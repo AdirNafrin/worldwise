@@ -1,0 +1,34 @@
+{
+  "name": "worldwise",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "license": "MIT",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "lint": "oxlint",
+    "preview": "vite preview",
+    "fetch:countries": "node scripts/fetchCountries.mjs",
+    "generate:icons": "node scripts/generateIcons.mjs"
+  },
+  "dependencies": {
+    "react": "^19.2.7",
+    "react-dom": "^19.2.7",
+    "react-router-dom": "^7.18.1"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.3.2",
+    "@types/react": "^19.2.17",
+    "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react": "^6.0.3",
+    "country-json": "^2.3.0",
+    "i18n-iso-countries": "^7.14.0",
+    "oxlint": "^1.71.0",
+    "sharp": "^0.35.3",
+    "tailwindcss": "^4.3.2",
+    "vite": "^8.1.1",
+    "vite-plugin-pwa": "^1.3.0",
+    "world-countries": "^5.1.0"
+  }
+}

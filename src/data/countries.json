@@ -1,0 +1,5649 @@
+[
+  {
+    "cca2": "AF",
+    "cca3": "AFG",
+    "nameEn": "Afghanistan",
+    "nameHe": "אפגניסטן",
+    "capital": "Kabul",
+    "region": "Asia",
+    "subregion": "Southern Asia",
+    "population": 37172386,
+    "area": 652230,
+    "languages": [
+      {
+        "code": "prs",
+        "name": "Dari"
+      },
+      {
+        "code": "pus",
+        "name": "Pashto"
+      },
+      {
+        "code": "tuk",
+        "name": "Turkmen"
+      }
+    ],
+    "flag": "/flags/afg.svg",
+    "independent": true,
+    "unMember": true
+  },
+  {
+    "cca2": "AX",
+    "cca3": "ALA",
+    "nameEn": "Åland Islands",
+    "nameHe": "איי אולנד",
+    "capital": "Mariehamn",
+    "region": "Europe",
+    "subregion": "Northern Europe",
+    "population": 30129,
+    "area": 1580,
+    "languages": [
+      {
+        "code": "swe",
+        "name": "Swedish"
+      }
+    ],
+    "flag": "/flags/ala.svg",
+    "independent": false,
+    "unMember": false
+  },
+  {
+    "cca2": "AL",
+    "cca3": "ALB",
+    "nameEn": "Albania",
+    "nameHe": "אלבניה",
+    "capital": "Tirana",
+    "region": "Europe",
+    "subregion": "Southeast Europe",
+    "population": 2866376,
+    "area": 28748,
+    "languages": [
+      {
+        "code": "sqi",
+        "name": "Albanian"
+      }
+    ],
+    "flag": "/flags/alb.svg",
+    "independent": true,
+    "unMember": true
+  },
+  {
+    "cca2": "DZ",
+    "cca3": "DZA",
+    "nameEn": "Algeria",
+    "nameHe": "אלג׳יריה",
+    "capital": "Algiers",
+    "region": "Africa",
+    "subregion": "Northern Africa",
+    "population": 42228429,
+    "area": 2381741,
+    "languages": [
+      {
+        "code": "ara",
+        "name": "Arabic"
+      }
+    ],
+    "flag": "/flags/dza.svg",
+    "independent": true,
+    "unMember": true
+  },
+  {
+    "cca2": "AS",
+    "cca3": "ASM",
+    "nameEn": "American Samoa",
+    "nameHe": "סמואה האמריקנית",
+    "capital": "Pago Pago",
+    "region": "Oceania",
+    "subregion": "Polynesia",
+    "population": 55465,
+    "area": 199,
+    "languages": [
+      {
+        "code": "eng",
+        "name": "English"
+      },
+      {
+        "code": "smo",
+        "name": "Samoan"
+      }
+    ],
+    "flag": "/flags/asm.svg",
+    "independent": false,
+    "unMember": false
+  },
+  {
+    "cca2": "AD",
+    "cca3": "AND",
+    "nameEn": "Andorra",
+    "nameHe": "אנדורה",
+    "capital": "Andorra la Vella",
+    "region": "Europe",
+    "subregion": "Southern Europe",
+    "population": 77006,
+    "area": 468,
+    "languages": [
+      {
+        "code": "cat",
+        "name": "Catalan"
+      }
+    ],
+    "flag": "/flags/and.svg",
+    "independent": true,
+    "unMember": true
+  },
+  {
+    "cca2": "AO",
+    "cca3": "AGO",
+    "nameEn": "Angola",
+    "nameHe": "אנגולה",
+    "capital": "Luanda",
+    "region": "Africa",
+    "subregion": "Middle Africa",
+    "population": 30809762,
+    "area": 1246700,
+    "languages": [
+      {
+        "code": "por",
+        "name": "Portuguese"
+      }
+    ],
+    "flag": "/flags/ago.svg",
+    "independent": true,
+    "unMember": true
+  },
+  {
+    "cca2": "AI",
+    "cca3": "AIA",
+    "nameEn": "Anguilla",
+    "nameHe": "אנגילה",
+    "capital": "The Valley",
+    "region": "Americas",
+    "subregion": "Caribbean",
+    "population": 15094,
+    "area": 91,
+    "languages": [
+      {
+        "code": "eng",
+        "name": "English"
+      }
+    ],
+    "flag": "/flags/aia.svg",
+    "independent": false,
+    "unMember": false
+  },
+  {
+    "cca2": "AQ",
+    "cca3": "ATA",
+    "nameEn": "Antarctica",
+    "nameHe": "אנטארקטיקה",
+    "capital": null,
+    "region": "Other",
+    "subregion": null,
+    "population": 1106,
+    "area": 14000000,
+    "languages": [],
+    "flag": "/flags/ata.svg",
+    "independent": false,
+    "unMember": false
+  },
+  {
+    "cca2": "AG",
+    "cca3": "ATG",
+    "nameEn": "Antigua and Barbuda",
+    "nameHe": "אנטיגואה וברבודה",
+    "capital": "Saint John's",
+    "region": "Americas",
+    "subregion": "Caribbean",
+    "population": 96286,
+    "area": 442,
+    "languages": [
+      {
+        "code": "eng",
+        "name": "English"
+      }
+    ],
+    "flag": "/flags/atg.svg",
+    "independent": true,
+    "unMember": true
+  },
+  {
+    "cca2": "AR",
+    "cca3": "ARG",
+    "nameEn": "Argentina",
+    "nameHe": "ארגנטינה",
+    "capital": "Buenos Aires",
+    "region": "Americas",
+    "subregion": "South America",
+    "population": 44494502,
+    "area": 2780400,
+    "languages": [
+      {
+        "code": "grn",
+        "name": "Guaraní"
+      },
+      {
+        "code": "spa",
+        "name": "Spanish"
+      }
+    ],
+    "flag": "/flags/arg.svg",
+    "independent": true,
+    "unMember": true
+  },
+  {
+    "cca2": "AM",
+    "cca3": "ARM",
+    "nameEn": "Armenia",
+    "nameHe": "ארמניה",
+    "capital": "Yerevan",
+    "region": "Asia",
+    "subregion": "Western Asia",
+    "population": 2951776,
+    "area": 29743,
+    "languages": [
+      {
+        "code": "hye",
+        "name": "Armenian"
+      }
+    ],
+    "flag": "/flags/arm.svg",
+    "independent": true,
+    "unMember": true
+  },
+  {
+    "cca2": "AW",
+    "cca3": "ABW",
+    "nameEn": "Aruba",
+    "nameHe": "ארובה",
+    "capital": "Oranjestad",
+    "region": "Americas",
+    "subregion": "Caribbean",
+    "population": 105845,
+    "area": 180,
+    "languages": [
+      {
+        "code": "nld",
+        "name": "Dutch"
+      },
+      {
+        "code": "pap",
+        "name": "Papiamento"
+      }
+    ],
+    "flag": "/flags/abw.svg",
+    "independent": false,
+    "unMember": false
+  },
+  {
+    "cca2": "AU",
+    "cca3": "AUS",
+    "nameEn": "Australia",
+    "nameHe": "אוסטרליה",
+    "capital": "Canberra",
+    "region": "Oceania",
+    "subregion": "Australia and New Zealand",
+    "population": 24982688,
+    "area": 7692024,
+    "languages": [
+      {
+        "code": "eng",
+        "name": "English"
+      }
+    ],
+    "flag": "/flags/aus.svg",
+    "independent": true,
+    "unMember": true
+  },
+  {
+    "cca2": "AT",
+    "cca3": "AUT",
+    "nameEn": "Austria",
+    "nameHe": "אוסטריה",
+    "capital": "Vienna",
+    "region": "Europe",
+    "subregion": "Central Europe",
+    "population": 8840521,
+    "area": 83871,
+    "languages": [
+      {
+        "code": "bar",
+        "name": "Austro-Bavarian German"
+      }
+    ],
+    "flag": "/flags/aut.svg",
+    "independent": true,
+    "unMember": true
+  },
+  {
+    "cca2": "AZ",
+    "cca3": "AZE",
+    "nameEn": "Azerbaijan",
+    "nameHe": "אזרבייג׳ן",
+    "capital": "Baku",
+    "region": "Asia",
+    "subregion": "Western Asia",
+    "population": 9939800,
+    "area": 86600,
+    "languages": [
+      {
+        "code": "aze",
+        "name": "Azerbaijani"
+      },
+      {
+        "code": "rus",
+        "name": "Russian"
+      }
+    ],
+    "flag": "/flags/aze.svg",
+    "independent": true,
+    "unMember": true
+  },
+  {
+    "cca2": "BS",
+    "cca3": "BHS",
+    "nameEn": "Bahamas",
+    "nameHe": "איי בהאמה",
+    "capital": "Nassau",
+    "region": "Americas",
+    "subregion": "Caribbean",
+    "population": 385640,
+    "area": 13943,
+    "languages": [
+      {
+        "code": "eng",
+        "name": "English"
+      }
+    ],
+    "flag": "/flags/bhs.svg",
+    "independent": true,
+    "unMember": true
+  },
+  {
+    "cca2": "BH",
+    "cca3": "BHR",
+    "nameEn": "Bahrain",
+    "nameHe": "בחריין",
+    "capital": "Manama",
+    "region": "Asia",
+    "subregion": "Western Asia",
+    "population": 1569439,
+    "area": 765,
+    "languages": [
+      {
+        "code": "ara",
+        "name": "Arabic"
+      }
+    ],
+    "flag": "/flags/bhr.svg",
+    "independent": true,
+    "unMember": true
+  },
+  {
+    "cca2": "BD",
+    "cca3": "BGD",
+    "nameEn": "Bangladesh",
+    "nameHe": "בנגלדש",
+    "capital": "Dhaka",
+    "region": "Asia",
+    "subregion": "Southern Asia",
+    "population": 161356039,
+    "area": 147570,
+    "languages": [
+      {
+        "code": "ben",
+        "name": "Bengali"
+      }
+    ],
+    "flag": "/flags/bgd.svg",
+    "independent": true,
+    "unMember": true
+  },
+  {
+    "cca2": "BB",
+    "cca3": "BRB",
+    "nameEn": "Barbados",
+    "nameHe": "ברבדוס",
+    "capital": "Bridgetown",
+    "region": "Americas",
+    "subregion": "Caribbean",
+    "population": 286641,
+    "area": 430,
+    "languages": [
+      {
+        "code": "eng",
+        "name": "English"
+      }
+    ],
+    "flag": "/flags/brb.svg",
+    "independent": true,
+    "unMember": true
+  },
+  {
+    "cca2": "BY",
+    "cca3": "BLR",
+    "nameEn": "Belarus",
+    "nameHe": "בלארוס",
+    "capital": "Minsk",
+    "region": "Europe",
+    "subregion": "Eastern Europe",
+    "population": 9483499,
+    "area": 207600,
+    "languages": [
+      {
+        "code": "bel",
+        "name": "Belarusian"
+      },
+      {
+        "code": "rus",
+        "name": "Russian"
+      }
+    ],
+    "flag": "/flags/blr.svg",
+    "independent": true,
+    "unMember": true
+  },
+  {
+    "cca2": "BE",
+    "cca3": "BEL",
+    "nameEn": "Belgium",
+    "nameHe": "בלגיה",
+    "capital": "Brussels",
+    "region": "Europe",
+    "subregion": "Western Europe",
+    "population": 11433256,
+    "area": 30528,
+    "languages": [
+      {
+        "code": "deu",
+        "name": "German"
+      },
+      {
+        "code": "fra",
+        "name": "French"
+      },
+      {
+        "code": "nld",
+        "name": "Dutch"
+      }
+    ],
+    "flag": "/flags/bel.svg",
+    "independent": true,
+    "unMember": true
+  },
+  {
+    "cca2": "BZ",
+    "cca3": "BLZ",
+    "nameEn": "Belize",
+    "nameHe": "בליז",
+    "capital": "Belmopan",
+    "region": "Americas",
+    "subregion": "Central America",
+    "population": 383071,
+    "area": 22966,
+    "languages": [
+      {
+        "code": "bjz",
+        "name": "Belizean Creole"
+      },
+      {
+        "code": "eng",
+        "name": "English"
+      },
+      {
+        "code": "spa",
+        "name": "Spanish"
+      }
+    ],
+    "flag": "/flags/blz.svg",
+    "independent": true,
+    "unMember": true
+  },
+  {
+    "cca2": "BJ",
+    "cca3": "BEN",
+    "nameEn": "Benin",
+    "nameHe": "בנין",
+    "capital": "Porto-Novo",
+    "region": "Africa",
+    "subregion": "Western Africa",
+    "population": 11485048,
+    "area": 112622,
+    "languages": [
+      {
+        "code": "fra",
+        "name": "French"
+      }
+    ],
+    "flag": "/flags/ben.svg",
+    "independent": true,
+    "unMember": true
+  },
+  {
+    "cca2": "BM",
+    "cca3": "BMU",
+    "nameEn": "Bermuda",
+    "nameHe": "ברמודה",
+    "capital": "Hamilton",
+    "region": "Americas",
+    "subregion": "North America",
+    "population": 63973,
+    "area": 54,
+    "languages": [
+      {
+        "code": "eng",
+        "name": "English"
+      }
+    ],
+    "flag": "/flags/bmu.svg",
+    "independent": false,
+    "unMember": false
+  },
+  {
+    "cca2": "BT",
+    "cca3": "BTN",
+    "nameEn": "Bhutan",
+    "nameHe": "בהוטן",
+    "capital": "Thimphu",
+    "region": "Asia",
+    "subregion": "Southern Asia",
+    "population": 754394,
+    "area": 38394,
+    "languages": [
+      {
+        "code": "dzo",
+        "name": "Dzongkha"
+      }
+    ],
+    "flag": "/flags/btn.svg",
+    "independent": true,
+    "unMember": true
+  },
+  {
+    "cca2": "BO",
+    "cca3": "BOL",
+    "nameEn": "Bolivia",
+    "nameHe": "בוליביה",
+    "capital": "Sucre",
+    "region": "Americas",
+    "subregion": "South America",
+    "population": 11353142,
+    "area": 1098581,
+    "languages": [
+      {
+        "code": "aym",
+        "name": "Aymara"
+      },
+      {
+        "code": "grn",
+        "name": "Guaraní"
+      },
+      {
+        "code": "que",
+        "name": "Quechua"
+      },
+      {
+        "code": "spa",
+        "name": "Spanish"
+      }
+    ],
+    "flag": "/flags/bol.svg",
+    "independent": true,
+    "unMember": true
+  },
+  {
+    "cca2": "BA",
+    "cca3": "BIH",
+    "nameEn": "Bosnia and Herzegovina",
+    "nameHe": "בוסניה והרצגובינה",
+    "capital": "Sarajevo",
+    "region": "Europe",
+    "subregion": "Southeast Europe",
+    "population": 3323929,
+    "area": 51209,
+    "languages": [
+      {
+        "code": "bos",
+        "name": "Bosnian"
+      },
+      {
+        "code": "hrv",
+        "name": "Croatian"
+      },
+      {
+        "code": "srp",
+        "name": "Serbian"
+      }
+    ],
+    "flag": "/flags/bih.svg",
+    "independent": true,
+    "unMember": true
+  },
+  {
+    "cca2": "BW",
+    "cca3": "BWA",
+    "nameEn": "Botswana",
+    "nameHe": "בוצוואנה",
+    "capital": "Gaborone",
+    "region": "Africa",
+    "subregion": "Southern Africa",
+    "population": 2254126,
+    "area": 582000,
+    "languages": [
+      {
+        "code": "eng",
+        "name": "English"
+      },
+      {
+        "code": "tsn",
+        "name": "Tswana"
+      }
+    ],
+    "flag": "/flags/bwa.svg",
+    "independent": true,
+    "unMember": true
+  },
+  {
+    "cca2": "BV",
+    "cca3": "BVT",
+    "nameEn": "Bouvet Island",
+    "nameHe": "איי בובה",
+    "capital": null,
+    "region": "Other",
+    "subregion": null,
+    "population": null,
+    "area": 49,
+    "languages": [
+      {
+        "code": "nor",
+        "name": "Norwegian"
+      }
+    ],
+    "flag": "/flags/bvt.svg",
+    "independent": false,
+    "unMember": false
+  },
+  {
+    "cca2": "BR",
+    "cca3": "BRA",
+    "nameEn": "Brazil",
+    "nameHe": "ברזיל",
+    "capital": "Brasília",
+    "region": "Americas",
+    "subregion": "South America",
+    "population": 209469333,
+    "area": 8515767,
+    "languages": [
+      {
+        "code": "por",
+        "name": "Portuguese"
+      }
+    ],
+    "flag": "/flags/bra.svg",
+    "independent": true,
+    "unMember": true
+  },
+  {
+    "cca2": "IO",
+    "cca3": "IOT",
+    "nameEn": "British Indian Ocean Territory",
+    "nameHe": "הטריטוריה הבריטית באוקיינוס ההודי",
+    "capital": "Diego Garcia",
+    "region": "Africa",
+    "subregion": "Eastern Africa",
+    "population": null,
+    "area": 60,
+    "languages": [
+      {
+        "code": "eng",
+        "name": "English"
+      }
+    ],
+    "flag": "/flags/iot.svg",
+    "independent": false,
+    "unMember": false
+  },
+  {
+    "cca2": "VG",
+    "cca3": "VGB",
+    "nameEn": "British Virgin Islands",
+    "nameHe": "איי הבתולה הבריטיים",
+    "capital": "Road Town",
+    "region": "Americas",
+    "subregion": "Caribbean",
+    "population": 29802,
+    "area": 151,
+    "languages": [
+      {
+        "code": "eng",
+        "name": "English"
+      }
+    ],
+    "flag": "/flags/vgb.svg",
+    "independent": false,
+    "unMember": false
+  },
+  {
+    "cca2": "BN",
+    "cca3": "BRN",
+    "nameEn": "Brunei",
+    "nameHe": "ברוניי",
+    "capital": "Bandar Seri Begawan",
+    "region": "Asia",
+    "subregion": "South-Eastern Asia",
+    "population": 428962,
+    "area": 5765,
+    "languages": [
+      {
+        "code": "msa",
+        "name": "Malay"
+      }
+    ],
+    "flag": "/flags/brn.svg",
+    "independent": true,
+    "unMember": true
+  },
+  {
+    "cca2": "BG",
+    "cca3": "BGR",
+    "nameEn": "Bulgaria",
+    "nameHe": "בולגריה",
+    "capital": "Sofia",
+    "region": "Europe",
+    "subregion": "Southeast Europe",
+    "population": 7025037,
+    "area": 110879,
+    "languages": [
+      {
+        "code": "bul",
+        "name": "Bulgarian"
+      }
+    ],
+    "flag": "/flags/bgr.svg",
+    "independent": true,
+    "unMember": true
+  },
+  {
+    "cca2": "BF",
+    "cca3": "BFA",
+    "nameEn": "Burkina Faso",
+    "nameHe": "בורקינה פאסו",
+    "capital": "Ouagadougou",
+    "region": "Africa",
+    "subregion": "Western Africa",
+    "population": 19751535,
+    "area": 272967,
+    "languages": [
+      {
+        "code": "fra",
+        "name": "French"
+      }
+    ],
+    "flag": "/flags/bfa.svg",
+    "independent": true,
+    "unMember": true
+  },
+  {
+    "cca2": "BI",
+    "cca3": "BDI",
+    "nameEn": "Burundi",
+    "nameHe": "בורונדי",
+    "capital": "Gitega",
+    "region": "Africa",
+    "subregion": "Eastern Africa",
+    "population": 11175378,
+    "area": 27834,
+    "languages": [
+      {
+        "code": "fra",
+        "name": "French"
+      },
+      {
+        "code": "run",
+        "name": "Kirundi"
+      }
+    ],
+    "flag": "/flags/bdi.svg",
+    "independent": true,
+    "unMember": true
+  },
+  {
+    "cca2": "KH",
+    "cca3": "KHM",
+    "nameEn": "Cambodia",
+    "nameHe": "קמבודיה",
+    "capital": "Phnom Penh",
+    "region": "Asia",
+    "subregion": "South-Eastern Asia",
+    "population": 16249798,
+    "area": 181035,
+    "languages": [
+      {
+        "code": "khm",
+        "name": "Khmer"
+      }
+    ],
+    "flag": "/flags/khm.svg",
+    "independent": true,
+    "unMember": true
+  },
+  {
+    "cca2": "CM",
+    "cca3": "CMR",
+    "nameEn": "Cameroon",
+    "nameHe": "קמרון",
+    "capital": "Yaoundé",
+    "region": "Africa",
+    "subregion": "Middle Africa",
+    "population": 25216237,
+    "area": 475442,
+    "languages": [
+      {
+        "code": "eng",
+        "name": "English"
+      },
+      {
+        "code": "fra",
+        "name": "French"
+      }
+    ],
+    "flag": "/flags/cmr.svg",
+    "independent": true,
+    "unMember": true
+  },
+  {
+    "cca2": "CA",
+    "cca3": "CAN",
+    "nameEn": "Canada",
+    "nameHe": "קנדה",
+    "capital": "Ottawa",
+    "region": "Americas",
+    "subregion": "North America",
+    "population": 37057765,
+    "area": 9984670,
+    "languages": [
+      {
+        "code": "eng",
+        "name": "English"
+      },
+      {
+        "code": "fra",
+        "name": "French"
+      }
+    ],
+    "flag": "/flags/can.svg",
+    "independent": true,
+    "unMember": true
+  },
+  {
+    "cca2": "CV",
+    "cca3": "CPV",
+    "nameEn": "Cape Verde",
+    "nameHe": "כף ורדה",
+    "capital": "Praia",
+    "region": "Africa",
+    "subregion": "Western Africa",
+    "population": 543767,
+    "area": 4033,
+    "languages": [
+      {
+        "code": "por",
+        "name": "Portuguese"
+      }
+    ],
+    "flag": "/flags/cpv.svg",
+    "independent": true,
+    "unMember": true
+  },
+  {
+    "cca2": "BQ",
+    "cca3": "BES",
+    "nameEn": "Caribbean Netherlands",
+    "nameHe": "האיים הקריביים ההולנדיים",
+    "capital": "Kralendijk",
+    "region": "Americas",
+    "subregion": "Caribbean",
+    "population": 26200,
+    "area": 328,
+    "languages": [
+      {
+        "code": "eng",
+        "name": "English"
+      },
+      {
+        "code": "nld",
+        "name": "Dutch"
+      },
+      {
+        "code": "pap",
+        "name": "Papiamento"
+      }
+    ],
+    "flag": "/flags/bes.svg",
+    "independent": false,
+    "unMember": false
+  },
+  {
+    "cca2": "KY",
+    "cca3": "CYM",
+    "nameEn": "Cayman Islands",
+    "nameHe": "איי קיימן",
+    "capital": "George Town",
+    "region": "Americas",
+    "subregion": "Caribbean",
+    "population": 64174,
+    "area": 264,
+    "languages": [
+      {
+        "code": "eng",
+        "name": "English"
+      }
+    ],
+    "flag": "/flags/cym.svg",
+    "independent": false,
+    "unMember": false
+  },
+  {
+    "cca2": "CF",
+    "cca3": "CAF",
+    "nameEn": "Central African Republic",
+    "nameHe": "הרפובליקה של מרכז אפריקה",
+    "capital": "Bangui",
+    "region": "Africa",
+    "subregion": "Middle Africa",
+    "population": 4666377,
+    "area": 622984,
+    "languages": [
+      {
+        "code": "fra",
+        "name": "French"
+      },
+      {
+        "code": "sag",
+        "name": "Sango"
+      }
+    ],
+    "flag": "/flags/caf.svg",
+    "independent": true,
+    "unMember": true
+  },
+  {
+    "cca2": "TD",
+    "cca3": "TCD",
+    "nameEn": "Chad",
+    "nameHe": "צ׳אד",
+    "capital": "N'Djamena",
+    "region": "Africa",
+    "subregion": "Middle Africa",
+    "population": 15477751,
+    "area": 1284000,
+    "languages": [
+      {
+        "code": "ara",
+        "name": "Arabic"
+      },
+      {
+        "code": "fra",
+        "name": "French"
+      }
+    ],
+    "flag": "/flags/tcd.svg",
+    "independent": true,
+    "unMember": true
+  },
+  {
+    "cca2": "CL",
+    "cca3": "CHL",
+    "nameEn": "Chile",
+    "nameHe": "צ׳ילה",
+    "capital": "Santiago",
+    "region": "Americas",
+    "subregion": "South America",
+    "population": 18729160,
+    "area": 756102,
+    "languages": [
+      {
+        "code": "spa",
+        "name": "Spanish"
+      }
+    ],
+    "flag": "/flags/chl.svg",
+    "independent": true,
+    "unMember": true
+  },
+  {
+    "cca2": "CN",
+    "cca3": "CHN",
+    "nameEn": "China",
+    "nameHe": "סין",
+    "capital": "Beijing",
+    "region": "Asia",
+    "subregion": "Eastern Asia",
+    "population": 1392730000,
+    "area": 9706961,
+    "languages": [
+      {
+        "code": "zho",
+        "name": "Chinese"
+      }
+    ],
+    "flag": "/flags/chn.svg",
+    "independent": true,
+    "unMember": true
+  },
+  {
+    "cca2": "CX",
+    "cca3": "CXR",
+    "nameEn": "Christmas Island",
+    "nameHe": "האי כריסטמס",
+    "capital": "Flying Fish Cove",
+    "region": "Oceania",
+    "subregion": "Australia and New Zealand",
+    "population": 1402,
+    "area": 135,
+    "languages": [
+      {
+        "code": "eng",
+        "name": "English"
+      }
+    ],
+    "flag": "/flags/cxr.svg",
+    "independent": false,
+    "unMember": false
+  },
+  {
+    "cca2": "CC",
+    "cca3": "CCK",
+    "nameEn": "Cocos (Keeling) Islands",
+    "nameHe": "איי קוקוס (קילינג)",
+    "capital": "West Island",
+    "region": "Oceania",
+    "subregion": "Australia and New Zealand",
+    "population": 596,
+    "area": 14,
+    "languages": [
+      {
+        "code": "eng",
+        "name": "English"
+      }
+    ],
+    "flag": "/flags/cck.svg",
+    "independent": false,
+    "unMember": false
+  },
+  {
+    "cca2": "CO",
+    "cca3": "COL",
+    "nameEn": "Colombia",
+    "nameHe": "קולומביה",
+    "capital": "Bogotá",
+    "region": "Americas",
+    "subregion": "South America",
+    "population": 49648685,
+    "area": 1141748,
+    "languages": [
+      {
+        "code": "spa",
+        "name": "Spanish"
+      }
+    ],
+    "flag": "/flags/col.svg",
+    "independent": true,
+    "unMember": true
+  },
+  {
+    "cca2": "KM",
+    "cca3": "COM",
+    "nameEn": "Comoros",
+    "nameHe": "קומורו",
+    "capital": "Moroni",
+    "region": "Africa",
+    "subregion": "Eastern Africa",
+    "population": 832322,
+    "area": 1862,
+    "languages": [
+      {
+        "code": "ara",
+        "name": "Arabic"
+      },
+      {
+        "code": "fra",
+        "name": "French"
+      },
+      {
+        "code": "zdj",
+        "name": "Comorian"
+      }
+    ],
+    "flag": "/flags/com.svg",
+    "independent": true,
+    "unMember": true
+  },
+  {
+    "cca2": "CK",
+    "cca3": "COK",
+    "nameEn": "Cook Islands",
+    "nameHe": "איי קוק",
+    "capital": "Avarua",
+    "region": "Oceania",
+    "subregion": "Polynesia",
+    "population": 17379,
+    "area": 236,
+    "languages": [
+      {
+        "code": "eng",
+        "name": "English"
+      },
+      {
+        "code": "rar",
+        "name": "Cook Islands Māori"
+      }
+    ],
+    "flag": "/flags/cok.svg",
+    "independent": false,
+    "unMember": false
+  },
+  {
+    "cca2": "CR",
+    "cca3": "CRI",
+    "nameEn": "Costa Rica",
+    "nameHe": "קוסטה ריקה",
+    "capital": "San José",
+    "region": "Americas",
+    "subregion": "Central America",
+    "population": 4999441,
+    "area": 51100,
+    "languages": [
+      {
+        "code": "spa",
+        "name": "Spanish"
+      }
+    ],
+    "flag": "/flags/cri.svg",
+    "independent": true,
+    "unMember": true
+  },
+  {
+    "cca2": "HR",
+    "cca3": "HRV",
+    "nameEn": "Croatia",
+    "nameHe": "קרואטיה",
+    "capital": "Zagreb",
+    "region": "Europe",
+    "subregion": "Southeast Europe",
+    "population": 4087843,
+    "area": 56594,
+    "languages": [
+      {
+        "code": "hrv",
+        "name": "Croatian"
+      }
+    ],
+    "flag": "/flags/hrv.svg",
+    "independent": true,
+    "unMember": true
+  },
+  {
+    "cca2": "CU",
+    "cca3": "CUB",
+    "nameEn": "Cuba",
+    "nameHe": "קובה",
+    "capital": "Havana",
+    "region": "Americas",
+    "subregion": "Caribbean",
+    "population": 11338138,
+    "area": 109884,
+    "languages": [
+      {
+        "code": "spa",
+        "name": "Spanish"
+      }
+    ],
+    "flag": "/flags/cub.svg",
+    "independent": true,
+    "unMember": true
+  },
+  {
+    "cca2": "CW",
+    "cca3": "CUW",
+    "nameEn": "Curaçao",
+    "nameHe": "קוראסאו",
+    "capital": "Willemstad",
+    "region": "Americas",
+    "subregion": "Caribbean",
+    "population": 156783,
+    "area": 444,
+    "languages": [
+      {
+        "code": "eng",
+        "name": "English"
+      },
+      {
+        "code": "nld",
+        "name": "Dutch"
+      },
+      {
+        "code": "pap",
+        "name": "Papiamento"
+      }
+    ],
+    "flag": "/flags/cuw.svg",
+    "independent": false,
+    "unMember": false
+  },
+  {
+    "cca2": "CY",
+    "cca3": "CYP",
+    "nameEn": "Cyprus",
+    "nameHe": "קפריסין",
+    "capital": "Nicosia",
+    "region": "Europe",
+    "subregion": "Southern Europe",
+    "population": 1189265,
+    "area": 9251,
+    "languages": [
+      {
+        "code": "ell",
+        "name": "Greek"
+      },
+      {
+        "code": "tur",
+        "name": "Turkish"
+      }
+    ],
+    "flag": "/flags/cyp.svg",
+    "independent": true,
+    "unMember": true
+  },
+  {
+    "cca2": "CZ",
+    "cca3": "CZE",
+    "nameEn": "Czechia",
+    "nameHe": "צ׳כיה",
+    "capital": "Prague",
+    "region": "Europe",
+    "subregion": "Central Europe",
+    "population": 10629928,
+    "area": 78865,
+    "languages": [
+      {
+        "code": "ces",
+        "name": "Czech"
+      },
+      {
+        "code": "slk",
+        "name": "Slovak"
+      }
+    ],
+    "flag": "/flags/cze.svg",
+    "independent": true,
+    "unMember": true
+  },
+  {
+    "cca2": "DK",
+    "cca3": "DNK",
+    "nameEn": "Denmark",
+    "nameHe": "דנמרק",
+    "capital": "Copenhagen",
+    "region": "Europe",
+    "subregion": "Northern Europe",
+    "population": 5793636,
+    "area": 43094,
+    "languages": [
+      {
+        "code": "dan",
+        "name": "Danish"
+      }
+    ],
+    "flag": "/flags/dnk.svg",
+    "independent": true,
+    "unMember": true
+  },
+  {
+    "cca2": "DJ",
+    "cca3": "DJI",
+    "nameEn": "Djibouti",
+    "nameHe": "ג׳יבוטי",
+    "capital": "Djibouti",
+    "region": "Africa",
+    "subregion": "Eastern Africa",
+    "population": 958920,
+    "area": 23200,
+    "languages": [
+      {
+        "code": "ara",
+        "name": "Arabic"
+      },
+      {
+        "code": "fra",
+        "name": "French"
+      }
+    ],
+    "flag": "/flags/dji.svg",
+    "independent": true,
+    "unMember": true
+  },
+  {
+    "cca2": "DM",
+    "cca3": "DMA",
+    "nameEn": "Dominica",
+    "nameHe": "דומיניקה",
+    "capital": "Roseau",
+    "region": "Americas",
+    "subregion": "Caribbean",
+    "population": 71625,
+    "area": 751,
+    "languages": [
+      {
+        "code": "eng",
+        "name": "English"
+      }
+    ],
+    "flag": "/flags/dma.svg",
+    "independent": true,
+    "unMember": true
+  },
+  {
+    "cca2": "DO",
+    "cca3": "DOM",
+    "nameEn": "Dominican Republic",
+    "nameHe": "הרפובליקה הדומיניקנית",
+    "capital": "Santo Domingo",
+    "region": "Americas",
+    "subregion": "Caribbean",
+    "population": 10627165,
+    "area": 48671,
+    "languages": [
+      {
+        "code": "spa",
+        "name": "Spanish"
+      }
+    ],
+    "flag": "/flags/dom.svg",
+    "independent": true,
+    "unMember": true
+  },
+  {
+    "cca2": "CD",
+    "cca3": "COD",
+    "nameEn": "DR Congo",
+    "nameHe": "קונגו - קינשאסה",
+    "capital": "Kinshasa",
+    "region": "Africa",
+    "subregion": "Middle Africa",
+    "population": 84068091,
+    "area": 2344858,
+    "languages": [
+      {
+        "code": "fra",
+        "name": "French"
+      },
+      {
+        "code": "kon",
+        "name": "Kikongo"
+      },
+      {
+        "code": "lin",
+        "name": "Lingala"
+      },
+      {
+        "code": "lua",
+        "name": "Tshiluba"
+      },
+      {
+        "code": "swa",
+        "name": "Swahili"
+      }
+    ],
+    "flag": "/flags/cod.svg",
+    "independent": true,
+    "unMember": true
+  },
+  {
+    "cca2": "EC",
+    "cca3": "ECU",
+    "nameEn": "Ecuador",
+    "nameHe": "אקוודור",
+    "capital": "Quito",
+    "region": "Americas",
+    "subregion": "South America",
+    "population": 17084357,
+    "area": 276841,
+    "languages": [
+      {
+        "code": "spa",
+        "name": "Spanish"
+      }
+    ],
+    "flag": "/flags/ecu.svg",
+    "independent": true,
+    "unMember": true
+  },
+  {
+    "cca2": "EG",
+    "cca3": "EGY",
+    "nameEn": "Egypt",
+    "nameHe": "מצרים",
+    "capital": "Cairo",
+    "region": "Africa",
+    "subregion": "Northern Africa",
+    "population": 98423595,
+    "area": 1002450,
+    "languages": [
+      {
+        "code": "ara",
+        "name": "Arabic"
+      }
+    ],
+    "flag": "/flags/egy.svg",
+    "independent": true,
+    "unMember": true
+  },
+  {
+    "cca2": "SV",
+    "cca3": "SLV",
+    "nameEn": "El Salvador",
+    "nameHe": "אל סלבדור",
+    "capital": "San Salvador",
+    "region": "Americas",
+    "subregion": "Central America",
+    "population": 6420744,
+    "area": 21041,
+    "languages": [
+      {
+        "code": "spa",
+        "name": "Spanish"
+      }
+    ],
+    "flag": "/flags/slv.svg",
+    "independent": true,
+    "unMember": true
+  },
+  {
+    "cca2": "GQ",
+    "cca3": "GNQ",
+    "nameEn": "Equatorial Guinea",
+    "nameHe": "גינאה המשוונית",
+    "capital": "Malabo",
+    "region": "Africa",
+    "subregion": "Middle Africa",
+    "population": 1308974,
+    "area": 28051,
+    "languages": [
+      {
+        "code": "fra",
+        "name": "French"
+      },
+      {
+        "code": "por",
+        "name": "Portuguese"
+      },
+      {
+        "code": "spa",
+        "name": "Spanish"
+      }
+    ],
+    "flag": "/flags/gnq.svg",
+    "independent": true,
+    "unMember": true
+  },
+  {
+    "cca2": "ER",
+    "cca3": "ERI",
+    "nameEn": "Eritrea",
+    "nameHe": "אריתריאה",
+    "capital": "Asmara",
+    "region": "Africa",
+    "subregion": "Eastern Africa",
+    "population": 6213972,
+    "area": 117600,
+    "languages": [
+      {
+        "code": "ara",
+        "name": "Arabic"
+      },
+      {
+        "code": "eng",
+        "name": "English"
+      },
+      {
+        "code": "tir",
+        "name": "Tigrinya"
+      }
+    ],
+    "flag": "/flags/eri.svg",
+    "independent": true,
+    "unMember": true
+  },
+  {
+    "cca2": "EE",
+    "cca3": "EST",
+    "nameEn": "Estonia",
+    "nameHe": "אסטוניה",
+    "capital": "Tallinn",
+    "region": "Europe",
+    "subregion": "Northern Europe",
+    "population": 1321977,
+    "area": 45227,
+    "languages": [
+      {
+        "code": "est",
+        "name": "Estonian"
+      }
+    ],
+    "flag": "/flags/est.svg",
+    "independent": true,
+    "unMember": true
+  },
+  {
+    "cca2": "SZ",
+    "cca3": "SWZ",
+    "nameEn": "Eswatini",
+    "nameHe": "סווזילנד",
+    "capital": "Lobamba",
+    "region": "Africa",
+    "subregion": "Southern Africa",
+    "population": 1136191,
+    "area": 17364,
+    "languages": [
+      {
+        "code": "eng",
+        "name": "English"
+      },
+      {
+        "code": "ssw",
+        "name": "Swazi"
+      }
+    ],
+    "flag": "/flags/swz.svg",
+    "independent": true,
+    "unMember": true
+  },
+  {
+    "cca2": "ET",
+    "cca3": "ETH",
+    "nameEn": "Ethiopia",
+    "nameHe": "אתיופיה",
+    "capital": "Addis Ababa",
+    "region": "Africa",
+    "subregion": "Eastern Africa",
+    "population": 109224559,
+    "area": 1104300,
+    "languages": [
+      {
+        "code": "amh",
+        "name": "Amharic"
+      }
+    ],
+    "flag": "/flags/eth.svg",
+    "independent": true,
+    "unMember": true
+  },
+  {
+    "cca2": "FK",
+    "cca3": "FLK",
+    "nameEn": "Falkland Islands",
+    "nameHe": "איי פוקלנד",
+    "capital": "Stanley",
+    "region": "Americas",
+    "subregion": "South America",
+    "population": 2840,
+    "area": 12173,
+    "languages": [
+      {
+        "code": "eng",
+        "name": "English"
+      }
+    ],
+    "flag": "/flags/flk.svg",
+    "independent": false,
+    "unMember": false
+  },
+  {
+    "cca2": "FO",
+    "cca3": "FRO",
+    "nameEn": "Faroe Islands",
+    "nameHe": "איי פארו",
+    "capital": "Tórshavn",
+    "region": "Europe",
+    "subregion": "Northern Europe",
+    "population": 48497,
+    "area": 1393,
+    "languages": [
+      {
+        "code": "dan",
+        "name": "Danish"
+      },
+      {
+        "code": "fao",
+        "name": "Faroese"
+      }
+    ],
+    "flag": "/flags/fro.svg",
+    "independent": false,
+    "unMember": false
+  },
+  {
+    "cca2": "FJ",
+    "cca3": "FJI",
+    "nameEn": "Fiji",
+    "nameHe": "פיג׳י",
+    "capital": "Suva",
+    "region": "Oceania",
+    "subregion": "Melanesia",
+    "population": 883483,
+    "area": 18272,
+    "languages": [
+      {
+        "code": "eng",
+        "name": "English"
+      },
+      {
+        "code": "fij",
+        "name": "Fijian"
+      },
+      {
+        "code": "hif",
+        "name": "Fiji Hindi"
+      }
+    ],
+    "flag": "/flags/fji.svg",
+    "independent": true,
+    "unMember": true
+  },
+  {
+    "cca2": "FI",
+    "cca3": "FIN",
+    "nameEn": "Finland",
+    "nameHe": "פינלנד",
+    "capital": "Helsinki",
+    "region": "Europe",
+    "subregion": "Northern Europe",
+    "population": 5515525,
+    "area": 338424,
+    "languages": [
+      {
+        "code": "fin",
+        "name": "Finnish"
+      },
+      {
+        "code": "swe",
+        "name": "Swedish"
+      }
+    ],
+    "flag": "/flags/fin.svg",
+    "independent": true,
+    "unMember": true
+  },
+  {
+    "cca2": "FR",
+    "cca3": "FRA",
+    "nameEn": "France",
+    "nameHe": "צרפת",
+    "capital": "Paris",
+    "region": "Europe",
+    "subregion": "Western Europe",
+    "population": 66977107,
+    "area": 551695,
+    "languages": [
+      {
+        "code": "fra",
+        "name": "French"
+      }
+    ],
+    "flag": "/flags/fra.svg",
+    "independent": true,
+    "unMember": true
+  },
+  {
+    "cca2": "GF",
+    "cca3": "GUF",
+    "nameEn": "French Guiana",
+    "nameHe": "גיאנה הצרפתית",
+    "capital": "Cayenne",
+    "region": "Americas",
+    "subregion": "South America",
+    "population": 290691,
+    "area": 83534,
+    "languages": [
+      {
+        "code": "fra",
+        "name": "French"
+      }
+    ],
+    "flag": "/flags/guf.svg",
+    "independent": false,
+    "unMember": false
+  },
+  {
+    "cca2": "PF",
+    "cca3": "PYF",
+    "nameEn": "French Polynesia",
+    "nameHe": "פולינזיה הצרפתית",
+    "capital": "Papeetē",
+    "region": "Oceania",
+    "subregion": "Polynesia",
+    "population": 277679,
+    "area": 4167,
+    "languages": [
+      {
+        "code": "fra",
+        "name": "French"
+      }
+    ],
+    "flag": "/flags/pyf.svg",
+    "independent": false,
+    "unMember": false
+  },
+  {
+    "cca2": "TF",
+    "cca3": "ATF",
+    "nameEn": "French Southern and Antarctic Lands",
+    "nameHe": "הטריטוריות הדרומיות של צרפת",
+    "capital": "Port-aux-Français",
+    "region": "Other",
+    "subregion": null,
+    "population": null,
+    "area": 7747,
+    "languages": [
+      {
+        "code": "fra",
+        "name": "French"
+      }
+    ],
+    "flag": "/flags/atf.svg",
+    "independent": false,
+    "unMember": false
+  },
+  {
+    "cca2": "GA",
+    "cca3": "GAB",
+    "nameEn": "Gabon",
+    "nameHe": "גבון",
+    "capital": "Libreville",
+    "region": "Africa",
+    "subregion": "Middle Africa",
+    "population": 2119275,
+    "area": 267668,
+    "languages": [
+      {
+        "code": "fra",
+        "name": "French"
+      }
+    ],
+    "flag": "/flags/gab.svg",
+    "independent": true,
+    "unMember": true
+  },
+  {
+    "cca2": "GM",
+    "cca3": "GMB",
+    "nameEn": "Gambia",
+    "nameHe": "גמביה",
+    "capital": "Banjul",
+    "region": "Africa",
+    "subregion": "Western Africa",
+    "population": 2280102,
+    "area": 10689,
+    "languages": [
+      {
+        "code": "eng",
+        "name": "English"
+      }
+    ],
+    "flag": "/flags/gmb.svg",
+    "independent": true,
+    "unMember": true
+  },
+  {
+    "cca2": "GE",
+    "cca3": "GEO",
+    "nameEn": "Georgia",
+    "nameHe": "גאורגיה",
+    "capital": "Tbilisi",
+    "region": "Asia",
+    "subregion": "Western Asia",
+    "population": 3726549,
+    "area": 69700,
+    "languages": [
+      {
+        "code": "kat",
+        "name": "Georgian"
+      }
+    ],
+    "flag": "/flags/geo.svg",
+    "independent": true,
+    "unMember": true
+  },
+  {
+    "cca2": "DE",
+    "cca3": "DEU",
+    "nameEn": "Germany",
+    "nameHe": "גרמניה",
+    "capital": "Berlin",
+    "region": "Europe",
+    "subregion": "Western Europe",
+    "population": 82905782,
+    "area": 357114,
+    "languages": [
+      {
+        "code": "deu",
+        "name": "German"
+      }
+    ],
+    "flag": "/flags/deu.svg",
+    "independent": true,
+    "unMember": true
+  },
+  {
+    "cca2": "GH",
+    "cca3": "GHA",
+    "nameEn": "Ghana",
+    "nameHe": "גאנה",
+    "capital": "Accra",
+    "region": "Africa",
+    "subregion": "Western Africa",
+    "population": 29767108,
+    "area": 238533,
+    "languages": [
+      {
+        "code": "eng",
+        "name": "English"
+      }
+    ],
+    "flag": "/flags/gha.svg",
+    "independent": true,
+    "unMember": true
+  },
+  {
+    "cca2": "GI",
+    "cca3": "GIB",
+    "nameEn": "Gibraltar",
+    "nameHe": "גיברלטר",
+    "capital": "Gibraltar",
+    "region": "Europe",
+    "subregion": "Southern Europe",
+    "population": 33718,
+    "area": 6,
+    "languages": [
+      {
+        "code": "eng",
+        "name": "English"
+      }
+    ],
+    "flag": "/flags/gib.svg",
+    "independent": false,
+    "unMember": false
+  },
+  {
+    "cca2": "GR",
+    "cca3": "GRC",
+    "nameEn": "Greece",
+    "nameHe": "יוון",
+    "capital": "Athens",
+    "region": "Europe",
+    "subregion": "Southern Europe",
+    "population": 10731726,
+    "area": 131990,
+    "languages": [
+      {
+        "code": "ell",
+        "name": "Greek"
+      }
+    ],
+    "flag": "/flags/grc.svg",
+    "independent": true,
+    "unMember": true
+  },
+  {
+    "cca2": "GL",
+    "cca3": "GRL",
+    "nameEn": "Greenland",
+    "nameHe": "גרינלנד",
+    "capital": "Nuuk",
+    "region": "Americas",
+    "subregion": "North America",
+    "population": 56025,
+    "area": 2166086,
+    "languages": [
+      {
+        "code": "kal",
+        "name": "Greenlandic"
+      }
+    ],
+    "flag": "/flags/grl.svg",
+    "independent": false,
+    "unMember": false
+  },
+  {
+    "cca2": "GD",
+    "cca3": "GRD",
+    "nameEn": "Grenada",
+    "nameHe": "גרנדה",
+    "capital": "St. George's",
+    "region": "Americas",
+    "subregion": "Caribbean",
+    "population": 111454,
+    "area": 344,
+    "languages": [
+      {
+        "code": "eng",
+        "name": "English"
+      }
+    ],
+    "flag": "/flags/grd.svg",
+    "independent": true,
+    "unMember": true
+  },
+  {
+    "cca2": "GP",
+    "cca3": "GLP",
+    "nameEn": "Guadeloupe",
+    "nameHe": "גוואדלופ",
+    "capital": "Basse-Terre",
+    "region": "Americas",
+    "subregion": "Caribbean",
+    "population": 395700,
+    "area": 1628,
+    "languages": [
+      {
+        "code": "fra",
+        "name": "French"
+      }
+    ],
+    "flag": "/flags/glp.svg",
+    "independent": false,
+    "unMember": false
+  },
+  {
+    "cca2": "GU",
+    "cca3": "GUM",
+    "nameEn": "Guam",
+    "nameHe": "גואם",
+    "capital": "Hagåtña",
+    "region": "Oceania",
+    "subregion": "Micronesia",
+    "population": 165768,
+    "area": 549,
+    "languages": [
+      {
+        "code": "cha",
+        "name": "Chamorro"
+      },
+      {
+        "code": "eng",
+        "name": "English"
+      },
+      {
+        "code": "spa",
+        "name": "Spanish"
+      }
+    ],
+    "flag": "/flags/gum.svg",
+    "independent": false,
+    "unMember": false
+  },
+  {
+    "cca2": "GT",
+    "cca3": "GTM",
+    "nameEn": "Guatemala",
+    "nameHe": "גואטמלה",
+    "capital": "Guatemala City",
+    "region": "Americas",
+    "subregion": "Central America",
+    "population": 17247807,
+    "area": 108889,
+    "languages": [
+      {
+        "code": "spa",
+        "name": "Spanish"
+      }
+    ],
+    "flag": "/flags/gtm.svg",
+    "independent": true,
+    "unMember": true
+  },
+  {
+    "cca2": "GG",
+    "cca3": "GGY",
+    "nameEn": "Guernsey",
+    "nameHe": "גרנסי",
+    "capital": "St. Peter Port",
+    "region": "Europe",
+    "subregion": "Northern Europe",
+    "population": 63950,
+    "area": 78,
+    "languages": [
+      {
+        "code": "eng",
+        "name": "English"
+      },
+      {
+        "code": "fra",
+        "name": "French"
+      },
+      {
+        "code": "nfr",
+        "name": "Guernésiais"
+      }
+    ],
+    "flag": "/flags/ggy.svg",
+    "independent": false,
+    "unMember": false
+  },
+  {
+    "cca2": "GN",
+    "cca3": "GIN",
+    "nameEn": "Guinea",
+    "nameHe": "גינאה",
+    "capital": "Conakry",
+    "region": "Africa",
+    "subregion": "Western Africa",
+    "population": 12414318,
+    "area": 245857,
+    "languages": [
+      {
+        "code": "fra",
+        "name": "French"
+      }
+    ],
+    "flag": "/flags/gin.svg",
+    "independent": true,
+    "unMember": true
+  },
+  {
+    "cca2": "GW",
+    "cca3": "GNB",
+    "nameEn": "Guinea-Bissau",
+    "nameHe": "גינאה ביסאו",
+    "capital": "Bissau",
+    "region": "Africa",
+    "subregion": "Western Africa",
+    "population": 1874309,
+    "area": 36125,
+    "languages": [
+      {
+        "code": "por",
+        "name": "Portuguese"
+      },
+      {
+        "code": "pov",
+        "name": "Upper Guinea Creole"
+      }
+    ],
+    "flag": "/flags/gnb.svg",
+    "independent": true,
+    "unMember": true
+  },
+  {
+    "cca2": "GY",
+    "cca3": "GUY",
+    "nameEn": "Guyana",
+    "nameHe": "גיאנה",
+    "capital": "Georgetown",
+    "region": "Americas",
+    "subregion": "South America",
+    "population": 779004,
+    "area": 214969,
+    "languages": [
+      {
+        "code": "eng",
+        "name": "English"
+      }
+    ],
+    "flag": "/flags/guy.svg",
+    "independent": true,
+    "unMember": true
+  },
+  {
+    "cca2": "HT",
+    "cca3": "HTI",
+    "nameEn": "Haiti",
+    "nameHe": "האיטי",
+    "capital": "Port-au-Prince",
+    "region": "Americas",
+    "subregion": "Caribbean",
+    "population": 11123176,
+    "area": 27750,
+    "languages": [
+      {
+        "code": "fra",
+        "name": "French"
+      },
+      {
+        "code": "hat",
+        "name": "Haitian Creole"
+      }
+    ],
+    "flag": "/flags/hti.svg",
+    "independent": true,
+    "unMember": true
+  },
+  {
+    "cca2": "HM",
+    "cca3": "HMD",
+    "nameEn": "Heard Island and McDonald Islands",
+    "nameHe": "איי הרד ומקדונלד",
+    "capital": null,
+    "region": "Other",
+    "subregion": null,
+    "population": null,
+    "area": 412,
+    "languages": [
+      {
+        "code": "eng",
+        "name": "English"
+      }
+    ],
+    "flag": "/flags/hmd.svg",
+    "independent": false,
+    "unMember": false
+  },
+  {
+    "cca2": "HN",
+    "cca3": "HND",
+    "nameEn": "Honduras",
+    "nameHe": "הונדורס",
+    "capital": "Tegucigalpa",
+    "region": "Americas",
+    "subregion": "Central America",
+    "population": 9587522,
+    "area": 112492,
+    "languages": [
+      {
+        "code": "spa",
+        "name": "Spanish"
+      }
+    ],
+    "flag": "/flags/hnd.svg",
+    "independent": true,
+    "unMember": true
+  },
+  {
+    "cca2": "HK",
+    "cca3": "HKG",
+    "nameEn": "Hong Kong",
+    "nameHe": "הונג קונג (מחוז מנהלי מיוחד של סין)",
+    "capital": "City of Victoria",
+    "region": "Asia",
+    "subregion": "Eastern Asia",
+    "population": 7451000,
+    "area": 1104,
+    "languages": [
+      {
+        "code": "eng",
+        "name": "English"
+      },
+      {
+        "code": "zho",
+        "name": "Chinese"
+      }
+    ],
+    "flag": "/flags/hkg.svg",
+    "independent": false,
+    "unMember": false
+  },
+  {
+    "cca2": "HU",
+    "cca3": "HUN",
+    "nameEn": "Hungary",
+    "nameHe": "הונגריה",
+    "capital": "Budapest",
+    "region": "Europe",
+    "subregion": "Central Europe",
+    "population": 9775564,
+    "area": 93028,
+    "languages": [
+      {
+        "code": "hun",
+        "name": "Hungarian"
+      }
+    ],
+    "flag": "/flags/hun.svg",
+    "independent": true,
+    "unMember": true
+  },
+  {
+    "cca2": "IS",
+    "cca3": "ISL",
+    "nameEn": "Iceland",
+    "nameHe": "איסלנד",
+    "capital": "Reykjavik",
+    "region": "Europe",
+    "subregion": "Northern Europe",
+    "population": 352721,
+    "area": 103000,
+    "languages": [
+      {
+        "code": "isl",
+        "name": "Icelandic"
+      }
+    ],
+    "flag": "/flags/isl.svg",
+    "independent": true,
+    "unMember": true
+  },
+  {
+    "cca2": "IN",
+    "cca3": "IND",
+    "nameEn": "India",
+    "nameHe": "הודו",
+    "capital": "New Delhi",
+    "region": "Asia",
+    "subregion": "Southern Asia",
+    "population": 1352617328,
+    "area": 3287590,
+    "languages": [
+      {
+        "code": "eng",
+        "name": "English"
+      },
+      {
+        "code": "hin",
+        "name": "Hindi"
+      },
+      {
+        "code": "tam",
+        "name": "Tamil"
+      }
+    ],
+    "flag": "/flags/ind.svg",
+    "independent": true,
+    "unMember": true
+  },
+  {
+    "cca2": "ID",
+    "cca3": "IDN",
+    "nameEn": "Indonesia",
+    "nameHe": "אינדונזיה",
+    "capital": "Jakarta",
+    "region": "Asia",
+    "subregion": "South-Eastern Asia",
+    "population": 267663435,
+    "area": 1904569,
+    "languages": [
+      {
+        "code": "ind",
+        "name": "Indonesian"
+      }
+    ],
+    "flag": "/flags/idn.svg",
+    "independent": true,
+    "unMember": true
+  },
+  {
+    "cca2": "IR",
+    "cca3": "IRN",
+    "nameEn": "Iran",
+    "nameHe": "איראן",
+    "capital": "Tehran",
+    "region": "Asia",
+    "subregion": "Southern Asia",
+    "population": 81800269,
+    "area": 1648195,
+    "languages": [
+      {
+        "code": "fas",
+        "name": "Persian (Farsi)"
+      }
+    ],
+    "flag": "/flags/irn.svg",
+    "independent": true,
+    "unMember": true
+  },
+  {
+    "cca2": "IQ",
+    "cca3": "IRQ",
+    "nameEn": "Iraq",
+    "nameHe": "עיראק",
+    "capital": "Baghdad",
+    "region": "Asia",
+    "subregion": "Western Asia",
+    "population": 38433600,
+    "area": 438317,
+    "languages": [
+      {
+        "code": "ara",
+        "name": "Arabic"
+      },
+      {
+        "code": "arc",
+        "name": "Aramaic"
+      },
+      {
+        "code": "ckb",
+        "name": "Sorani"
+      }
+    ],
+    "flag": "/flags/irq.svg",
+    "independent": true,
+    "unMember": true
+  },
+  {
+    "cca2": "IE",
+    "cca3": "IRL",
+    "nameEn": "Ireland",
+    "nameHe": "אירלנד",
+    "capital": "Dublin",
+    "region": "Europe",
+    "subregion": "Northern Europe",
+    "population": 4867309,
+    "area": 70273,
+    "languages": [
+      {
+        "code": "eng",
+        "name": "English"
+      },
+      {
+        "code": "gle",
+        "name": "Irish"
+      }
+    ],
+    "flag": "/flags/irl.svg",
+    "independent": true,
+    "unMember": true
+  },
+  {
+    "cca2": "IM",
+    "cca3": "IMN",
+    "nameEn": "Isle of Man",
+    "nameHe": "האי מאן",
+    "capital": "Douglas",
+    "region": "Europe",
+    "subregion": "Northern Europe",
+    "population": 84069,
+    "area": 572,
+    "languages": [
+      {
+        "code": "eng",
+        "name": "English"
+      },
+      {
+        "code": "glv",
+        "name": "Manx"
+      }
+    ],
+    "flag": "/flags/imn.svg",
+    "independent": false,
+    "unMember": false
+  },
+  {
+    "cca2": "IL",
+    "cca3": "ISR",
+    "nameEn": "Israel",
+    "nameHe": "ישראל",
+    "capital": "Jerusalem",
+    "region": "Asia",
+    "subregion": "Western Asia",
+    "population": 8882800,
+    "area": 20770,
+    "languages": [
+      {
+        "code": "ara",
+        "name": "Arabic"
+      },
+      {
+        "code": "heb",
+        "name": "Hebrew"
+      }
+    ],
+    "flag": "/flags/isr.svg",
+    "independent": true,
+    "unMember": true
+  },
+  {
+    "cca2": "IT",
+    "cca3": "ITA",
+    "nameEn": "Italy",
+    "nameHe": "איטליה",
+    "capital": "Rome",
+    "region": "Europe",
+    "subregion": "Southern Europe",
+    "population": 60421760,
+    "area": 301336,
+    "languages": [
+      {
+        "code": "ita",
+        "name": "Italian"
+      }
+    ],
+    "flag": "/flags/ita.svg",
+    "independent": true,
+    "unMember": true
+  },
+  {
+    "cca2": "CI",
+    "cca3": "CIV",
+    "nameEn": "Ivory Coast",
+    "nameHe": "חוף השנהב",
+    "capital": "Yamoussoukro",
+    "region": "Africa",
+    "subregion": "Western Africa",
+    "population": 25069229,
+    "area": 322463,
+    "languages": [
+      {
+        "code": "fra",
+        "name": "French"
+      }
+    ],
+    "flag": "/flags/civ.svg",
+    "independent": true,
+    "unMember": true
+  },
+  {
+    "cca2": "JM",
+    "cca3": "JAM",
+    "nameEn": "Jamaica",
+    "nameHe": "ג׳מייקה",
+    "capital": "Kingston",
+    "region": "Americas",
+    "subregion": "Caribbean",
+    "population": 2934855,
+    "area": 10991,
+    "languages": [
+      {
+        "code": "eng",
+        "name": "English"
+      },
+      {
+        "code": "jam",
+        "name": "Jamaican Patois"
+      }
+    ],
+    "flag": "/flags/jam.svg",
+    "independent": true,
+    "unMember": true
+  },
+  {
+    "cca2": "JP",
+    "cca3": "JPN",
+    "nameEn": "Japan",
+    "nameHe": "יפן",
+    "capital": "Tokyo",
+    "region": "Asia",
+    "subregion": "Eastern Asia",
+    "population": 126529100,
+    "area": 377930,
+    "languages": [
+      {
+        "code": "jpn",
+        "name": "Japanese"
+      }
+    ],
+    "flag": "/flags/jpn.svg",
+    "independent": true,
+    "unMember": true
+  },
+  {
+    "cca2": "JE",
+    "cca3": "JEY",
+    "nameEn": "Jersey",
+    "nameHe": "ג׳רסי",
+    "capital": "Saint Helier",
+    "region": "Europe",
+    "subregion": "Northern Europe",
+    "population": 103267,
+    "area": 116,
+    "languages": [
+      {
+        "code": "eng",
+        "name": "English"
+      },
+      {
+        "code": "fra",
+        "name": "French"
+      },
+      {
+        "code": "nrf",
+        "name": "Jèrriais"
+      }
+    ],
+    "flag": "/flags/jey.svg",
+    "independent": false,
+    "unMember": false
+  },
+  {
+    "cca2": "JO",
+    "cca3": "JOR",
+    "nameEn": "Jordan",
+    "nameHe": "ירדן",
+    "capital": "Amman",
+    "region": "Asia",
+    "subregion": "Western Asia",
+    "population": 9956011,
+    "area": 89342,
+    "languages": [
+      {
+        "code": "ara",
+        "name": "Arabic"
+      }
+    ],
+    "flag": "/flags/jor.svg",
+    "independent": true,
+    "unMember": true
+  },
+  {
+    "cca2": "KZ",
+    "cca3": "KAZ",
+    "nameEn": "Kazakhstan",
+    "nameHe": "קזחסטן",
+    "capital": "Astana",
+    "region": "Asia",
+    "subregion": "Central Asia",
+    "population": 18272430,
+    "area": 2724900,
+    "languages": [
+      {
+        "code": "kaz",
+        "name": "Kazakh"
+      },
+      {
+        "code": "rus",
+        "name": "Russian"
+      }
+    ],
+    "flag": "/flags/kaz.svg",
+    "independent": true,
+    "unMember": true
+  },
+  {
+    "cca2": "KE",
+    "cca3": "KEN",
+    "nameEn": "Kenya",
+    "nameHe": "קניה",
+    "capital": "Nairobi",
+    "region": "Africa",
+    "subregion": "Eastern Africa",
+    "population": 51393010,
+    "area": 580367,
+    "languages": [
+      {
+        "code": "eng",
+        "name": "English"
+      },
+      {
+        "code": "swa",
+        "name": "Swahili"
+      }
+    ],
+    "flag": "/flags/ken.svg",
+    "independent": true,
+    "unMember": true
+  },
+  {
+    "cca2": "KI",
+    "cca3": "KIR",
+    "nameEn": "Kiribati",
+    "nameHe": "קיריבאטי",
+    "capital": "South Tarawa",
+    "region": "Oceania",
+    "subregion": "Micronesia",
+    "population": 115847,
+    "area": 811,
+    "languages": [
+      {
+        "code": "eng",
+        "name": "English"
+      },
+      {
+        "code": "gil",
+        "name": "Gilbertese"
+      }
+    ],
+    "flag": "/flags/kir.svg",
+    "independent": true,
+    "unMember": true
+  },
+  {
+    "cca2": "XK",
+    "cca3": "UNK",
+    "nameEn": "Kosovo",
+    "nameHe": "קוסובו",
+    "capital": "Pristina",
+    "region": "Europe",
+    "subregion": "Southeast Europe",
+    "population": 1586659,
+    "area": 10908,
+    "languages": [
+      {
+        "code": "sqi",
+        "name": "Albanian"
+      },
+      {
+        "code": "srp",
+        "name": "Serbian"
+      }
+    ],
+    "flag": "/flags/unk.svg",
+    "independent": false,
+    "unMember": false
+  },
+  {
+    "cca2": "KW",
+    "cca3": "KWT",
+    "nameEn": "Kuwait",
+    "nameHe": "כווית",
+    "capital": "Kuwait City",
+    "region": "Asia",
+    "subregion": "Western Asia",
+    "population": 4137309,
+    "area": 17818,
+    "languages": [
+      {
+        "code": "ara",
+        "name": "Arabic"
+      }
+    ],
+    "flag": "/flags/kwt.svg",
+    "independent": true,
+    "unMember": true
+  },
+  {
+    "cca2": "KG",
+    "cca3": "KGZ",
+    "nameEn": "Kyrgyzstan",
+    "nameHe": "קירגיזסטן",
+    "capital": "Bishkek",
+    "region": "Asia",
+    "subregion": "Central Asia",
+    "population": 6322800,
+    "area": 199951,
+    "languages": [
+      {
+        "code": "kir",
+        "name": "Kyrgyz"
+      },
+      {
+        "code": "rus",
+        "name": "Russian"
+      }
+    ],
+    "flag": "/flags/kgz.svg",
+    "independent": true,
+    "unMember": true
+  },
+  {
+    "cca2": "LA",
+    "cca3": "LAO",
+    "nameEn": "Laos",
+    "nameHe": "לאוס",
+    "capital": "Vientiane",
+    "region": "Asia",
+    "subregion": "South-Eastern Asia",
+    "population": 7061507,
+    "area": 236800,
+    "languages": [
+      {
+        "code": "lao",
+        "name": "Lao"
+      }
+    ],
+    "flag": "/flags/lao.svg",
+    "independent": true,
+    "unMember": true
+  },
+  {
+    "cca2": "LV",
+    "cca3": "LVA",
+    "nameEn": "Latvia",
+    "nameHe": "לטביה",
+    "capital": "Riga",
+    "region": "Europe",
+    "subregion": "Northern Europe",
+    "population": 1927174,
+    "area": 64559,
+    "languages": [
+      {
+        "code": "lav",
+        "name": "Latvian"
+      }
+    ],
+    "flag": "/flags/lva.svg",
+    "independent": true,
+    "unMember": true
+  },
+  {
+    "cca2": "LB",
+    "cca3": "LBN",
+    "nameEn": "Lebanon",
+    "nameHe": "לבנון",
+    "capital": "Beirut",
+    "region": "Asia",
+    "subregion": "Western Asia",
+    "population": 6848925,
+    "area": 10452,
+    "languages": [
+      {
+        "code": "ara",
+        "name": "Arabic"
+      },
+      {
+        "code": "fra",
+        "name": "French"
+      }
+    ],
+    "flag": "/flags/lbn.svg",
+    "independent": true,
+    "unMember": true
+  },
+  {
+    "cca2": "LS",
+    "cca3": "LSO",
+    "nameEn": "Lesotho",
+    "nameHe": "לסוטו",
+    "capital": "Maseru",
+    "region": "Africa",
+    "subregion": "Southern Africa",
+    "population": 2108132,
+    "area": 30355,
+    "languages": [
+      {
+        "code": "eng",
+        "name": "English"
+      },
+      {
+        "code": "sot",
+        "name": "Sotho"
+      }
+    ],
+    "flag": "/flags/lso.svg",
+    "independent": true,
+    "unMember": true
+  },
+  {
+    "cca2": "LR",
+    "cca3": "LBR",
+    "nameEn": "Liberia",
+    "nameHe": "ליבריה",
+    "capital": "Monrovia",
+    "region": "Africa",
+    "subregion": "Western Africa",
+    "population": 4818977,
+    "area": 111369,
+    "languages": [
+      {
+        "code": "eng",
+        "name": "English"
+      }
+    ],
+    "flag": "/flags/lbr.svg",
+    "independent": true,
+    "unMember": true
+  },
+  {
+    "cca2": "LY",
+    "cca3": "LBY",
+    "nameEn": "Libya",
+    "nameHe": "לוב",
+    "capital": "Tripoli",
+    "region": "Africa",
+    "subregion": "Northern Africa",
+    "population": 6678567,
+    "area": 1759540,
+    "languages": [
+      {
+        "code": "ara",
+        "name": "Arabic"
+      }
+    ],
+    "flag": "/flags/lby.svg",
+    "independent": true,
+    "unMember": true
+  },
+  {
+    "cca2": "LI",
+    "cca3": "LIE",
+    "nameEn": "Liechtenstein",
+    "nameHe": "ליכטנשטיין",
+    "capital": "Vaduz",
+    "region": "Europe",
+    "subregion": "Western Europe",
+    "population": 37910,
+    "area": 160,
+    "languages": [
+      {
+        "code": "deu",
+        "name": "German"
+      }
+    ],
+    "flag": "/flags/lie.svg",
+    "independent": true,
+    "unMember": true
+  },
+  {
+    "cca2": "LT",
+    "cca3": "LTU",
+    "nameEn": "Lithuania",
+    "nameHe": "ליטא",
+    "capital": "Vilnius",
+    "region": "Europe",
+    "subregion": "Northern Europe",
+    "population": 2801543,
+    "area": 65300,
+    "languages": [
+      {
+        "code": "lit",
+        "name": "Lithuanian"
+      }
+    ],
+    "flag": "/flags/ltu.svg",
+    "independent": true,
+    "unMember": true
+  },
+  {
+    "cca2": "LU",
+    "cca3": "LUX",
+    "nameEn": "Luxembourg",
+    "nameHe": "לוקסמבורג",
+    "capital": "Luxembourg",
+    "region": "Europe",
+    "subregion": "Western Europe",
+    "population": 607950,
+    "area": 2586,
+    "languages": [
+      {
+        "code": "deu",
+        "name": "German"
+      },
+      {
+        "code": "fra",
+        "name": "French"
+      },
+      {
+        "code": "ltz",
+        "name": "Luxembourgish"
+      }
+    ],
+    "flag": "/flags/lux.svg",
+    "independent": true,
+    "unMember": true
+  },
+  {
+    "cca2": "MO",
+    "cca3": "MAC",
+    "nameEn": "Macau",
+    "nameHe": "מקאו (מחוז מנהלי מיוחד של סין)",
+    "capital": null,
+    "region": "Asia",
+    "subregion": "Eastern Asia",
+    "population": 631636,
+    "area": 30,
+    "languages": [
+      {
+        "code": "por",
+        "name": "Portuguese"
+      },
+      {
+        "code": "zho",
+        "name": "Chinese"
+      }
+    ],
+    "flag": "/flags/mac.svg",
+    "independent": false,
+    "unMember": false
+  },
+  {
+    "cca2": "MG",
+    "cca3": "MDG",
+    "nameEn": "Madagascar",
+    "nameHe": "מדגסקר",
+    "capital": "Antananarivo",
+    "region": "Africa",
+    "subregion": "Eastern Africa",
+    "population": 26262368,
+    "area": 587041,
+    "languages": [
+      {
+        "code": "fra",
+        "name": "French"
+      },
+      {
+        "code": "mlg",
+        "name": "Malagasy"
+      }
+    ],
+    "flag": "/flags/mdg.svg",
+    "independent": true,
+    "unMember": true
+  },
+  {
+    "cca2": "MW",
+    "cca3": "MWI",
+    "nameEn": "Malawi",
+    "nameHe": "מלאווי",
+    "capital": "Lilongwe",
+    "region": "Africa",
+    "subregion": "Eastern Africa",
+    "population": 18143315,
+    "area": 118484,
+    "languages": [
+      {
+        "code": "eng",
+        "name": "English"
+      },
+      {
+        "code": "nya",
+        "name": "Chewa"
+      }
+    ],
+    "flag": "/flags/mwi.svg",
+    "independent": true,
+    "unMember": true
+  },
+  {
+    "cca2": "MY",
+    "cca3": "MYS",
+    "nameEn": "Malaysia",
+    "nameHe": "מלזיה",
+    "capital": "Kuala Lumpur",
+    "region": "Asia",
+    "subregion": "South-Eastern Asia",
+    "population": 31528585,
+    "area": 330803,
+    "languages": [
+      {
+        "code": "eng",
+        "name": "English"
+      },
+      {
+        "code": "msa",
+        "name": "Malay"
+      }
+    ],
+    "flag": "/flags/mys.svg",
+    "independent": true,
+    "unMember": true
+  },
+  {
+    "cca2": "MV",
+    "cca3": "MDV",
+    "nameEn": "Maldives",
+    "nameHe": "האיים המלדיביים",
+    "capital": "Malé",
+    "region": "Asia",
+    "subregion": "Southern Asia",
+    "population": 515696,
+    "area": 300,
+    "languages": [
+      {
+        "code": "div",
+        "name": "Maldivian"
+      }
+    ],
+    "flag": "/flags/mdv.svg",
+    "independent": true,
+    "unMember": true
+  },
+  {
+    "cca2": "ML",
+    "cca3": "MLI",
+    "nameEn": "Mali",
+    "nameHe": "מאלי",
+    "capital": "Bamako",
+    "region": "Africa",
+    "subregion": "Western Africa",
+    "population": 19077690,
+    "area": 1240192,
+    "languages": [
+      {
+        "code": "fra",
+        "name": "French"
+      }
+    ],
+    "flag": "/flags/mli.svg",
+    "independent": true,
+    "unMember": true
+  },
+  {
+    "cca2": "MT",
+    "cca3": "MLT",
+    "nameEn": "Malta",
+    "nameHe": "מלטה",
+    "capital": "Valletta",
+    "region": "Europe",
+    "subregion": "Southern Europe",
+    "population": 484630,
+    "area": 316,
+    "languages": [
+      {
+        "code": "eng",
+        "name": "English"
+      },
+      {
+        "code": "mlt",
+        "name": "Maltese"
+      }
+    ],
+    "flag": "/flags/mlt.svg",
+    "independent": true,
+    "unMember": true
+  },
+  {
+    "cca2": "MH",
+    "cca3": "MHL",
+    "nameEn": "Marshall Islands",
+    "nameHe": "איי מרשל",
+    "capital": "Majuro",
+    "region": "Oceania",
+    "subregion": "Micronesia",
+    "population": 58413,
+    "area": 181,
+    "languages": [
+      {
+        "code": "eng",
+        "name": "English"
+      },
+      {
+        "code": "mah",
+        "name": "Marshallese"
+      }
+    ],
+    "flag": "/flags/mhl.svg",
+    "independent": true,
+    "unMember": true
+  },
+  {
+    "cca2": "MQ",
+    "cca3": "MTQ",
+    "nameEn": "Martinique",
+    "nameHe": "מרטיניק",
+    "capital": "Fort-de-France",
+    "region": "Americas",
+    "subregion": "Caribbean",
+    "population": 376480,
+    "area": 1128,
+    "languages": [
+      {
+        "code": "fra",
+        "name": "French"
+      }
+    ],
+    "flag": "/flags/mtq.svg",
+    "independent": false,
+    "unMember": false
+  },
+  {
+    "cca2": "MR",
+    "cca3": "MRT",
+    "nameEn": "Mauritania",
+    "nameHe": "מאוריטניה",
+    "capital": "Nouakchott",
+    "region": "Africa",
+    "subregion": "Western Africa",
+    "population": 4403319,
+    "area": 1030700,
+    "languages": [
+      {
+        "code": "ara",
+        "name": "Arabic"
+      }
+    ],
+    "flag": "/flags/mrt.svg",
+    "independent": true,
+    "unMember": true
+  },
+  {
+    "cca2": "MU",
+    "cca3": "MUS",
+    "nameEn": "Mauritius",
+    "nameHe": "מאוריציוס",
+    "capital": "Port Louis",
+    "region": "Africa",
+    "subregion": "Eastern Africa",
+    "population": 1265303,
+    "area": 2040,
+    "languages": [
+      {
+        "code": "eng",
+        "name": "English"
+      },
+      {
+        "code": "fra",
+        "name": "French"
+      },
+      {
+        "code": "mfe",
+        "name": "Mauritian Creole"
+      }
+    ],
+    "flag": "/flags/mus.svg",
+    "independent": true,
+    "unMember": true
+  },
+  {
+    "cca2": "YT",
+    "cca3": "MYT",
+    "nameEn": "Mayotte",
+    "nameHe": "מאיוט",
+    "capital": "Mamoudzou",
+    "region": "Africa",
+    "subregion": "Eastern Africa",
+    "population": 270372,
+    "area": 374,
+    "languages": [
+      {
+        "code": "fra",
+        "name": "French"
+      }
+    ],
+    "flag": "/flags/myt.svg",
+    "independent": false,
+    "unMember": false
+  },
+  {
+    "cca2": "MX",
+    "cca3": "MEX",
+    "nameEn": "Mexico",
+    "nameHe": "מקסיקו",
+    "capital": "Mexico City",
+    "region": "Americas",
+    "subregion": "North America",
+    "population": 126190788,
+    "area": 1964375,
+    "languages": [
+      {
+        "code": "spa",
+        "name": "Spanish"
+      }
+    ],
+    "flag": "/flags/mex.svg",
+    "independent": true,
+    "unMember": true
+  },
+  {
+    "cca2": "FM",
+    "cca3": "FSM",
+    "nameEn": "Micronesia",
+    "nameHe": "מיקרונזיה",
+    "capital": "Palikir",
+    "region": "Oceania",
+    "subregion": "Micronesia",
+    "population": 112640,
+    "area": 702,
+    "languages": [
+      {
+        "code": "eng",
+        "name": "English"
+      }
+    ],
+    "flag": "/flags/fsm.svg",
+    "independent": true,
+    "unMember": true
+  },
+  {
+    "cca2": "MD",
+    "cca3": "MDA",
+    "nameEn": "Moldova",
+    "nameHe": "מולדובה",
+    "capital": "Chișinău",
+    "region": "Europe",
+    "subregion": "Eastern Europe",
+    "population": 2706049,
+    "area": 33846,
+    "languages": [
+      {
+        "code": "ron",
+        "name": "Moldavian"
+      }
+    ],
+    "flag": "/flags/mda.svg",
+    "independent": true,
+    "unMember": true
+  },
+  {
+    "cca2": "MC",
+    "cca3": "MCO",
+    "nameEn": "Monaco",
+    "nameHe": "מונקו",
+    "capital": "Monaco",
+    "region": "Europe",
+    "subregion": "Western Europe",
+    "population": 38682,
+    "area": 2.02,
+    "languages": [
+      {
+        "code": "fra",
+        "name": "French"
+      }
+    ],
+    "flag": "/flags/mco.svg",
+    "independent": true,
+    "unMember": true
+  },
+  {
+    "cca2": "MN",
+    "cca3": "MNG",
+    "nameEn": "Mongolia",
+    "nameHe": "מונגוליה",
+    "capital": "Ulan Bator",
+    "region": "Asia",
+    "subregion": "Eastern Asia",
+    "population": 3170208,
+    "area": 1564110,
+    "languages": [
+      {
+        "code": "mon",
+        "name": "Mongolian"
+      }
+    ],
+    "flag": "/flags/mng.svg",
+    "independent": true,
+    "unMember": true
+  },
+  {
+    "cca2": "ME",
+    "cca3": "MNE",
+    "nameEn": "Montenegro",
+    "nameHe": "מונטנגרו",
+    "capital": "Podgorica",
+    "region": "Europe",
+    "subregion": "Southeast Europe",
+    "population": 631219,
+    "area": 13812,
+    "languages": [
+      {
+        "code": "cnr",
+        "name": "Montenegrin"
+      }
+    ],
+    "flag": "/flags/mne.svg",
+    "independent": true,
+    "unMember": true
+  },
+  {
+    "cca2": "MS",
+    "cca3": "MSR",
+    "nameEn": "Montserrat",
+    "nameHe": "מונסראט",
+    "capital": "Plymouth",
+    "region": "Americas",
+    "subregion": "Caribbean",
+    "population": 5900,
+    "area": 102,
+    "languages": [
+      {
+        "code": "eng",
+        "name": "English"
+      }
+    ],
+    "flag": "/flags/msr.svg",
+    "independent": false,
+    "unMember": false
+  },
+  {
+    "cca2": "MA",
+    "cca3": "MAR",
+    "nameEn": "Morocco",
+    "nameHe": "מרוקו",
+    "capital": "Rabat",
+    "region": "Africa",
+    "subregion": "Northern Africa",
+    "population": 36029138,
+    "area": 446550,
+    "languages": [
+      {
+        "code": "ara",
+        "name": "Arabic"
+      },
+      {
+        "code": "ber",
+        "name": "Berber"
+      }
+    ],
+    "flag": "/flags/mar.svg",
+    "independent": true,
+    "unMember": true
+  },
+  {
+    "cca2": "MZ",
+    "cca3": "MOZ",
+    "nameEn": "Mozambique",
+    "nameHe": "מוזמביק",
+    "capital": "Maputo",
+    "region": "Africa",
+    "subregion": "Eastern Africa",
+    "population": 29495962,
+    "area": 801590,
+    "languages": [
+      {
+        "code": "por",
+        "name": "Portuguese"
+      }
+    ],
+    "flag": "/flags/moz.svg",
+    "independent": true,
+    "unMember": true
+  },
+  {
+    "cca2": "MM",
+    "cca3": "MMR",
+    "nameEn": "Myanmar",
+    "nameHe": "מיאנמר (בורמה)",
+    "capital": "Naypyidaw",
+    "region": "Asia",
+    "subregion": "South-Eastern Asia",
+    "population": 53708395,
+    "area": 676578,
+    "languages": [
+      {
+        "code": "mya",
+        "name": "Burmese"
+      }
+    ],
+    "flag": "/flags/mmr.svg",
+    "independent": true,
+    "unMember": true
+  },
+  {
+    "cca2": "NA",
+    "cca3": "NAM",
+    "nameEn": "Namibia",
+    "nameHe": "נמיביה",
+    "capital": "Windhoek",
+    "region": "Africa",
+    "subregion": "Southern Africa",
+    "population": 2448255,
+    "area": 825615,
+    "languages": [
+      {
+        "code": "afr",
+        "name": "Afrikaans"
+      },
+      {
+        "code": "deu",
+        "name": "German"
+      },
+      {
+        "code": "eng",
+        "name": "English"
+      },
+      {
+        "code": "her",
+        "name": "Herero"
+      },
+      {
+        "code": "hgm",
+        "name": "Khoekhoe"
+      },
+      {
+        "code": "kwn",
+        "name": "Kwangali"
+      },
+      {
+        "code": "loz",
+        "name": "Lozi"
+      },
+      {
+        "code": "ndo",
+        "name": "Ndonga"
+      },
+      {
+        "code": "tsn",
+        "name": "Tswana"
+      }
+    ],
+    "flag": "/flags/nam.svg",
+    "independent": true,
+    "unMember": true
+  },
+  {
+    "cca2": "NR",
+    "cca3": "NRU",
+    "nameEn": "Nauru",
+    "nameHe": "נאורו",
+    "capital": "Yaren",
+    "region": "Oceania",
+    "subregion": "Micronesia",
+    "population": 12704,
+    "area": 21,
+    "languages": [
+      {
+        "code": "eng",
+        "name": "English"
+      },
+      {
+        "code": "nau",
+        "name": "Nauru"
+      }
+    ],
+    "flag": "/flags/nru.svg",
+    "independent": true,
+    "unMember": true
+  },
+  {
+    "cca2": "NP",
+    "cca3": "NPL",
+    "nameEn": "Nepal",
+    "nameHe": "נפאל",
+    "capital": "Kathmandu",
+    "region": "Asia",
+    "subregion": "Southern Asia",
+    "population": 28087871,
+    "area": 147181,
+    "languages": [
+      {
+        "code": "nep",
+        "name": "Nepali"
+      }
+    ],
+    "flag": "/flags/npl.svg",
+    "independent": true,
+    "unMember": true
+  },
+  {
+    "cca2": "NL",
+    "cca3": "NLD",
+    "nameEn": "Netherlands",
+    "nameHe": "הולנד",
+    "capital": "Amsterdam",
+    "region": "Europe",
+    "subregion": "Western Europe",
+    "population": 17231624,
+    "area": 41850,
+    "languages": [
+      {
+        "code": "nld",
+        "name": "Dutch"
+      }
+    ],
+    "flag": "/flags/nld.svg",
+    "independent": true,
+    "unMember": true
+  },
+  {
+    "cca2": "NC",
+    "cca3": "NCL",
+    "nameEn": "New Caledonia",
+    "nameHe": "קלדוניה החדשה",
+    "capital": "Nouméa",
+    "region": "Oceania",
+    "subregion": "Melanesia",
+    "population": 284060,
+    "area": 18575,
+    "languages": [
+      {
+        "code": "fra",
+        "name": "French"
+      }
+    ],
+    "flag": "/flags/ncl.svg",
+    "independent": false,
+    "unMember": false
+  },
+  {
+    "cca2": "NZ",
+    "cca3": "NZL",
+    "nameEn": "New Zealand",
+    "nameHe": "ניו זילנד",
+    "capital": "Wellington",
+    "region": "Oceania",
+    "subregion": "Australia and New Zealand",
+    "population": 4841000,
+    "area": 270467,
+    "languages": [
+      {
+        "code": "eng",
+        "name": "English"
+      },
+      {
+        "code": "mri",
+        "name": "Māori"
+      },
+      {
+        "code": "nzs",
+        "name": "New Zealand Sign Language"
+      }
+    ],
+    "flag": "/flags/nzl.svg",
+    "independent": true,
+    "unMember": true
+  },
+  {
+    "cca2": "NI",
+    "cca3": "NIC",
+    "nameEn": "Nicaragua",
+    "nameHe": "ניקרגואה",
+    "capital": "Managua",
+    "region": "Americas",
+    "subregion": "Central America",
+    "population": 6465513,
+    "area": 130373,
+    "languages": [
+      {
+        "code": "spa",
+        "name": "Spanish"
+      }
+    ],
+    "flag": "/flags/nic.svg",
+    "independent": true,
+    "unMember": true
+  },
+  {
+    "cca2": "NE",
+    "cca3": "NER",
+    "nameEn": "Niger",
+    "nameHe": "ניז׳ר",
+    "capital": "Niamey",
+    "region": "Africa",
+    "subregion": "Western Africa",
+    "population": 22442948,
+    "area": 1267000,
+    "languages": [
+      {
+        "code": "fra",
+        "name": "French"
+      }
+    ],
+    "flag": "/flags/ner.svg",
+    "independent": true,
+    "unMember": true
+  },
+  {
+    "cca2": "NG",
+    "cca3": "NGA",
+    "nameEn": "Nigeria",
+    "nameHe": "ניגריה",
+    "capital": "Abuja",
+    "region": "Africa",
+    "subregion": "Western Africa",
+    "population": 195874740,
+    "area": 923768,
+    "languages": [
+      {
+        "code": "eng",
+        "name": "English"
+      }
+    ],
+    "flag": "/flags/nga.svg",
+    "independent": true,
+    "unMember": true
+  },
+  {
+    "cca2": "NU",
+    "cca3": "NIU",
+    "nameEn": "Niue",
+    "nameHe": "ניווה",
+    "capital": "Alofi",
+    "region": "Oceania",
+    "subregion": "Polynesia",
+    "population": 1624,
+    "area": 260,
+    "languages": [
+      {
+        "code": "eng",
+        "name": "English"
+      },
+      {
+        "code": "niu",
+        "name": "Niuean"
+      }
+    ],
+    "flag": "/flags/niu.svg",
+    "independent": false,
+    "unMember": false
+  },
+  {
+    "cca2": "NF",
+    "cca3": "NFK",
+    "nameEn": "Norfolk Island",
+    "nameHe": "איי נורפוק",
+    "capital": "Kingston",
+    "region": "Oceania",
+    "subregion": "Australia and New Zealand",
+    "population": 2169,
+    "area": 36,
+    "languages": [
+      {
+        "code": "eng",
+        "name": "English"
+      },
+      {
+        "code": "pih",
+        "name": "Norfuk"
+      }
+    ],
+    "flag": "/flags/nfk.svg",
+    "independent": false,
+    "unMember": false
+  },
+  {
+    "cca2": "KP",
+    "cca3": "PRK",
+    "nameEn": "North Korea",
+    "nameHe": "קוריאה הצפונית",
+    "capital": "Pyongyang",
+    "region": "Asia",
+    "subregion": "Eastern Asia",
+    "population": 25549819,
+    "area": 120538,
+    "languages": [
+      {
+        "code": "kor",
+        "name": "Korean"
+      }
+    ],
+    "flag": "/flags/prk.svg",
+    "independent": true,
+    "unMember": true
+  },
+  {
+    "cca2": "MK",
+    "cca3": "MKD",
+    "nameEn": "North Macedonia",
+    "nameHe": "מקדוניה הצפונית",
+    "capital": "Skopje",
+    "region": "Europe",
+    "subregion": "Southeast Europe",
+    "population": 2084367,
+    "area": 25713,
+    "languages": [
+      {
+        "code": "mkd",
+        "name": "Macedonian"
+      }
+    ],
+    "flag": "/flags/mkd.svg",
+    "independent": true,
+    "unMember": true
+  },
+  {
+    "cca2": "MP",
+    "cca3": "MNP",
+    "nameEn": "Northern Mariana Islands",
+    "nameHe": "איי מריאנה הצפוניים",
+    "capital": "Saipan",
+    "region": "Oceania",
+    "subregion": "Micronesia",
+    "population": 56882,
+    "area": 464,
+    "languages": [
+      {
+        "code": "cal",
+        "name": "Carolinian"
+      },
+      {
+        "code": "cha",
+        "name": "Chamorro"
+      },
+      {
+        "code": "eng",
+        "name": "English"
+      }
+    ],
+    "flag": "/flags/mnp.svg",
+    "independent": false,
+    "unMember": false
+  },
+  {
+    "cca2": "NO",
+    "cca3": "NOR",
+    "nameEn": "Norway",
+    "nameHe": "נורווגיה",
+    "capital": "Oslo",
+    "region": "Europe",
+    "subregion": "Northern Europe",
+    "population": 5311916,
+    "area": 323802,
+    "languages": [
+      {
+        "code": "nno",
+        "name": "Norwegian Nynorsk"
+      },
+      {
+        "code": "nob",
+        "name": "Norwegian Bokmål"
+      },
+      {
+        "code": "smi",
+        "name": "Sami"
+      }
+    ],
+    "flag": "/flags/nor.svg",
+    "independent": true,
+    "unMember": true
+  },
+  {
+    "cca2": "OM",
+    "cca3": "OMN",
+    "nameEn": "Oman",
+    "nameHe": "עומאן",
+    "capital": "Muscat",
+    "region": "Asia",
+    "subregion": "Western Asia",
+    "population": 4829483,
+    "area": 309500,
+    "languages": [
+      {
+        "code": "ara",
+        "name": "Arabic"
+      }
+    ],
+    "flag": "/flags/omn.svg",
+    "independent": true,
+    "unMember": true
+  },
+  {
+    "cca2": "PK",
+    "cca3": "PAK",
+    "nameEn": "Pakistan",
+    "nameHe": "פקיסטן",
+    "capital": "Islamabad",
+    "region": "Asia",
+    "subregion": "Southern Asia",
+    "population": 212215030,
+    "area": 881912,
+    "languages": [
+      {
+        "code": "eng",
+        "name": "English"
+      },
+      {
+        "code": "urd",
+        "name": "Urdu"
+      }
+    ],
+    "flag": "/flags/pak.svg",
+    "independent": true,
+    "unMember": true
+  },
+  {
+    "cca2": "PW",
+    "cca3": "PLW",
+    "nameEn": "Palau",
+    "nameHe": "פלאו",
+    "capital": "Ngerulmud",
+    "region": "Oceania",
+    "subregion": "Micronesia",
+    "population": 17907,
+    "area": 459,
+    "languages": [
+      {
+        "code": "eng",
+        "name": "English"
+      },
+      {
+        "code": "pau",
+        "name": "Palauan"
+      }
+    ],
+    "flag": "/flags/plw.svg",
+    "independent": true,
+    "unMember": true
+  },
+  {
+    "cca2": "PS",
+    "cca3": "PSE",
+    "nameEn": "Palestine",
+    "nameHe": "השטחים הפלסטיניים",
+    "capital": "Ramallah",
+    "region": "Asia",
+    "subregion": "Western Asia",
+    "population": 4569087,
+    "area": 6220,
+    "languages": [
+      {
+        "code": "ara",
+        "name": "Arabic"
+      }
+    ],
+    "flag": "/flags/pse.svg",
+    "independent": false,
+    "unMember": false
+  },
+  {
+    "cca2": "PA",
+    "cca3": "PAN",
+    "nameEn": "Panama",
+    "nameHe": "פנמה",
+    "capital": "Panama City",
+    "region": "Americas",
+    "subregion": "Central America",
+    "population": 4176873,
+    "area": 75417,
+    "languages": [
+      {
+        "code": "spa",
+        "name": "Spanish"
+      }
+    ],
+    "flag": "/flags/pan.svg",
+    "independent": true,
+    "unMember": true
+  },
+  {
+    "cca2": "PG",
+    "cca3": "PNG",
+    "nameEn": "Papua New Guinea",
+    "nameHe": "פפואה גינאה החדשה",
+    "capital": "Port Moresby",
+    "region": "Oceania",
+    "subregion": "Melanesia",
+    "population": 8606316,
+    "area": 462840,
+    "languages": [
+      {
+        "code": "eng",
+        "name": "English"
+      },
+      {
+        "code": "hmo",
+        "name": "Hiri Motu"
+      },
+      {
+        "code": "tpi",
+        "name": "Tok Pisin"
+      }
+    ],
+    "flag": "/flags/png.svg",
+    "independent": true,
+    "unMember": true
+  },
+  {
+    "cca2": "PY",
+    "cca3": "PRY",
+    "nameEn": "Paraguay",
+    "nameHe": "פרגוואי",
+    "capital": "Asunción",
+    "region": "Americas",
+    "subregion": "South America",
+    "population": 6956071,
+    "area": 406752,
+    "languages": [
+      {
+        "code": "grn",
+        "name": "Guaraní"
+      },
+      {
+        "code": "spa",
+        "name": "Spanish"
+      }
+    ],
+    "flag": "/flags/pry.svg",
+    "independent": true,
+    "unMember": true
+  },
+  {
+    "cca2": "PE",
+    "cca3": "PER",
+    "nameEn": "Peru",
+    "nameHe": "פרו",
+    "capital": "Lima",
+    "region": "Americas",
+    "subregion": "South America",
+    "population": 31989256,
+    "area": 1285216,
+    "languages": [
+      {
+        "code": "aym",
+        "name": "Aymara"
+      },
+      {
+        "code": "que",
+        "name": "Quechua"
+      },
+      {
+        "code": "spa",
+        "name": "Spanish"
+      }
+    ],
+    "flag": "/flags/per.svg",
+    "independent": true,
+    "unMember": true
+  },
+  {
+    "cca2": "PH",
+    "cca3": "PHL",
+    "nameEn": "Philippines",
+    "nameHe": "הפיליפינים",
+    "capital": "Manila",
+    "region": "Asia",
+    "subregion": "South-Eastern Asia",
+    "population": 106651922,
+    "area": 342353,
+    "languages": [
+      {
+        "code": "eng",
+        "name": "English"
+      },
+      {
+        "code": "fil",
+        "name": "Filipino"
+      }
+    ],
+    "flag": "/flags/phl.svg",
+    "independent": true,
+    "unMember": true
+  },
+  {
+    "cca2": "PN",
+    "cca3": "PCN",
+    "nameEn": "Pitcairn Islands",
+    "nameHe": "איי פיטקרן",
+    "capital": "Adamstown",
+    "region": "Oceania",
+    "subregion": "Polynesia",
+    "population": 67,
+    "area": 47,
+    "languages": [
+      {
+        "code": "eng",
+        "name": "English"
+      }
+    ],
+    "flag": "/flags/pcn.svg",
+    "independent": false,
+    "unMember": false
+  },
+  {
+    "cca2": "PL",
+    "cca3": "POL",
+    "nameEn": "Poland",
+    "nameHe": "פולין",
+    "capital": "Warsaw",
+    "region": "Europe",
+    "subregion": "Central Europe",
+    "population": 37974750,
+    "area": 312679,
+    "languages": [
+      {
+        "code": "pol",
+        "name": "Polish"
+      }
+    ],
+    "flag": "/flags/pol.svg",
+    "independent": true,
+    "unMember": true
+  },
+  {
+    "cca2": "PT",
+    "cca3": "PRT",
+    "nameEn": "Portugal",
+    "nameHe": "פורטוגל",
+    "capital": "Lisbon",
+    "region": "Europe",
+    "subregion": "Southern Europe",
+    "population": 10283822,
+    "area": 92090,
+    "languages": [
+      {
+        "code": "por",
+        "name": "Portuguese"
+      }
+    ],
+    "flag": "/flags/prt.svg",
+    "independent": true,
+    "unMember": true
+  },
+  {
+    "cca2": "PR",
+    "cca3": "PRI",
+    "nameEn": "Puerto Rico",
+    "nameHe": "פוארטו ריקו",
+    "capital": "San Juan",
+    "region": "Americas",
+    "subregion": "Caribbean",
+    "population": 3195153,
+    "area": 8870,
+    "languages": [
+      {
+        "code": "eng",
+        "name": "English"
+      },
+      {
+        "code": "spa",
+        "name": "Spanish"
+      }
+    ],
+    "flag": "/flags/pri.svg",
+    "independent": false,
+    "unMember": false
+  },
+  {
+    "cca2": "QA",
+    "cca3": "QAT",
+    "nameEn": "Qatar",
+    "nameHe": "קטאר",
+    "capital": "Doha",
+    "region": "Asia",
+    "subregion": "Western Asia",
+    "population": 2781677,
+    "area": 11586,
+    "languages": [
+      {
+        "code": "ara",
+        "name": "Arabic"
+      }
+    ],
+    "flag": "/flags/qat.svg",
+    "independent": true,
+    "unMember": true
+  },
+  {
+    "cca2": "CG",
+    "cca3": "COG",
+    "nameEn": "Republic of the Congo",
+    "nameHe": "קונגו - ברזאויל",
+    "capital": "Brazzaville",
+    "region": "Africa",
+    "subregion": "Middle Africa",
+    "population": 5244363,
+    "area": 342000,
+    "languages": [
+      {
+        "code": "fra",
+        "name": "French"
+      },
+      {
+        "code": "kon",
+        "name": "Kikongo"
+      },
+      {
+        "code": "lin",
+        "name": "Lingala"
+      }
+    ],
+    "flag": "/flags/cog.svg",
+    "independent": true,
+    "unMember": true
+  },
+  {
+    "cca2": "RE",
+    "cca3": "REU",
+    "nameEn": "Réunion",
+    "nameHe": "ראוניון",
+    "capital": "Saint-Denis",
+    "region": "Africa",
+    "subregion": "Eastern Africa",
+    "population": 859959,
+    "area": 2511,
+    "languages": [
+      {
+        "code": "fra",
+        "name": "French"
+      }
+    ],
+    "flag": "/flags/reu.svg",
+    "independent": false,
+    "unMember": false
+  },
+  {
+    "cca2": "RO",
+    "cca3": "ROU",
+    "nameEn": "Romania",
+    "nameHe": "רומניה",
+    "capital": "Bucharest",
+    "region": "Europe",
+    "subregion": "Southeast Europe",
+    "population": 19466145,
+    "area": 238391,
+    "languages": [
+      {
+        "code": "ron",
+        "name": "Romanian"
+      }
+    ],
+    "flag": "/flags/rou.svg",
+    "independent": true,
+    "unMember": true
+  },
+  {
+    "cca2": "RU",
+    "cca3": "RUS",
+    "nameEn": "Russia",
+    "nameHe": "רוסיה",
+    "capital": "Moscow",
+    "region": "Europe",
+    "subregion": "Eastern Europe",
+    "population": 144478050,
+    "area": 17098242,
+    "languages": [
+      {
+        "code": "rus",
+        "name": "Russian"
+      }
+    ],
+    "flag": "/flags/rus.svg",
+    "independent": true,
+    "unMember": true
+  },
+  {
+    "cca2": "RW",
+    "cca3": "RWA",
+    "nameEn": "Rwanda",
+    "nameHe": "רואנדה",
+    "capital": "Kigali",
+    "region": "Africa",
+    "subregion": "Eastern Africa",
+    "population": 12301939,
+    "area": 26338,
+    "languages": [
+      {
+        "code": "eng",
+        "name": "English"
+      },
+      {
+        "code": "fra",
+        "name": "French"
+      },
+      {
+        "code": "kin",
+        "name": "Kinyarwanda"
+      }
+    ],
+    "flag": "/flags/rwa.svg",
+    "independent": true,
+    "unMember": true
+  },
+  {
+    "cca2": "BL",
+    "cca3": "BLM",
+    "nameEn": "Saint Barthélemy",
+    "nameHe": "סן ברתלמי",
+    "capital": "Gustavia",
+    "region": "Americas",
+    "subregion": "Caribbean",
+    "population": 10994,
+    "area": 21,
+    "languages": [
+      {
+        "code": "fra",
+        "name": "French"
+      }
+    ],
+    "flag": "/flags/blm.svg",
+    "independent": false,
+    "unMember": false
+  },
+  {
+    "cca2": "SH",
+    "cca3": "SHN",
+    "nameEn": "Saint Helena, Ascension and Tristan da Cunha",
+    "nameHe": "סנט הלנה",
+    "capital": "Jamestown",
+    "region": "Africa",
+    "subregion": "Western Africa",
+    "population": 6600,
+    "area": 394,
+    "languages": [
+      {
+        "code": "eng",
+        "name": "English"
+      }
+    ],
+    "flag": "/flags/shn.svg",
+    "independent": false,
+    "unMember": false
+  },
+  {
+    "cca2": "KN",
+    "cca3": "KNA",
+    "nameEn": "Saint Kitts and Nevis",
+    "nameHe": "סנט קיטס ונוויס",
+    "capital": "Basseterre",
+    "region": "Americas",
+    "subregion": "Caribbean",
+    "population": 52441,
+    "area": 261,
+    "languages": [
+      {
+        "code": "eng",
+        "name": "English"
+      }
+    ],
+    "flag": "/flags/kna.svg",
+    "independent": true,
+    "unMember": true
+  },
+  {
+    "cca2": "LC",
+    "cca3": "LCA",
+    "nameEn": "Saint Lucia",
+    "nameHe": "סנט לוסיה",
+    "capital": "Castries",
+    "region": "Americas",
+    "subregion": "Caribbean",
+    "population": 181889,
+    "area": 616,
+    "languages": [
+      {
+        "code": "eng",
+        "name": "English"
+      }
+    ],
+    "flag": "/flags/lca.svg",
+    "independent": true,
+    "unMember": true
+  },
+  {
+    "cca2": "MF",
+    "cca3": "MAF",
+    "nameEn": "Saint Martin",
+    "nameHe": "סן מארטן",
+    "capital": "Marigot",
+    "region": "Americas",
+    "subregion": "Caribbean",
+    "population": 32077,
+    "area": 53,
+    "languages": [
+      {
+        "code": "fra",
+        "name": "French"
+      }
+    ],
+    "flag": "/flags/maf.svg",
+    "independent": false,
+    "unMember": false
+  },
+  {
+    "cca2": "PM",
+    "cca3": "SPM",
+    "nameEn": "Saint Pierre and Miquelon",
+    "nameHe": "סנט פייר ומיקלון",
+    "capital": "Saint-Pierre",
+    "region": "Americas",
+    "subregion": "North America",
+    "population": 5888,
+    "area": 242,
+    "languages": [
+      {
+        "code": "fra",
+        "name": "French"
+      }
+    ],
+    "flag": "/flags/spm.svg",
+    "independent": false,
+    "unMember": false
+  },
+  {
+    "cca2": "VC",
+    "cca3": "VCT",
+    "nameEn": "Saint Vincent and the Grenadines",
+    "nameHe": "סנט וינסנט והגרנדינים",
+    "capital": "Kingstown",
+    "region": "Americas",
+    "subregion": "Caribbean",
+    "population": 110210,
+    "area": 389,
+    "languages": [
+      {
+        "code": "eng",
+        "name": "English"
+      }
+    ],
+    "flag": "/flags/vct.svg",
+    "independent": true,
+    "unMember": true
+  },
+  {
+    "cca2": "WS",
+    "cca3": "WSM",
+    "nameEn": "Samoa",
+    "nameHe": "סמואה",
+    "capital": "Apia",
+    "region": "Oceania",
+    "subregion": "Polynesia",
+    "population": 196130,
+    "area": 2842,
+    "languages": [
+      {
+        "code": "eng",
+        "name": "English"
+      },
+      {
+        "code": "smo",
+        "name": "Samoan"
+      }
+    ],
+    "flag": "/flags/wsm.svg",
+    "independent": true,
+    "unMember": true
+  },
+  {
+    "cca2": "SM",
+    "cca3": "SMR",
+    "nameEn": "San Marino",
+    "nameHe": "סן מרינו",
+    "capital": "City of San Marino",
+    "region": "Europe",
+    "subregion": "Southern Europe",
+    "population": 33785,
+    "area": 61,
+    "languages": [
+      {
+        "code": "ita",
+        "name": "Italian"
+      }
+    ],
+    "flag": "/flags/smr.svg",
+    "independent": true,
+    "unMember": true
+  },
+  {
+    "cca2": "ST",
+    "cca3": "STP",
+    "nameEn": "São Tomé and Príncipe",
+    "nameHe": "סאו טומה ופרינסיפה",
+    "capital": "São Tomé",
+    "region": "Africa",
+    "subregion": "Middle Africa",
+    "population": 211028,
+    "area": 964,
+    "languages": [
+      {
+        "code": "por",
+        "name": "Portuguese"
+      }
+    ],
+    "flag": "/flags/stp.svg",
+    "independent": true,
+    "unMember": true
+  },
+  {
+    "cca2": "SA",
+    "cca3": "SAU",
+    "nameEn": "Saudi Arabia",
+    "nameHe": "ערב הסעודית",
+    "capital": "Riyadh",
+    "region": "Asia",
+    "subregion": "Western Asia",
+    "population": 33699947,
+    "area": 2149690,
+    "languages": [
+      {
+        "code": "ara",
+        "name": "Arabic"
+      }
+    ],
+    "flag": "/flags/sau.svg",
+    "independent": true,
+    "unMember": true
+  },
+  {
+    "cca2": "SN",
+    "cca3": "SEN",
+    "nameEn": "Senegal",
+    "nameHe": "סנגל",
+    "capital": "Dakar",
+    "region": "Africa",
+    "subregion": "Western Africa",
+    "population": 15854360,
+    "area": 196722,
+    "languages": [
+      {
+        "code": "fra",
+        "name": "French"
+      }
+    ],
+    "flag": "/flags/sen.svg",
+    "independent": true,
+    "unMember": true
+  },
+  {
+    "cca2": "RS",
+    "cca3": "SRB",
+    "nameEn": "Serbia",
+    "nameHe": "סרביה",
+    "capital": "Belgrade",
+    "region": "Europe",
+    "subregion": "Southeast Europe",
+    "population": 6963764,
+    "area": 88361,
+    "languages": [
+      {
+        "code": "srp",
+        "name": "Serbian"
+      }
+    ],
+    "flag": "/flags/srb.svg",
+    "independent": true,
+    "unMember": true
+  },
+  {
+    "cca2": "SC",
+    "cca3": "SYC",
+    "nameEn": "Seychelles",
+    "nameHe": "איי סיישל",
+    "capital": "Victoria",
+    "region": "Africa",
+    "subregion": "Eastern Africa",
+    "population": 96762,
+    "area": 452,
+    "languages": [
+      {
+        "code": "crs",
+        "name": "Seychellois Creole"
+      },
+      {
+        "code": "eng",
+        "name": "English"
+      },
+      {
+        "code": "fra",
+        "name": "French"
+      }
+    ],
+    "flag": "/flags/syc.svg",
+    "independent": true,
+    "unMember": true
+  },
+  {
+    "cca2": "SL",
+    "cca3": "SLE",
+    "nameEn": "Sierra Leone",
+    "nameHe": "סיירה לאונה",
+    "capital": "Freetown",
+    "region": "Africa",
+    "subregion": "Western Africa",
+    "population": 7650154,
+    "area": 71740,
+    "languages": [
+      {
+        "code": "eng",
+        "name": "English"
+      }
+    ],
+    "flag": "/flags/sle.svg",
+    "independent": true,
+    "unMember": true
+  },
+  {
+    "cca2": "SG",
+    "cca3": "SGP",
+    "nameEn": "Singapore",
+    "nameHe": "סינגפור",
+    "capital": "Singapore",
+    "region": "Asia",
+    "subregion": "South-Eastern Asia",
+    "population": 5638676,
+    "area": 710,
+    "languages": [
+      {
+        "code": "eng",
+        "name": "English"
+      },
+      {
+        "code": "msa",
+        "name": "Malay"
+      },
+      {
+        "code": "tam",
+        "name": "Tamil"
+      },
+      {
+        "code": "zho",
+        "name": "Chinese"
+      }
+    ],
+    "flag": "/flags/sgp.svg",
+    "independent": true,
+    "unMember": true
+  },
+  {
+    "cca2": "SX",
+    "cca3": "SXM",
+    "nameEn": "Sint Maarten",
+    "nameHe": "סינט מארטן",
+    "capital": "Philipsburg",
+    "region": "Americas",
+    "subregion": "Caribbean",
+    "population": 43847,
+    "area": 34,
+    "languages": [
+      {
+        "code": "eng",
+        "name": "English"
+      },
+      {
+        "code": "fra",
+        "name": "French"
+      },
+      {
+        "code": "nld",
+        "name": "Dutch"
+      }
+    ],
+    "flag": "/flags/sxm.svg",
+    "independent": false,
+    "unMember": false
+  },
+  {
+    "cca2": "SK",
+    "cca3": "SVK",
+    "nameEn": "Slovakia",
+    "nameHe": "סלובקיה",
+    "capital": "Bratislava",
+    "region": "Europe",
+    "subregion": "Central Europe",
+    "population": 5446771,
+    "area": 49037,
+    "languages": [
+      {
+        "code": "slk",
+        "name": "Slovak"
+      }
+    ],
+    "flag": "/flags/svk.svg",
+    "independent": true,
+    "unMember": true
+  },
+  {
+    "cca2": "SI",
+    "cca3": "SVN",
+    "nameEn": "Slovenia",
+    "nameHe": "סלובניה",
+    "capital": "Ljubljana",
+    "region": "Europe",
+    "subregion": "Central Europe",
+    "population": 2073894,
+    "area": 20273,
+    "languages": [
+      {
+        "code": "slv",
+        "name": "Slovene"
+      }
+    ],
+    "flag": "/flags/svn.svg",
+    "independent": true,
+    "unMember": true
+  },
+  {
+    "cca2": "SB",
+    "cca3": "SLB",
+    "nameEn": "Solomon Islands",
+    "nameHe": "איי שלמה",
+    "capital": "Honiara",
+    "region": "Oceania",
+    "subregion": "Melanesia",
+    "population": 652858,
+    "area": 28896,
+    "languages": [
+      {
+        "code": "eng",
+        "name": "English"
+      }
+    ],
+    "flag": "/flags/slb.svg",
+    "independent": true,
+    "unMember": true
+  },
+  {
+    "cca2": "SO",
+    "cca3": "SOM",
+    "nameEn": "Somalia",
+    "nameHe": "סומליה",
+    "capital": "Mogadishu",
+    "region": "Africa",
+    "subregion": "Eastern Africa",
+    "population": 15008154,
+    "area": 637657,
+    "languages": [
+      {
+        "code": "ara",
+        "name": "Arabic"
+      },
+      {
+        "code": "som",
+        "name": "Somali"
+      }
+    ],
+    "flag": "/flags/som.svg",
+    "independent": true,
+    "unMember": true
+  },
+  {
+    "cca2": "ZA",
+    "cca3": "ZAF",
+    "nameEn": "South Africa",
+    "nameHe": "דרום אפריקה",
+    "capital": "Pretoria",
+    "region": "Africa",
+    "subregion": "Southern Africa",
+    "population": 57779622,
+    "area": 1221037,
+    "languages": [
+      {
+        "code": "afr",
+        "name": "Afrikaans"
+      },
+      {
+        "code": "eng",
+        "name": "English"
+      },
+      {
+        "code": "nbl",
+        "name": "Southern Ndebele"
+      },
+      {
+        "code": "nso",
+        "name": "Northern Sotho"
+      },
+      {
+        "code": "sot",
+        "name": "Southern Sotho"
+      },
+      {
+        "code": "ssw",
+        "name": "Swazi"
+      },
+      {
+        "code": "tsn",
+        "name": "Tswana"
+      },
+      {
+        "code": "tso",
+        "name": "Tsonga"
+      },
+      {
+        "code": "ven",
+        "name": "Venda"
+      },
+      {
+        "code": "xho",
+        "name": "Xhosa"
+      },
+      {
+        "code": "zul",
+        "name": "Zulu"
+      }
+    ],
+    "flag": "/flags/zaf.svg",
+    "independent": true,
+    "unMember": true
+  },
+  {
+    "cca2": "GS",
+    "cca3": "SGS",
+    "nameEn": "South Georgia",
+    "nameHe": "ג׳ורג׳יה הדרומית ואיי סנדוויץ׳ הדרומיים",
+    "capital": "King Edward Point",
+    "region": "Other",
+    "subregion": null,
+    "population": 30,
+    "area": 3903,
+    "languages": [
+      {
+        "code": "eng",
+        "name": "English"
+      }
+    ],
+    "flag": "/flags/sgs.svg",
+    "independent": false,
+    "unMember": false
+  },
+  {
+    "cca2": "KR",
+    "cca3": "KOR",
+    "nameEn": "South Korea",
+    "nameHe": "קוריאה הדרומית",
+    "capital": "Seoul",
+    "region": "Asia",
+    "subregion": "Eastern Asia",
+    "population": 51606633,
+    "area": 100210,
+    "languages": [
+      {
+        "code": "kor",
+        "name": "Korean"
+      }
+    ],
+    "flag": "/flags/kor.svg",
+    "independent": true,
+    "unMember": true
+  },
+  {
+    "cca2": "SS",
+    "cca3": "SSD",
+    "nameEn": "South Sudan",
+    "nameHe": "דרום סודן",
+    "capital": "Juba",
+    "region": "Africa",
+    "subregion": "Middle Africa",
+    "population": 10975920,
+    "area": 619745,
+    "languages": [
+      {
+        "code": "eng",
+        "name": "English"
+      }
+    ],
+    "flag": "/flags/ssd.svg",
+    "independent": true,
+    "unMember": true
+  },
+  {
+    "cca2": "ES",
+    "cca3": "ESP",
+    "nameEn": "Spain",
+    "nameHe": "ספרד",
+    "capital": "Madrid",
+    "region": "Europe",
+    "subregion": "Southern Europe",
+    "population": 46796540,
+    "area": 505992,
+    "languages": [
+      {
+        "code": "spa",
+        "name": "Spanish"
+      }
+    ],
+    "flag": "/flags/esp.svg",
+    "independent": true,
+    "unMember": true
+  },
+  {
+    "cca2": "LK",
+    "cca3": "LKA",
+    "nameEn": "Sri Lanka",
+    "nameHe": "סרי לנקה",
+    "capital": "Colombo",
+    "region": "Asia",
+    "subregion": "Southern Asia",
+    "population": 21670000,
+    "area": 65610,
+    "languages": [
+      {
+        "code": "sin",
+        "name": "Sinhala"
+      },
+      {
+        "code": "tam",
+        "name": "Tamil"
+      }
+    ],
+    "flag": "/flags/lka.svg",
+    "independent": true,
+    "unMember": true
+  },
+  {
+    "cca2": "SD",
+    "cca3": "SDN",
+    "nameEn": "Sudan",
+    "nameHe": "סודן",
+    "capital": "Khartoum",
+    "region": "Africa",
+    "subregion": "Northern Africa",
+    "population": 41801533,
+    "area": 1886068,
+    "languages": [
+      {
+        "code": "ara",
+        "name": "Arabic"
+      },
+      {
+        "code": "eng",
+        "name": "English"
+      }
+    ],
+    "flag": "/flags/sdn.svg",
+    "independent": true,
+    "unMember": true
+  },
+  {
+    "cca2": "SR",
+    "cca3": "SUR",
+    "nameEn": "Suriname",
+    "nameHe": "סורינם",
+    "capital": "Paramaribo",
+    "region": "Americas",
+    "subregion": "South America",
+    "population": 575991,
+    "area": 163820,
+    "languages": [
+      {
+        "code": "nld",
+        "name": "Dutch"
+      }
+    ],
+    "flag": "/flags/sur.svg",
+    "independent": true,
+    "unMember": true
+  },
+  {
+    "cca2": "SJ",
+    "cca3": "SJM",
+    "nameEn": "Svalbard and Jan Mayen",
+    "nameHe": "סוולבארד ויאן מאיין",
+    "capital": "Longyearbyen",
+    "region": "Europe",
+    "subregion": "Northern Europe",
+    "population": 2572,
+    "area": -1,
+    "languages": [
+      {
+        "code": "nor",
+        "name": "Norwegian"
+      }
+    ],
+    "flag": "/flags/sjm.svg",
+    "independent": false,
+    "unMember": false
+  },
+  {
+    "cca2": "SE",
+    "cca3": "SWE",
+    "nameEn": "Sweden",
+    "nameHe": "שוודיה",
+    "capital": "Stockholm",
+    "region": "Europe",
+    "subregion": "Northern Europe",
+    "population": 10175214,
+    "area": 450295,
+    "languages": [
+      {
+        "code": "swe",
+        "name": "Swedish"
+      }
+    ],
+    "flag": "/flags/swe.svg",
+    "independent": true,
+    "unMember": true
+  },
+  {
+    "cca2": "CH",
+    "cca3": "CHE",
+    "nameEn": "Switzerland",
+    "nameHe": "שווייץ",
+    "capital": "Bern",
+    "region": "Europe",
+    "subregion": "Western Europe",
+    "population": 8513227,
+    "area": 41284,
+    "languages": [
+      {
+        "code": "fra",
+        "name": "French"
+      },
+      {
+        "code": "gsw",
+        "name": "Swiss German"
+      },
+      {
+        "code": "ita",
+        "name": "Italian"
+      },
+      {
+        "code": "roh",
+        "name": "Romansh"
+      }
+    ],
+    "flag": "/flags/che.svg",
+    "independent": true,
+    "unMember": true
+  },
+  {
+    "cca2": "SY",
+    "cca3": "SYR",
+    "nameEn": "Syria",
+    "nameHe": "סוריה",
+    "capital": "Damascus",
+    "region": "Asia",
+    "subregion": "Western Asia",
+    "population": 16906283,
+    "area": 185180,
+    "languages": [
+      {
+        "code": "ara",
+        "name": "Arabic"
+      }
+    ],
+    "flag": "/flags/syr.svg",
+    "independent": true,
+    "unMember": true
+  },
+  {
+    "cca2": "TW",
+    "cca3": "TWN",
+    "nameEn": "Taiwan",
+    "nameHe": "טייוואן",
+    "capital": "Taipei",
+    "region": "Asia",
+    "subregion": "Eastern Asia",
+    "population": 23894394,
+    "area": 36193,
+    "languages": [
+      {
+        "code": "zho",
+        "name": "Chinese"
+      }
+    ],
+    "flag": "/flags/twn.svg",
+    "independent": false,
+    "unMember": false
+  },
+  {
+    "cca2": "TJ",
+    "cca3": "TJK",
+    "nameEn": "Tajikistan",
+    "nameHe": "טג׳יקיסטן",
+    "capital": "Dushanbe",
+    "region": "Asia",
+    "subregion": "Central Asia",
+    "population": 9100837,
+    "area": 143100,
+    "languages": [
+      {
+        "code": "rus",
+        "name": "Russian"
+      },
+      {
+        "code": "tgk",
+        "name": "Tajik"
+      }
+    ],
+    "flag": "/flags/tjk.svg",
+    "independent": true,
+    "unMember": true
+  },
+  {
+    "cca2": "TZ",
+    "cca3": "TZA",
+    "nameEn": "Tanzania",
+    "nameHe": "טנזניה",
+    "capital": "Dodoma",
+    "region": "Africa",
+    "subregion": "Eastern Africa",
+    "population": 56318348,
+    "area": 945087,
+    "languages": [
+      {
+        "code": "eng",
+        "name": "English"
+      },
+      {
+        "code": "swa",
+        "name": "Swahili"
+      }
+    ],
+    "flag": "/flags/tza.svg",
+    "independent": true,
+    "unMember": true
+  },
+  {
+    "cca2": "TH",
+    "cca3": "THA",
+    "nameEn": "Thailand",
+    "nameHe": "תאילנד",
+    "capital": "Bangkok",
+    "region": "Asia",
+    "subregion": "South-Eastern Asia",
+    "population": 69428524,
+    "area": 513120,
+    "languages": [
+      {
+        "code": "tha",
+        "name": "Thai"
+      }
+    ],
+    "flag": "/flags/tha.svg",
+    "independent": true,
+    "unMember": true
+  },
+  {
+    "cca2": "TL",
+    "cca3": "TLS",
+    "nameEn": "Timor-Leste",
+    "nameHe": "טימור לסטה",
+    "capital": "Dili",
+    "region": "Asia",
+    "subregion": "South-Eastern Asia",
+    "population": 1267972,
+    "area": 14874,
+    "languages": [
+      {
+        "code": "por",
+        "name": "Portuguese"
+      },
+      {
+        "code": "tet",
+        "name": "Tetum"
+      }
+    ],
+    "flag": "/flags/tls.svg",
+    "independent": true,
+    "unMember": true
+  },
+  {
+    "cca2": "TG",
+    "cca3": "TGO",
+    "nameEn": "Togo",
+    "nameHe": "טוגו",
+    "capital": "Lomé",
+    "region": "Africa",
+    "subregion": "Western Africa",
+    "population": 7889094,
+    "area": 56785,
+    "languages": [
+      {
+        "code": "fra",
+        "name": "French"
+      }
+    ],
+    "flag": "/flags/tgo.svg",
+    "independent": true,
+    "unMember": true
+  },
+  {
+    "cca2": "TK",
+    "cca3": "TKL",
+    "nameEn": "Tokelau",
+    "nameHe": "טוקלאו",
+    "capital": "Fakaofo",
+    "region": "Oceania",
+    "subregion": "Polynesia",
+    "population": 1411,
+    "area": 12,
+    "languages": [
+      {
+        "code": "eng",
+        "name": "English"
+      },
+      {
+        "code": "smo",
+        "name": "Samoan"
+      },
+      {
+        "code": "tkl",
+        "name": "Tokelauan"
+      }
+    ],
+    "flag": "/flags/tkl.svg",
+    "independent": false,
+    "unMember": false
+  },
+  {
+    "cca2": "TO",
+    "cca3": "TON",
+    "nameEn": "Tonga",
+    "nameHe": "טונגה",
+    "capital": "Nuku'alofa",
+    "region": "Oceania",
+    "subregion": "Polynesia",
+    "population": 103197,
+    "area": 747,
+    "languages": [
+      {
+        "code": "eng",
+        "name": "English"
+      },
+      {
+        "code": "ton",
+        "name": "Tongan"
+      }
+    ],
+    "flag": "/flags/ton.svg",
+    "independent": true,
+    "unMember": true
+  },
+  {
+    "cca2": "TT",
+    "cca3": "TTO",
+    "nameEn": "Trinidad and Tobago",
+    "nameHe": "טרינידד וטובגו",
+    "capital": "Port of Spain",
+    "region": "Americas",
+    "subregion": "Caribbean",
+    "population": 1389858,
+    "area": 5130,
+    "languages": [
+      {
+        "code": "eng",
+        "name": "English"
+      }
+    ],
+    "flag": "/flags/tto.svg",
+    "independent": true,
+    "unMember": true
+  },
+  {
+    "cca2": "TN",
+    "cca3": "TUN",
+    "nameEn": "Tunisia",
+    "nameHe": "טוניסיה",
+    "capital": "Tunis",
+    "region": "Africa",
+    "subregion": "Northern Africa",
+    "population": 11565204,
+    "area": 163610,
+    "languages": [
+      {
+        "code": "ara",
+        "name": "Arabic"
+      }
+    ],
+    "flag": "/flags/tun.svg",
+    "independent": true,
+    "unMember": true
+  },
+  {
+    "cca2": "TR",
+    "cca3": "TUR",
+    "nameEn": "Türkiye",
+    "nameHe": "טורקיה",
+    "capital": "Ankara",
+    "region": "Asia",
+    "subregion": "Western Asia",
+    "population": 82319724,
+    "area": 783562,
+    "languages": [
+      {
+        "code": "tur",
+        "name": "Turkish"
+      }
+    ],
+    "flag": "/flags/tur.svg",
+    "independent": true,
+    "unMember": true
+  },
+  {
+    "cca2": "TM",
+    "cca3": "TKM",
+    "nameEn": "Turkmenistan",
+    "nameHe": "טורקמניסטן",
+    "capital": "Ashgabat",
+    "region": "Asia",
+    "subregion": "Central Asia",
+    "population": 5850908,
+    "area": 488100,
+    "languages": [
+      {
+        "code": "rus",
+        "name": "Russian"
+      },
+      {
+        "code": "tuk",
+        "name": "Turkmen"
+      }
+    ],
+    "flag": "/flags/tkm.svg",
+    "independent": true,
+    "unMember": true
+  },
+  {
+    "cca2": "TC",
+    "cca3": "TCA",
+    "nameEn": "Turks and Caicos Islands",
+    "nameHe": "איי טורקס וקאיקוס",
+    "capital": "Cockburn Town",
+    "region": "Americas",
+    "subregion": "Caribbean",
+    "population": 37665,
+    "area": 948,
+    "languages": [
+      {
+        "code": "eng",
+        "name": "English"
+      }
+    ],
+    "flag": "/flags/tca.svg",
+    "independent": false,
+    "unMember": false
+  },
+  {
+    "cca2": "TV",
+    "cca3": "TUV",
+    "nameEn": "Tuvalu",
+    "nameHe": "טובאלו",
+    "capital": "Funafuti",
+    "region": "Oceania",
+    "subregion": "Polynesia",
+    "population": 11508,
+    "area": 26,
+    "languages": [
+      {
+        "code": "eng",
+        "name": "English"
+      },
+      {
+        "code": "tvl",
+        "name": "Tuvaluan"
+      }
+    ],
+    "flag": "/flags/tuv.svg",
+    "independent": true,
+    "unMember": true
+  },
+  {
+    "cca2": "UG",
+    "cca3": "UGA",
+    "nameEn": "Uganda",
+    "nameHe": "אוגנדה",
+    "capital": "Kampala",
+    "region": "Africa",
+    "subregion": "Eastern Africa",
+    "population": 42723139,
+    "area": 241550,
+    "languages": [
+      {
+        "code": "eng",
+        "name": "English"
+      },
+      {
+        "code": "swa",
+        "name": "Swahili"
+      }
+    ],
+    "flag": "/flags/uga.svg",
+    "independent": true,
+    "unMember": true
+  },
+  {
+    "cca2": "UA",
+    "cca3": "UKR",
+    "nameEn": "Ukraine",
+    "nameHe": "אוקראינה",
+    "capital": "Kyiv",
+    "region": "Europe",
+    "subregion": "Eastern Europe",
+    "population": 44622516,
+    "area": 603500,
+    "languages": [
+      {
+        "code": "ukr",
+        "name": "Ukrainian"
+      }
+    ],
+    "flag": "/flags/ukr.svg",
+    "independent": true,
+    "unMember": true
+  },
+  {
+    "cca2": "AE",
+    "cca3": "ARE",
+    "nameEn": "United Arab Emirates",
+    "nameHe": "איחוד האמירויות הערביות",
+    "capital": "Abu Dhabi",
+    "region": "Asia",
+    "subregion": "Western Asia",
+    "population": 9630959,
+    "area": 83600,
+    "languages": [
+      {
+        "code": "ara",
+        "name": "Arabic"
+      }
+    ],
+    "flag": "/flags/are.svg",
+    "independent": true,
+    "unMember": true
+  },
+  {
+    "cca2": "GB",
+    "cca3": "GBR",
+    "nameEn": "United Kingdom",
+    "nameHe": "הממלכה המאוחדת",
+    "capital": "London",
+    "region": "Europe",
+    "subregion": "Northern Europe",
+    "population": 66460344,
+    "area": 242900,
+    "languages": [
+      {
+        "code": "eng",
+        "name": "English"
+      }
+    ],
+    "flag": "/flags/gbr.svg",
+    "independent": true,
+    "unMember": true
+  },
+  {
+    "cca2": "US",
+    "cca3": "USA",
+    "nameEn": "United States",
+    "nameHe": "ארצות הברית",
+    "capital": "Washington D.C.",
+    "region": "Americas",
+    "subregion": "North America",
+    "population": 326687501,
+    "area": 9372610,
+    "languages": [
+      {
+        "code": "eng",
+        "name": "English"
+      }
+    ],
+    "flag": "/flags/usa.svg",
+    "independent": true,
+    "unMember": true
+  },
+  {
+    "cca2": "UM",
+    "cca3": "UMI",
+    "nameEn": "United States Minor Outlying Islands",
+    "nameHe": "האיים המרוחקים הקטנים של ארה״ב",
+    "capital": null,
+    "region": "Americas",
+    "subregion": "North America",
+    "population": 300,
+    "area": 34.2,
+    "languages": [
+      {
+        "code": "eng",
+        "name": "English"
+      }
+    ],
+    "flag": "/flags/umi.svg",
+    "independent": false,
+    "unMember": false
+  },
+  {
+    "cca2": "VI",
+    "cca3": "VIR",
+    "nameEn": "United States Virgin Islands",
+    "nameHe": "איי הבתולה של ארצות הברית",
+    "capital": "Charlotte Amalie",
+    "region": "Americas",
+    "subregion": "Caribbean",
+    "population": 106977,
+    "area": 347,
+    "languages": [
+      {
+        "code": "eng",
+        "name": "English"
+      }
+    ],
+    "flag": "/flags/vir.svg",
+    "independent": false,
+    "unMember": false
+  },
+  {
+    "cca2": "UY",
+    "cca3": "URY",
+    "nameEn": "Uruguay",
+    "nameHe": "אורוגוואי",
+    "capital": "Montevideo",
+    "region": "Americas",
+    "subregion": "South America",
+    "population": 3449299,
+    "area": 181034,
+    "languages": [
+      {
+        "code": "spa",
+        "name": "Spanish"
+      }
+    ],
+    "flag": "/flags/ury.svg",
+    "independent": true,
+    "unMember": true
+  },
+  {
+    "cca2": "UZ",
+    "cca3": "UZB",
+    "nameEn": "Uzbekistan",
+    "nameHe": "אוזבקיסטן",
+    "capital": "Tashkent",
+    "region": "Asia",
+    "subregion": "Central Asia",
+    "population": 32955400,
+    "area": 447400,
+    "languages": [
+      {
+        "code": "rus",
+        "name": "Russian"
+      },
+      {
+        "code": "uzb",
+        "name": "Uzbek"
+      }
+    ],
+    "flag": "/flags/uzb.svg",
+    "independent": true,
+    "unMember": true
+  },
+  {
+    "cca2": "VU",
+    "cca3": "VUT",
+    "nameEn": "Vanuatu",
+    "nameHe": "ונואטו",
+    "capital": "Port Vila",
+    "region": "Oceania",
+    "subregion": "Melanesia",
+    "population": 292680,
+    "area": 12189,
+    "languages": [
+      {
+        "code": "bis",
+        "name": "Bislama"
+      },
+      {
+        "code": "eng",
+        "name": "English"
+      },
+      {
+        "code": "fra",
+        "name": "French"
+      }
+    ],
+    "flag": "/flags/vut.svg",
+    "independent": true,
+    "unMember": true
+  },
+  {
+    "cca2": "VA",
+    "cca3": "VAT",
+    "nameEn": "Vatican City",
+    "nameHe": "הכס הקדוש (וותיקן)",
+    "capital": "Vatican City",
+    "region": "Europe",
+    "subregion": "Southern Europe",
+    "population": 825,
+    "area": 0.44,
+    "languages": [
+      {
+        "code": "ita",
+        "name": "Italian"
+      },
+      {
+        "code": "lat",
+        "name": "Latin"
+      }
+    ],
+    "flag": "/flags/vat.svg",
+    "independent": true,
+    "unMember": true
+  },
+  {
+    "cca2": "VE",
+    "cca3": "VEN",
+    "nameEn": "Venezuela",
+    "nameHe": "ונצואלה",
+    "capital": "Caracas",
+    "region": "Americas",
+    "subregion": "South America",
+    "population": 28870195,
+    "area": 916445,
+    "languages": [
+      {
+        "code": "spa",
+        "name": "Spanish"
+      }
+    ],
+    "flag": "/flags/ven.svg",
+    "independent": true,
+    "unMember": true
+  },
+  {
+    "cca2": "VN",
+    "cca3": "VNM",
+    "nameEn": "Vietnam",
+    "nameHe": "וייטנאם",
+    "capital": "Hanoi",
+    "region": "Asia",
+    "subregion": "South-Eastern Asia",
+    "population": 95540395,
+    "area": 331212,
+    "languages": [
+      {
+        "code": "vie",
+        "name": "Vietnamese"
+      }
+    ],
+    "flag": "/flags/vnm.svg",
+    "independent": true,
+    "unMember": true
+  },
+  {
+    "cca2": "WF",
+    "cca3": "WLF",
+    "nameEn": "Wallis and Futuna",
+    "nameHe": "איי ווליס ופוטונה",
+    "capital": "Mata-Utu",
+    "region": "Oceania",
+    "subregion": "Polynesia",
+    "population": 15289,
+    "area": 142,
+    "languages": [
+      {
+        "code": "fra",
+        "name": "French"
+      }
+    ],
+    "flag": "/flags/wlf.svg",
+    "independent": false,
+    "unMember": false
+  },
+  {
+    "cca2": "EH",
+    "cca3": "ESH",
+    "nameEn": "Western Sahara",
+    "nameHe": "סהרה המערבית",
+    "capital": "El Aaiún",
+    "region": "Africa",
+    "subregion": "Northern Africa",
+    "population": 652271,
+    "area": 266000,
+    "languages": [
+      {
+        "code": "ber",
+        "name": "Berber"
+      },
+      {
+        "code": "mey",
+        "name": "Hassaniya"
+      },
+      {
+        "code": "spa",
+        "name": "Spanish"
+      }
+    ],
+    "flag": "/flags/esh.svg",
+    "independent": false,
+    "unMember": false
+  },
+  {
+    "cca2": "YE",
+    "cca3": "YEM",
+    "nameEn": "Yemen",
+    "nameHe": "תימן",
+    "capital": "Sana'a",
+    "region": "Asia",
+    "subregion": "Western Asia",
+    "population": 28498687,
+    "area": 527968,
+    "languages": [
+      {
+        "code": "ara",
+        "name": "Arabic"
+      }
+    ],
+    "flag": "/flags/yem.svg",
+    "independent": true,
+    "unMember": true
+  },
+  {
+    "cca2": "ZM",
+    "cca3": "ZMB",
+    "nameEn": "Zambia",
+    "nameHe": "זמביה",
+    "capital": "Lusaka",
+    "region": "Africa",
+    "subregion": "Eastern Africa",
+    "population": 17351822,
+    "area": 752612,
+    "languages": [
+      {
+        "code": "eng",
+        "name": "English"
+      }
+    ],
+    "flag": "/flags/zmb.svg",
+    "independent": true,
+    "unMember": true
+  },
+  {
+    "cca2": "ZW",
+    "cca3": "ZWE",
+    "nameEn": "Zimbabwe",
+    "nameHe": "זימבבואה",
+    "capital": "Harare",
+    "region": "Africa",
+    "subregion": "Eastern Africa",
+    "population": 14439018,
+    "area": 390757,
+    "languages": [
+      {
+        "code": "bwg",
+        "name": "Chibarwe"
+      },
+      {
+        "code": "eng",
+        "name": "English"
+      },
+      {
+        "code": "kck",
+        "name": "Kalanga"
+      },
+      {
+        "code": "khi",
+        "name": "Khoisan"
+      },
+      {
+        "code": "ndc",
+        "name": "Ndau"
+      },
+      {
+        "code": "nde",
+        "name": "Northern Ndebele"
+      },
+      {
+        "code": "nya",
+        "name": "Chewa"
+      },
+      {
+        "code": "sna",
+        "name": "Shona"
+      },
+      {
+        "code": "sot",
+        "name": "Sotho"
+      },
+      {
+        "code": "toi",
+        "name": "Tonga"
+      },
+      {
+        "code": "tsn",
+        "name": "Tswana"
+      },
+      {
+        "code": "tso",
+        "name": "Tsonga"
+      },
+      {
+        "code": "ven",
+        "name": "Venda"
+      },
+      {
+        "code": "xho",
+        "name": "Xhosa"
+      },
+      {
+        "code": "zib",
+        "name": "Zimbabwean Sign Language"
+      }
+    ],
+    "flag": "/flags/zwe.svg",
+    "independent": true,
+    "unMember": true
+  }
+]
