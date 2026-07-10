@@ -27,10 +27,12 @@ export function Home() {
 
   return (
     <div className="mx-auto flex min-h-screen max-w-lg flex-col px-6 pb-10 pt-8">
-      {/* Header: logo + gradient title on the leading side, language/theme
-          switches on the trailing side. */}
-      <div className="flex items-center justify-between">
-        <div className="flex items-center gap-2">
+      {/* Header: logo + gradient title truly centered in the row (the two
+          flanking grid columns share equal space regardless of the
+          language/theme switches' width), switches pinned to the trailing side. */}
+      <div className="grid grid-cols-[1fr_auto_1fr] items-center">
+        <div />
+        <div className="flex items-center justify-self-center gap-2">
           <span className="flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-br from-amber-300 to-amber-500 shadow-sm">
             <img src="/favicon.svg" alt="" className="h-7 w-7" />
           </span>
@@ -38,7 +40,7 @@ export function Home() {
             {t('app.name')}
           </h1>
         </div>
-        <div className="flex items-center gap-2">
+        <div className="flex items-center justify-self-end gap-2">
           <LanguageToggle />
           <ThemeToggle />
         </div>
@@ -70,7 +72,7 @@ export function Home() {
       {/* Quick stats card: games played / best score / average accuracy,
           or a placeholder message before the player's first round. */}
       <div className="mt-10 rounded-2xl border border-slate-200 bg-white/60 p-5 shadow-sm dark:border-slate-700 dark:bg-slate-800/40">
-        <h2 className="mb-3 font-semibold">{t('home.yourStats')}</h2>
+        <h2 className="mb-3 text-center font-semibold">{t('home.yourStats')}</h2>
         {summary ? (
           <div className="grid grid-cols-3 gap-3 text-center">
             <div>
