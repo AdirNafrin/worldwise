@@ -156,7 +156,7 @@ export function Game() {
       <div className="flex items-center justify-between gap-3">
         <button
           onClick={() => setConfirmQuit(true)}
-          className="rounded-full p-2 text-slate-500 hover:bg-slate-200/60 dark:hover:bg-slate-800"
+          className="flex h-10 w-10 items-center justify-center rounded-full border border-slate-200 bg-white text-lg text-slate-500 shadow-sm hover:bg-red-50 hover:text-red-600 dark:border-slate-700 dark:bg-slate-800 dark:hover:bg-red-950/40 dark:hover:text-red-400"
           aria-label={t('game.quit')}
         >
           ✕
@@ -210,7 +210,13 @@ export function Game() {
         </div>
 
         {answered && (
-          <div className="mt-6 rounded-2xl border border-slate-200 p-4 dark:border-slate-700">
+          <div
+            className={`mt-6 rounded-2xl border p-4 ${
+              selected === question.correctAnswer
+                ? 'border-green-200 bg-green-50 dark:border-green-900 dark:bg-green-950/30'
+                : 'border-red-200 bg-red-50 dark:border-red-900 dark:bg-red-950/30'
+            }`}
+          >
             <p className={`font-semibold ${selected === question.correctAnswer ? 'text-green-600' : 'text-red-600'}`}>
               {timedOut ? t('feedback.timeUp') : selected === question.correctAnswer ? t('feedback.correct') : t('feedback.incorrect')}
             </p>
@@ -245,6 +251,10 @@ export function Game() {
 
 function formatAnswer(category, value, lang) {
   if (category === 'nameToPopulation') return formatPopulation(value, lang);
+  if (category === 'nameToFlag') {
+    const country = countryByFlag.get(value);
+    return country ? getCountryName(country, lang) : value;
+  }
   return value;
 }
 

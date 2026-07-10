@@ -8,7 +8,23 @@ import { REGIONS } from '../utils/countries';
 const CATEGORY_OPTIONS = [...CATEGORIES, 'mixed'];
 const DIFFICULTIES = ['easy', 'medium', 'hard'];
 
-function OptionCard({ selected, onClick, title, subtitle }) {
+const CATEGORY_ICON = {
+  flagToName: { emoji: '🏳️', badge: 'bg-blue-100 dark:bg-blue-900/50' },
+  nameToFlag: { emoji: '🔍', badge: 'bg-sky-100 dark:bg-sky-900/50' },
+  capitalToName: { emoji: '🏛️', badge: 'bg-amber-100 dark:bg-amber-900/50' },
+  nameToCapital: { emoji: '📍', badge: 'bg-orange-100 dark:bg-orange-900/50' },
+  nameToPopulation: { emoji: '👥', badge: 'bg-emerald-100 dark:bg-emerald-900/50' },
+  nameToLanguage: { emoji: '💬', badge: 'bg-violet-100 dark:bg-violet-900/50' },
+  mixed: { emoji: '🎲', badge: 'bg-pink-100 dark:bg-pink-900/50' },
+};
+
+const DIFFICULTY_COLOR = {
+  easy: 'border-green-600 bg-green-600 text-white',
+  medium: 'border-amber-500 bg-amber-500 text-white',
+  hard: 'border-red-600 bg-red-600 text-white',
+};
+
+function OptionCard({ selected, onClick, title, subtitle, icon }) {
   return (
     <button
       onClick={onClick}
@@ -18,19 +34,26 @@ function OptionCard({ selected, onClick, title, subtitle }) {
           : 'border-slate-200 bg-white hover:border-blue-300 dark:border-slate-700 dark:bg-slate-800'
       }`}
     >
-      <p className="font-semibold">{title}</p>
-      {subtitle && <p className="mt-0.5 text-xs text-slate-500 dark:text-slate-400">{subtitle}</p>}
+      <div className="flex items-center gap-2">
+        {icon && (
+          <span className={`flex h-8 w-8 shrink-0 items-center justify-center rounded-full text-base ${icon.badge}`}>
+            {icon.emoji}
+          </span>
+        )}
+        <p className="font-semibold">{title}</p>
+      </div>
+      {subtitle && <p className="mt-1 text-xs text-slate-500 dark:text-slate-400">{subtitle}</p>}
     </button>
   );
 }
 
-function Pill({ selected, onClick, children }) {
+function Pill({ selected, onClick, children, colorClass }) {
   return (
     <button
       onClick={onClick}
       className={`rounded-full border px-4 py-2 text-sm font-medium transition-colors ${
         selected
-          ? 'border-blue-600 bg-blue-600 text-white'
+          ? colorClass || 'border-blue-600 bg-blue-600 text-white'
           : 'border-slate-300 hover:bg-slate-100 dark:border-slate-600 dark:hover:bg-slate-800'
       }`}
     >
@@ -74,6 +97,7 @@ export function GameSetup() {
               onClick={() => setCategory(cat)}
               title={t(`category.${cat}`)}
               subtitle={t(`category.${cat}.desc`)}
+              icon={CATEGORY_ICON[cat]}
             />
           ))}
         </div>
@@ -101,7 +125,7 @@ export function GameSetup() {
         </h2>
         <div className="flex flex-wrap gap-2">
           {DIFFICULTIES.map((d) => (
-            <Pill key={d} selected={difficulty === d} onClick={() => setDifficulty(d)}>
+            <Pill key={d} selected={difficulty === d} onClick={() => setDifficulty(d)} colorClass={DIFFICULTY_COLOR[d]}>
               {t(`difficulty.${d}`)}
             </Pill>
           ))}

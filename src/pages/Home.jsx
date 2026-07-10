@@ -23,8 +23,12 @@ export function Home() {
     <div className="mx-auto flex min-h-screen max-w-lg flex-col px-6 pb-10 pt-8">
       <div className="flex items-center justify-between">
         <div className="flex items-center gap-2">
-          <img src="/favicon.svg" alt="" className="h-9 w-9" />
-          <h1 className="text-2xl font-bold">{t('app.name')}</h1>
+          <span className="flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-br from-amber-300 to-amber-500 shadow-sm">
+            <img src="/favicon.svg" alt="" className="h-7 w-7" />
+          </span>
+          <h1 className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-violet-600 bg-clip-text text-transparent dark:from-blue-400 dark:to-violet-400">
+            {t('app.name')}
+          </h1>
         </div>
         <div className="flex items-center gap-2">
           <LanguageToggle />
@@ -53,20 +57,22 @@ export function Home() {
         </button>
       </div>
 
-      <div className="mt-10 rounded-2xl border border-slate-200 p-5 dark:border-slate-700">
+      <div className="mt-10 rounded-2xl border border-slate-200 bg-white/60 p-5 shadow-sm dark:border-slate-700 dark:bg-slate-800/40">
         <h2 className="mb-3 font-semibold">{t('home.yourStats')}</h2>
         {summary ? (
           <div className="grid grid-cols-3 gap-3 text-center">
             <div>
-              <p className="text-xl font-bold">{summary.count}</p>
+              <p className="text-xl font-bold text-blue-600 dark:text-blue-400">{summary.count}</p>
               <p className="text-xs text-slate-500 dark:text-slate-400">{t('home.gamesPlayed')}</p>
             </div>
             <div>
-              <p className="text-xl font-bold">{summary.best}</p>
+              <p className="text-xl font-bold text-amber-500">{summary.best}</p>
               <p className="text-xs text-slate-500 dark:text-slate-400">{t('home.bestScore')}</p>
             </div>
             <div>
-              <p className="text-xl font-bold">{Math.round(summary.avgAccuracy * 100)}%</p>
+              <p className="text-xl font-bold text-emerald-600 dark:text-emerald-400">
+                {Math.round(summary.avgAccuracy * 100)}%
+              </p>
               <p className="text-xs text-slate-500 dark:text-slate-400">{t('home.avgAccuracy')}</p>
             </div>
           </div>
