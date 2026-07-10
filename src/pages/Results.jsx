@@ -90,8 +90,12 @@ export function Results() {
       </div>
 
       <div className="mt-6 flex flex-col gap-3">
+        {/* "Play again" reuses this same round's config (category/region/
+            difficulty/mode) and jumps straight back into a fresh game -
+            it does not go through the setup screen. Anyone wanting to
+            change settings first uses "Back to home" instead. */}
         <button
-          onClick={() => navigate('/setup')}
+          onClick={() => navigate('/game', { replace: true, state: data.config })}
           className="w-full rounded-full bg-blue-600 py-3 font-semibold text-white hover:bg-blue-700"
         >
           {t('results.playAgain')}
