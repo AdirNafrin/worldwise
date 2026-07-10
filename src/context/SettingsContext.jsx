@@ -7,6 +7,7 @@ const STORAGE_KEY = 'worldwise:settings';
 const DEFAULTS = {
   theme: 'light',
   soundMuted: false,
+  soundTheme: 'classic', // one of the keys in SOUND_THEMES (src/hooks/useSound.js)
   customTimerSeconds: null, // null = use difficulty default
 };
 
@@ -41,6 +42,7 @@ export function SettingsProvider({ children }) {
       toggleTheme: () =>
         setSettings((s) => ({ ...s, theme: s.theme === 'dark' ? 'light' : 'dark' })),
       toggleSound: () => setSettings((s) => ({ ...s, soundMuted: !s.soundMuted })),
+      setSoundTheme: (soundTheme) => setSettings((s) => ({ ...s, soundTheme })),
       setCustomTimerSeconds: (seconds) =>
         setSettings((s) => ({ ...s, customTimerSeconds: seconds })),
     }),

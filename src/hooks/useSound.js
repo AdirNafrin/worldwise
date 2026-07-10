@@ -15,9 +15,9 @@ function getAudioContext() {
   return sharedCtx;
 }
 
-// Plays a single short tone: a sine (or square) wave oscillator whose
-// volume ramps up quickly then decays away exponentially, so it sounds
-// like a soft "blip" rather than an abrupt click at the start/end.
+// Plays a single short tone: an oscillator whose volume ramps up quickly
+// then decays away exponentially, so it sounds like a soft "blip" rather
+// than an abrupt click at the start/end.
 function beep(ctx, { freq, duration, delay = 0, type = 'sine', gain = 0.15 }) {
   const osc = ctx.createOscillator();
   const gainNode = ctx.createGain();
@@ -32,30 +32,87 @@ function beep(ctx, { freq, duration, delay = 0, type = 'sine', gain = 0.15 }) {
   osc.stop(start + duration + 0.02);
 }
 
-// Exposes playCorrect/playWrong, both respecting the player's mute setting.
+// A "sound theme" is just a fixed sequence of beep() calls for each
+// outcome. Each one is deliberately built from a different waveform/pitch
+// pattern so the 4 themes feel distinct rather than just louder/quieter
+// versions of each other.
+export const SOUND_THEMES = {
+  classic: {
+    label: 'settings.sound.theme.classic',
+    correct: [
+      { freq: 660, duration: 0.12 },
+      { freq: 880, duration: 0.16, delay: 0.1 },
+    ],
+    wrong: [{ freq: 220, duration: 0.22, type: 'square', gain: 0.1 }],
+  },
+  arcade: {
+    label: 'settings.sound.theme.arcade',
+    correct: [
+      { freq: 523, duration: 0.07, type: 'square' },
+      { freq: 659, duration: 0.07, delay: 0.07, type: 'square' },
+      { freq: 784, duration: 0.12, delay: 0.14, type: 'square' },
+    ],
+    wrong: [
+      { freq: 300, duration: 0.15, type: 'sawtooth', gain: 0.1 },
+      { freq: 180, duration: 0.18, delay: 0.12, type: 'sawtooth', gain: 0.1 },
+    ],
+  },
+  chime: {
+    label: 'settings.sound.theme.chime',
+    correct: [
+      { freq: 784, duration: 0.35, gain: 0.12 },
+      { freq: 988, duration: 0.4, delay: 0.05, gain: 0.1 },
+    ],
+    wrong: [{ freq: 220, duration: 0.3, gain: 0.12 }],
+  },
+  marimba: {
+    label: 'settings.sound.theme.marimba',
+    correct: [
+      { freq: 440, duration: 0.1, type: 'triangle' },
+      { freq: 554, duration: 0.1, delay: 0.09, type: 'triangle' },
+      { freq: 659, duration: 0.15, delay: 0.18, type: 'triangle' },
+    ],
+    wrong: [
+      { freq: 330, duration: 0.15, type: 'triangle', gain: 0.12 },
+      { freq: 247, duration: 0.2, delay: 0.12, type: 'triangle', gain: 0.12 },
+    ],
+  },
+};
+
+function playSequence(ctx, sequence) {
+  for (const config of sequence) beep(ctx, config);
+}
+
+// Exposes playCorrect/playWrong for the player's currently-selected sound
+// theme, both respecting the mute setting.
 export function useSound() {
   const { settings } = useSettings();
-  // A ref (rather than reading `settings.soundMuted` directly in the
-  // closures below) so the mute check always sees the latest value even
-  // if playCorrect/playWrong were captured by an event handler set up on
-  // an earlier render.
-  const mutedRef = useRef(settings.soundMuted);
-  mutedRef.current = settings.soundMuted;
+  // A ref (rather than reading settings directly in the closures below) so
+  // the mute/theme check always sees the latest value even if
+  // playCorrect/playWrong were captured by an event handler set up on an
+  // earlier render.
+  const settingsRef = useRef(settings);
+  settingsRef.current = settings;
 
-  // Correct answer: two quick ascending notes (an upward "ding-ding").
   const playCorrect = () => {
-    if (mutedRef.current) return;
-    const ctx = getAudioContext();
-    beep(ctx, { freq: 660, duration: 0.12 });
-    beep(ctx, { freq: 880, duration: 0.16, delay: 0.1 });
+    if (settingsRef.current.soundMuted) return;
+    const theme = SOUND_THEMES[settingsRef.current.soundTheme] || SOUND_THEMES.classic;
+    playSequence(getAudioContext(), theme.correct);
   };
 
-  // Wrong answer / timeout: one low, slightly harsher buzz.
   const playWrong = () => {
-    if (mutedRef.current) return;
-    const ctx = getAudioContext();
-    beep(ctx, { freq: 220, duration: 0.22, type: 'square', gain: 0.1 });
+    if (settingsRef.current.soundMuted) return;
+    const theme = SOUND_THEMES[settingsRef.current.soundTheme] || SOUND_THEMES.classic;
+    playSequence(getAudioContext(), theme.wrong);
   };
 
-  return { playCorrect, playWrong };
+  // Auditions a theme regardless of the mute setting - used by the
+  // settings screen's preview button, where muting shouldn't prevent the
+  // player from previewing what a theme sounds like.
+  const previewTheme = (themeKey) => {
+    const theme = SOUND_THEMES[themeKey] || SOUND_THEMES.classic;
+    playSequence(getAudioContext(), theme.correct);
+  };
+
+  return { playCorrect, playWrong, previewTheme };
 }

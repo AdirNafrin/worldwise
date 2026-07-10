@@ -1,5 +1,6 @@
 import { useI18n } from '../i18n/I18nContext';
 import { useSettings } from '../context/SettingsContext';
+import { SOUND_THEMES, useSound } from '../hooks/useSound';
 
 // Preset custom timer lengths (seconds) a player can pin instead of using
 // the difficulty's automatic default.
@@ -11,7 +12,8 @@ const TIMER_OPTIONS = [5, 7, 10, 15, 20, 30];
 // just the UI for editing them.
 export function SettingsSheet({ open, onClose }) {
   const { t, lang, setLang } = useI18n();
-  const { settings, toggleTheme, toggleSound, setCustomTimerSeconds } = useSettings();
+  const { settings, toggleTheme, toggleSound, setSoundTheme, setCustomTimerSeconds } = useSettings();
+  const { previewTheme } = useSound();
 
   if (!open) return null;
 
@@ -87,6 +89,36 @@ export function SettingsSheet({ open, onClose }) {
                 className={`block h-5 w-5 rounded-full bg-white transition-transform ${!settings.soundMuted ? 'translate-x-5 rtl:-translate-x-5' : 'translate-x-0'}`}
               />
             </button>
+          </div>
+
+          {/* Sound theme: which synthesized tone set plays on correct/wrong
+              answers. The preview (▶) button always plays, even while
+              muted, so the player can audition a theme before choosing it. */}
+          <div>
+            <span className="font-medium">{t('settings.soundTheme')}</span>
+            <div className="mt-2 flex flex-wrap gap-2">
+              {Object.entries(SOUND_THEMES).map(([key, theme]) => (
+                <div
+                  key={key}
+                  className={`flex items-center gap-1 rounded-full border pe-1 ps-3 py-1.5 text-sm ${
+                    settings.soundTheme === key
+                      ? 'border-blue-600 bg-blue-600 text-white'
+                      : 'border-slate-300 dark:border-slate-600'
+                  }`}
+                >
+                  <button onClick={() => setSoundTheme(key)}>{t(theme.label)}</button>
+                  <button
+                    onClick={() => previewTheme(key)}
+                    aria-label={t('settings.soundTheme.preview')}
+                    className={`flex h-6 w-6 items-center justify-center rounded-full ${
+                      settings.soundTheme === key ? 'bg-blue-700' : 'bg-slate-100 dark:bg-slate-700'
+                    }`}
+                  >
+                    ▶
+                  </button>
+                </div>
+              ))}
+            </div>
           </div>
 
           {/* Timer override: "Automatic" clears the override so Game.jsx
