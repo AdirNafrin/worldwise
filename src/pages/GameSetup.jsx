@@ -176,7 +176,7 @@ export function GameSetup() {
           the extra safe-area padding keeps it clear of the iPhone home
           indicator when installed as a standalone PWA. */}
       <div
-        className="fixed inset-x-0 bottom-0 mx-auto max-w-lg border-t border-slate-200 bg-white/90 p-4 backdrop-blur dark:border-slate-700 dark:bg-slate-900/90"
+        className="fixed inset-x-0 bottom-0 mx-auto max-w-lg border-t border-slate-200/60 bg-[var(--bg-bottom)] p-4 dark:border-slate-700/60 dark:bg-[var(--bg-bottom-dark)]"
         style={{ paddingBottom: 'calc(1rem + env(safe-area-inset-bottom))' }}
       >
         <button

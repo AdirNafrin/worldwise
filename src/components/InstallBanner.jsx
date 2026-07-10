@@ -76,7 +76,7 @@ export function InstallBanner() {
 
   return (
     <div
-      className="fixed inset-x-0 bottom-0 z-40 border-t border-slate-200 bg-white p-4 shadow-lg dark:border-slate-700 dark:bg-slate-800"
+      className="fixed inset-x-0 bottom-0 z-40 border-t border-slate-200/60 bg-[var(--bg-bottom)] p-4 shadow-lg dark:border-slate-700/60 dark:bg-[var(--bg-bottom-dark)]"
       style={{ paddingBottom: 'calc(1rem + env(safe-area-inset-bottom))' }}
     >
       <div className="mx-auto flex max-w-lg items-center gap-3">

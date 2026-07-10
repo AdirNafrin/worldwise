@@ -243,8 +243,10 @@ export function Game() {
 
         {/* 4-option answer grid. Each option's visual status is derived
             here (rather than stored) from whether it was picked and/or
-            correct, so the coloring/icon logic lives in one place. */}
-        <div className="mt-6 grid gap-3">
+            correct, so the coloring/icon logic lives in one place.
+            Flag options go in a 2x2 grid (images read better as a compact
+            grid than a tall single column); text answers stay one-per-row. */}
+        <div className={`mt-6 grid gap-3 ${question.category === 'nameToFlag' ? 'grid-cols-2' : ''}`}>
           {question.options.map((opt, i) => {
             let status = 'idle';
             if (answered) {
@@ -392,7 +394,7 @@ function AnswerOption({ category, value, status, disabled, onClick, lang, index 
         onClick={onClick}
         disabled={disabled}
         aria-label={flagLabel}
-        className={`flex items-center justify-center rounded-2xl border-2 bg-slate-50 p-4 transition-all dark:bg-slate-900/40 ${
+        className={`flex items-center justify-center rounded-2xl border-2 bg-slate-50 p-3 transition-all dark:bg-slate-900/40 ${
           status === 'correct'
             ? 'border-green-500'
             : status === 'incorrect'
@@ -404,7 +406,10 @@ function AnswerOption({ category, value, status, disabled, onClick, lang, index 
                   : 'border-slate-200 hover:-translate-y-0.5 hover:border-[var(--accent)] hover:shadow-md dark:border-slate-700'
         }`}
       >
-        <div className="h-20 w-32 overflow-hidden rounded-md shadow-sm ring-1 ring-black/5">
+        {/* w-full + aspect-ratio (rather than a fixed px width) so the flag
+            keeps its natural proportions while still shrinking to fit a
+            2-column grid on narrow phone screens. */}
+        <div className="aspect-[8/5] w-full max-w-40 overflow-hidden rounded-md shadow-sm ring-1 ring-black/5">
           <FlagImage src={value} alt="" />
         </div>
       </button>
