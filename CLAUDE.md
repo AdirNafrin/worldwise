@@ -133,14 +133,32 @@ than guessing — it changes if they ever rename the Vercel project.
 
 ## Open / unresolved items
 
-- **Color palette was never actually chosen.** An artifact with 4 named
-  palette options (Atlas Blue / Terracotta Sunset / Emerald Meridian /
-  Violet Arcade) was sent early on; the user never picked one and the
-  conversation moved on to bug fixes instead. The app currently ships
-  with palette A (blue/violet gradient, the original default) by
-  inertia, not by decision. Worth revisiting if the user brings up colors
-  again.
 - No repo secrets, API keys, or analytics of any kind are present by
   design (verified via grep + `npm audit` when the user asked about
   security before sharing the app with friends) — keep it that way unless
   explicitly asked otherwise.
+
+## Theming (color palette + hover)
+
+- The 4 candidate palettes from the early design artifact were never
+  picked as a single default — instead, per the user's request, **all 4
+  shipped as a persistent Settings option** (`settings.palette`), the
+  same way light/dark mode works. Default is `atlas` (the original
+  blue/violet look).
+- Every accent color (buttons, selected states, timer bar, score,
+  gradient title) reads from CSS custom properties defined per palette
+  in `src/index.css` under `[data-palette='X']` blocks, applied via a
+  `data-palette` attribute on `<html>` (`SettingsContext.jsx`, mirroring
+  how the `dark` class works). **When adding new UI that needs an accent
+  color, use `bg-[var(--accent)]` etc., never a hardcoded Tailwind color
+  like `bg-blue-600`** — the whole point is that every palette re-themes
+  it automatically. See `src/index.css` for the full token list
+  (`--accent`, `--accent-hover`, `--accent-text-dark`, `--accent-2`,
+  `--accent-soft`, `--bg-top`/`--bg-bottom` + dark variants).
+- Category badge colors (`CATEGORY_ICON` in `GameSetup.jsx`) and
+  difficulty colors (green/amber/red) are deliberately *not* tied to the
+  palette — they're semantic/identity colors, not brand accent.
+- Buttons/cards/pills have a hover lift+shadow micro-interaction
+  (`hover:-translate-y-0.5 hover:shadow-*`), gated by
+  `prefers-reduced-motion` in `index.css`. Destructive actions (reset
+  progress) intentionally don't get this — a plain color change only.
