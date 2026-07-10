@@ -70,6 +70,10 @@ const HEBREW_NAME_FALLBACK = {
 
 const popByName = new Map(population.map((p) => [p.country.toLowerCase(), p.population]));
 
+// Finds a country's population in the country-json dataset, which is
+// keyed by English country name rather than an ISO code. Tries the manual
+// override table first, then the country's common/official names, the
+// alias table, and finally all known alternate spellings, in that order.
 function lookupPopulation(country) {
   if (POPULATION_MANUAL[country.cca2] !== undefined) return POPULATION_MANUAL[country.cca2];
   const candidates = [
@@ -87,6 +91,10 @@ function lookupPopulation(country) {
 
 const REGIONS = new Set(['Africa', 'Americas', 'Asia', 'Europe', 'Oceania']);
 
+// Builds one output record per country/territory: resolves its Hebrew
+// name, capital, language list, and population from the sources above,
+// and copies its flag SVG into public/ so the built app can serve it as a
+// local static asset instead of depending on any external image host.
 const result = worldCountries
   .map((country) => {
     const cca2 = country.cca2;

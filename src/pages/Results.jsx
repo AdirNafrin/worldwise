@@ -9,15 +9,22 @@ import { markFirstRoundDone } from '../components/InstallBanner';
 const countryByCode = new Map(ALL_COUNTRIES.map((c) => [c.cca3, c]));
 const countryByFlag = new Map(ALL_COUNTRIES.filter((c) => c.flag).map((c) => [c.flag, c]));
 
+// End-of-round summary: final score, accuracy, a full question-by-question
+// review, and the entry point for saving this game into personal stats.
 export function Results() {
   const { t, lang } = useI18n();
   const location = useLocation();
   const navigate = useNavigate();
   const { stats, recordGame } = useStats();
   const [reviewOpen, setReviewOpen] = useState(false);
+  // Guards against recording the same game twice (React 18/19 StrictMode
+  // runs effects twice in development) and against the "new best score"
+  // check comparing against a stats value that already includes this game.
   const recordedRef = useRef(false);
   const prevBestRef = useRef(null);
 
+  // Passed in via router state from Game.jsx's finishRound(); see the
+  // redirect effect below for what happens if it's missing.
   const data = location.state;
 
   useEffect(() => {
@@ -40,6 +47,8 @@ export function Results() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [data]);
 
+  // No round data (e.g. this page was opened directly, not via a finished
+  // round) - there's nothing to show, so bounce back to Home.
   useEffect(() => {
     if (!data) navigate('/', { replace: true });
   }, [data, navigate]);
@@ -53,6 +62,9 @@ export function Results() {
 
   return (
     <div className="mx-auto min-h-screen max-w-lg px-6 pb-10 pt-8">
+      {/* Different headline when the round ended early from running out of
+          lives, vs. a normal completed round or a practice session stopped
+          by the player. */}
       <h1 className="text-center text-2xl font-bold">
         {data.log.length < 20 && !data.config.practice ? t('results.gameOverEarly') : t('results.title')}
       </h1>
@@ -98,6 +110,8 @@ export function Results() {
         </button>
       </div>
 
+      {/* Full round review: every question asked, what the player picked,
+          and the correct answer - not just a list of missed countries. */}
       {reviewOpen && (
         <div className="mt-6 space-y-3">
           {data.log.map((entry, i) => (
@@ -109,16 +123,26 @@ export function Results() {
   );
 }
 
+// Builds accessible alt text for a review-row flag thumbnail by looking up
+// which country that flag image path belongs to (the log only stores the
+// image path, not the country, since that's all the question needed at
+// the time it was generated).
 function flagAlt(flagSrc, t, lang) {
   const country = countryByFlag.get(flagSrc);
   return country ? t('game.flagAlt', { country: getCountryName(country, lang) }) : '';
 }
 
+// Formats a logged answer value for display in the review list; only
+// population values need special formatting (raw numbers otherwise).
 function optionLabel(category, value, lang) {
   if (category === 'nameToPopulation') return formatPopulation(value, lang);
   return value;
 }
 
+// One row in the review list: which question it was, whether the player
+// got it right, their answer, and (if wrong) the correct answer. Renders
+// flag thumbnails instead of text for nameToFlag questions, since the
+// logged "answer" there is an image path, not a readable string.
 function ReviewRow({ index, entry, t, lang }) {
   const subject = countryByCode.get(entry.countryCode);
   const isFlagCategory = entry.category === 'nameToFlag';
@@ -149,6 +173,8 @@ function ReviewRow({ index, entry, t, lang }) {
             </p>
           )}
         </div>
+        {/* Correct answer is only shown when the player got it wrong -
+            redundant (and visually noisy) to repeat it when they were right. */}
         {!entry.wasCorrect && (
           <div>
             <p className="text-xs text-slate-500 dark:text-slate-400">{t('results.review.correctAnswer')}</p>

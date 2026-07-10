@@ -12,14 +12,25 @@ import { TimerBar } from '../components/TimerBar';
 import { FlagImage } from '../components/FlagImage';
 import { ConfirmDialog } from '../components/ConfirmDialog';
 
+// Default seconds-per-question by difficulty (overridable in Settings).
 const DIFFICULTY_TIMER = { easy: 15, medium: 10, hard: 7 };
 const MAX_LIVES = 3;
 const ROUND_LENGTH = 20;
+// How many extra practice-mode questions to generate at a time once the
+// player is close to running out (practice mode has no fixed round length).
 const PRACTICE_BATCH = 30;
 
+// Lookup maps built once from the full country list, used to go from a
+// question's stored country/flag reference back to the full country
+// record (for the practice-mode facts panel and for turning a flag image
+// path back into a readable country name in feedback text).
 const countryByCode = new Map(ALL_COUNTRIES.map((c) => [c.cca3, c]));
 const countryByFlag = new Map(ALL_COUNTRIES.filter((c) => c.flag).map((c) => [c.flag, c]));
 
+// Points for one answer: a flat base, a bonus for answering with time to
+// spare (scaled by how much of the timer was left), and a bonus that grows
+// with the player's *existing* streak length (so it rewards sustained
+// runs, not just this one answer).
 function scoreFor(wasCorrect, remainingSeconds, duration, streak) {
   if (!wasCorrect) return 0;
   const base = 100;
@@ -28,6 +39,10 @@ function scoreFor(wasCorrect, remainingSeconds, duration, streak) {
   return base + speedBonus + streakBonus;
 }
 
+// The main gameplay screen: shows one question at a time, handles
+// answering (tap or timeout), scoring, lives, and hands off to the Results
+// screen once the round ends. Also renders practice mode's per-answer
+// "facts" panel, since that's just an alternate feedback state of the same screen.
 export function Game() {
   const { t, lang } = useI18n();
   const location = useLocation();
@@ -35,8 +50,14 @@ export function Game() {
   const { settings } = useSettings();
   const { playCorrect, playWrong } = useSound();
 
+  // The round's setup (category/region/difficulty/practice), passed in via
+  // router state from GameSetup. If it's missing (e.g. the page was loaded
+  // directly), there's nothing to play - see the redirect effect below.
   const config = location.state;
 
+  // Normal rounds generate all 20 questions upfront (needed anyway for the
+  // Results review screen); practice mode generates a first batch and
+  // tops itself up as the player approaches the end (see goNext).
   const [questions, setQuestions] = useState(() =>
     config ? generateRound({ ...config, count: config.practice ? PRACTICE_BATCH : ROUND_LENGTH, lang }) : [],
   );
@@ -58,13 +79,19 @@ export function Game() {
   const scoreRef = useRef(score);
   const logRef = useRef(log);
 
+  // Guard against landing on /game with no round configured (e.g. a
+  // refresh, or direct navigation) - bounce back to setup instead of
+  // crashing on a missing `config`.
   useEffect(() => {
     if (!config) navigate('/setup', { replace: true });
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
+  // Cancel any pending auto-advance timer if the component unmounts mid-delay.
   useEffect(() => () => clearTimeout(advanceTimeoutRef.current), []);
 
+  // null duration disables the timer entirely (practice mode); otherwise
+  // the player's custom override wins, falling back to the difficulty default.
   const duration = config?.practice ? null : settings.customTimerSeconds ?? DIFFICULTY_TIMER[config?.difficulty];
   const question = questions[index];
 
@@ -73,8 +100,15 @@ export function Game() {
     commitAnswer(null, true);
   };
 
+  // Timer is disabled once the question is answered (freezes the bar
+  // instead of continuing to tick down towards a second expiry).
   const { remainingSeconds, percent } = useTimer(answered ? null : duration, index, handleExpire);
 
+  // Records an answer (or a timeout, when wasTimeout is true): scores it,
+  // updates streak/lives, appends a log entry for the Results review
+  // screen, and either schedules the next question or ends the round -
+  // all in normal mode, which auto-advances; practice mode instead waits
+  // for the player to tap "Next" (see the render below).
   function commitAnswer(answer, wasTimeout) {
     if (!question) return;
     const wasCorrect = !wasTimeout && answer === question.correctAnswer;
@@ -113,13 +147,22 @@ export function Game() {
       const livesLeft = wasCorrect ? lives : lives - 1;
       if (!wasCorrect) setLives(livesLeft);
       if (livesLeft <= 0) {
+        // Out of lives: show this last answer's feedback briefly, then go
+        // straight to Results instead of the next question.
         advanceTimeoutRef.current = setTimeout(() => finishRound(nextScore, nextLog), 1400);
         return;
       }
+      // Normal mode auto-advances after a short pause so the player has
+      // time to see whether they were right; practice mode's "Next"
+      // button (rendered below) calls goNext() directly instead.
       advanceTimeoutRef.current = setTimeout(() => goNext(), 1400);
     }
   }
 
+  // Resets the per-question feedback state and moves to the next question -
+  // generating another batch of practice questions if the current batch is
+  // almost exhausted, or ending the round if a normal-mode round has just
+  // finished its last question.
   function goNext() {
     setAnswered(false);
     setSelected(null);
@@ -136,6 +179,9 @@ export function Game() {
     setIndex((i) => i + 1);
   }
 
+  // Navigates to the Results screen with everything it needs to display
+  // the summary and recompute/save stats: the round's config, final score,
+  // and full question log.
   function finishRound(finalScore, finalLog) {
     navigate('/results', {
       replace: true,
@@ -153,6 +199,7 @@ export function Game() {
 
   return (
     <div className="mx-auto flex min-h-screen max-w-lg flex-col px-4 pb-8 pt-4">
+      {/* Top row: quit button, live score/lives/streak. */}
       <div className="flex items-center justify-between gap-3">
         <button
           onClick={() => setConfirmQuit(true)}
@@ -168,6 +215,7 @@ export function Game() {
         </div>
       </div>
 
+      {/* Question counter: "∞" total in practice mode since it's unbounded. */}
       <p className="mt-2 text-center text-sm text-slate-500 dark:text-slate-400">
         {config.practice
           ? t('game.question', { current: index + 1, total: '∞' })
@@ -183,6 +231,9 @@ export function Game() {
       <div className="mt-6 flex flex-1 flex-col">
         <QuestionPrompt question={question} t={t} />
 
+        {/* 4-option answer grid. Each option's visual status is derived
+            here (rather than stored) from whether it was picked and/or
+            correct, so the coloring/icon logic lives in one place. */}
         <div className="mt-6 grid gap-3">
           {question.options.map((opt, i) => {
             let status = 'idle';
@@ -209,6 +260,11 @@ export function Game() {
           })}
         </div>
 
+        {/* Feedback panel: shown once the question has been answered.
+            Color-coded green/red to match the correct/incorrect state,
+            reveals the correct answer when the player got it wrong, and
+            (practice mode only) shows the extended country facts plus a
+            manual "Next" button instead of auto-advancing. */}
         {answered && (
           <div
             className={`mt-6 rounded-2xl border p-4 ${
@@ -238,6 +294,7 @@ export function Game() {
         )}
       </div>
 
+      {/* Confirmation before abandoning an in-progress round. */}
       <ConfirmDialog
         open={confirmQuit}
         title={t('game.quit')}
@@ -249,6 +306,10 @@ export function Game() {
   );
 }
 
+// Formats a raw correct-answer value for display in the feedback text.
+// Population values need unit formatting, and nameToFlag's "value" is
+// actually a flag image path, so it's translated back to a country name -
+// otherwise the feedback text would show something like "/flags/can.svg".
 function formatAnswer(category, value, lang) {
   if (category === 'nameToPopulation') return formatPopulation(value, lang);
   if (category === 'nameToFlag') {
@@ -258,12 +319,18 @@ function formatAnswer(category, value, lang) {
   return value;
 }
 
+// Renders the question prompt itself (what's shown above the answer
+// options), which differs per category: an image for flag questions, a
+// city name for capital questions, or a country name with the relevant
+// question text otherwise.
 function QuestionPrompt({ question, t }) {
   switch (question.category) {
     case 'flagToName':
       return (
         <div className="flex flex-col items-center gap-4">
           <div className="h-40 w-64 overflow-hidden rounded-xl border border-slate-200 shadow-sm dark:border-slate-700">
+            {/* alt text intentionally doesn't name the country - that
+                would give away the answer to screen reader users. */}
             <FlagImage src={question.flag} alt={t('game.flagAltHidden')} />
           </div>
           <p className="text-lg font-semibold">{t('game.whichCountry')}</p>
@@ -289,8 +356,14 @@ function QuestionPrompt({ question, t }) {
   }
 }
 
+// One answer option. For nameToFlag questions this renders a flag image
+// (in a fixed, correctly-proportioned box so it never looks stretched)
+// instead of the AnswerButton's usual text label.
 function AnswerOption({ category, value, status, disabled, onClick, lang, index }) {
   if (category === 'nameToFlag') {
+    // Once answered, reveal which country this flag belongs to via the
+    // accessible label (it stays generic - just the option's position -
+    // beforehand, so it doesn't spoil the answer for screen reader users).
     const revealed = status !== 'idle' ? countryByFlag.get(value) : null;
     const flagLabel = revealed ? getCountryName(revealed, lang) : `${index + 1}`;
     return (
@@ -325,9 +398,15 @@ function AnswerOption({ category, value, status, disabled, onClick, lang, index 
   );
 }
 
+// Practice-mode-only panel shown after every answer: region, capital,
+// area, population, and languages for the country just asked about (not a
+// narrative "fun fact", since that content doesn't exist in the source
+// data and would need separate hand-written copy per country).
 function PracticeFacts({ subject, t, lang }) {
   return (
     <div className="mt-4 grid grid-cols-2 gap-2 rounded-xl bg-slate-50 p-3 text-sm dark:bg-slate-900">
+      {/* Falls back to the raw region string for the handful of
+          territories (e.g. Antarctica) outside the 5 translated regions. */}
       <Fact label={t('feedback.facts.region')} value={t(`region.${subject.region}`) !== `region.${subject.region}` ? t(`region.${subject.region}`) : subject.region} />
       <Fact label={t('feedback.facts.capital')} value={subject.capital || '—'} />
       <Fact label={t('feedback.facts.area')} value={formatArea(subject.area, lang)} />
@@ -342,6 +421,7 @@ function PracticeFacts({ subject, t, lang }) {
   );
 }
 
+// One label/value row within the practice facts panel.
 function Fact({ label, value }) {
   return (
     <div>

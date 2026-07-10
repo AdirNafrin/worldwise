@@ -8,11 +8,18 @@ import { CATEGORIES } from '../utils/questions';
 
 const countryByCode = new Map(ALL_COUNTRIES.map((c) => [c.cca3, c]));
 
+// Personal stats screen: recent game history, accuracy broken down by
+// category, the countries the player misses most, and a reset button.
+// Everything here reads from StatsContext, which is what Results.jsx
+// writes to after each finished round.
 export function Stats() {
   const { t, lang } = useI18n();
   const { stats, resetStats } = useStats();
   const [confirmOpen, setConfirmOpen] = useState(false);
 
+  // Top 8 most-missed countries, sorted by mistake count. Filters out any
+  // country code that's no longer in the dataset (defensive, shouldn't
+  // normally happen) rather than crashing on a missing lookup.
   const hardestCountries = useMemo(() => {
     return Object.entries(stats.countryMistakes)
       .sort((a, b) => b[1] - a[1])
@@ -25,6 +32,8 @@ export function Stats() {
     <div className="mx-auto min-h-screen max-w-lg px-4 pb-10">
       <TopBar title={t('stats.title')} onBack={true} />
 
+      {/* Recent games: newest 10, with category/difficulty/region/date and
+          that game's score + accuracy. */}
       <section className="mt-2">
         <h2 className="mb-3 text-sm font-semibold uppercase tracking-wide text-slate-500 dark:text-slate-400">
           {t('stats.history')}
@@ -57,6 +66,9 @@ export function Stats() {
         )}
       </section>
 
+      {/* Accuracy per category: one progress bar per of the 6 real
+          categories (not "mixed", since that isn't a category to be
+          accurate *in* - its questions already count toward these rows). */}
       <section className="mt-8">
         <h2 className="mb-3 text-sm font-semibold uppercase tracking-wide text-slate-500 dark:text-slate-400">
           {t('stats.byCategory')}
@@ -80,6 +92,7 @@ export function Stats() {
         </div>
       </section>
 
+      {/* Countries the player gets wrong most often, as a quick chip list. */}
       <section className="mt-8">
         <h2 className="mb-3 text-sm font-semibold uppercase tracking-wide text-slate-500 dark:text-slate-400">
           {t('stats.hardestCountries')}
@@ -100,6 +113,7 @@ export function Stats() {
         )}
       </section>
 
+      {/* Destructive action, gated behind a confirmation dialog. */}
       <button
         onClick={() => setConfirmOpen(true)}
         className="mt-10 w-full rounded-full border border-red-300 py-3 font-medium text-red-600 hover:bg-red-50 dark:border-red-900 dark:text-red-400 dark:hover:bg-red-950/30"

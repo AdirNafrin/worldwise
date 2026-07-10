@@ -1,5 +1,8 @@
 @import "tailwindcss";
 
+/* Makes Tailwind's dark: variant respond to a `.dark` class on <html>
+   (toggled by SettingsContext) instead of only the OS color-scheme
+   preference, since the app has its own persisted light/dark setting. */
 @custom-variant dark (&:where(.dark, .dark *));
 
 html,
@@ -12,15 +15,20 @@ body {
   @apply text-slate-900 antialiased dark:text-slate-100;
   background: linear-gradient(180deg, #eef2ff 0%, #f8fafc 45%, #f8fafc 100%);
   background-attachment: fixed;
+  /* Keeps content clear of the iPhone notch/status bar and home-indicator
+     area when the app is installed and running as a standalone PWA. */
   padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom)
     env(safe-area-inset-left);
 }
 
+/* Dark-mode background gradient, swapped in via the same `.dark` class. */
 :root.dark body {
   background: linear-gradient(180deg, #1e1b4b 0%, #0f172a 45%, #020617 100%);
   background-attachment: fixed;
 }
 
+/* Removes the gray flash Android/iOS browsers show on tap, since answer
+   buttons already have their own hover/active styling. */
 * {
   -webkit-tap-highlight-color: transparent;
 }

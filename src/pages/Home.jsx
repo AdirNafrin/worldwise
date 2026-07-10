@@ -5,12 +5,18 @@ import { useStats } from '../context/StatsContext';
 import { LanguageToggle, ThemeToggle } from '../components/TopBar';
 import { SettingsSheet } from '../components/SettingsSheet';
 
+// Landing screen: title/logo, language + theme switches, the 3 main
+// actions (start a game, view stats, open settings), and a short summary
+// of the player's own stats.
 export function Home() {
   const { t } = useI18n();
   const navigate = useNavigate();
   const { stats } = useStats();
   const [settingsOpen, setSettingsOpen] = useState(false);
 
+  // Derives the 3 headline numbers shown at the bottom of the screen from
+  // the full game history; null when no games have been played yet, so the
+  // UI can show a "play a round" hint instead of misleading zeros.
   const summary = useMemo(() => {
     if (stats.games.length === 0) return null;
     const best = Math.max(...stats.games.map((g) => g.score));
@@ -21,6 +27,8 @@ export function Home() {
 
   return (
     <div className="mx-auto flex min-h-screen max-w-lg flex-col px-6 pb-10 pt-8">
+      {/* Header: logo + gradient title on the leading side, language/theme
+          switches on the trailing side. */}
       <div className="flex items-center justify-between">
         <div className="flex items-center gap-2">
           <span className="flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-br from-amber-300 to-amber-500 shadow-sm">
@@ -36,6 +44,8 @@ export function Home() {
         </div>
       </div>
 
+      {/* Primary actions: start a new game is the main call-to-action,
+          stats/settings are secondary. */}
       <div className="mt-12 flex flex-1 flex-col items-center justify-center gap-4 text-center">
         <button
           onClick={() => navigate('/setup')}
@@ -57,6 +67,8 @@ export function Home() {
         </button>
       </div>
 
+      {/* Quick stats card: games played / best score / average accuracy,
+          or a placeholder message before the player's first round. */}
       <div className="mt-10 rounded-2xl border border-slate-200 bg-white/60 p-5 shadow-sm dark:border-slate-700 dark:bg-slate-800/40">
         <h2 className="mb-3 font-semibold">{t('home.yourStats')}</h2>
         {summary ? (

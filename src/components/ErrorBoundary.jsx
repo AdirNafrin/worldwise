@@ -1,13 +1,20 @@
 import { Component } from 'react';
 import { withT } from './withT';
 
+// React only supports error boundaries as class components, which is why
+// this one isn't a function component like the rest of the app. It catches
+// any render/lifecycle error thrown by its children and shows a friendly
+// fallback screen with a reload button instead of a blank white page.
 class ErrorBoundaryBase extends Component {
   state = { hasError: false };
 
+  // Called by React after a child throws during render; flips this
+  // boundary into its fallback UI state.
   static getDerivedStateFromError() {
     return { hasError: true };
   }
 
+  // Called after the error has been caught, purely for diagnostics.
   componentDidCatch(error, info) {
     console.error('ErrorBoundary caught:', error, info);
   }
@@ -28,8 +35,11 @@ class ErrorBoundaryBase extends Component {
         </div>
       );
     }
+    // No error: render the app as normal.
     return this.props.children;
   }
 }
 
+// Wrapped with withT so it can show translated text despite being a class
+// component that can't call the useI18n hook itself.
 export const ErrorBoundary = withT(ErrorBoundaryBase);

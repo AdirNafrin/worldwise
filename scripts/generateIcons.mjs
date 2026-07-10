@@ -11,6 +11,8 @@ const root = path.resolve(__dirname, '..');
 const iconsDir = path.join(root, 'public', 'icons');
 mkdirSync(iconsDir, { recursive: true });
 
+// Icon color palette - a gold medal on a blue ribbon, matching the app's
+// "achievement" branding requirement from the spec.
 const gold = '#f5b921';
 const goldDark = '#d4900f';
 const ribbon = '#3b82f6';
@@ -28,11 +30,14 @@ const glyph = (size, withBg) => `
   <path d="M256 250 L276 300 L330 305 L290 340 L302 393 L256 365 L210 393 L222 340 L182 305 L236 300 Z" fill="${goldDark}"/>
 </svg>`;
 
+// Rasterizes the glyph SVG to a PNG file at the given pixel size.
 async function render(size, withBg, filename) {
   await sharp(Buffer.from(glyph(size, withBg))).png().toFile(path.join(iconsDir, filename));
   console.log('wrote', filename);
 }
 
+// Generates every PNG size the manifest/HTML <head> reference: standard
+// and maskable PWA icons, the Apple touch icon, and a small favicon PNG.
 await render(192, true, 'icon-192.png');
 await render(512, true, 'icon-512.png');
 await render(512, true, 'icon-maskable-512.png');

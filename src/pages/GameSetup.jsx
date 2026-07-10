@@ -5,9 +5,13 @@ import { TopBar } from '../components/TopBar';
 import { CATEGORIES } from '../utils/questions';
 import { REGIONS } from '../utils/countries';
 
+// The 6 real categories plus the "mixed" pseudo-category, in the order
+// they're offered to the player.
 const CATEGORY_OPTIONS = [...CATEGORIES, 'mixed'];
 const DIFFICULTIES = ['easy', 'medium', 'hard'];
 
+// Emoji + tinted badge background for each category card, purely
+// decorative (helps the grid read as more than a wall of text).
 const CATEGORY_ICON = {
   flagToName: { emoji: '🏳️', badge: 'bg-blue-100 dark:bg-blue-900/50' },
   nameToFlag: { emoji: '🔍', badge: 'bg-sky-100 dark:bg-sky-900/50' },
@@ -18,12 +22,17 @@ const CATEGORY_ICON = {
   mixed: { emoji: '🎲', badge: 'bg-pink-100 dark:bg-pink-900/50' },
 };
 
+// Selected-state color per difficulty (green/amber/red), doubling as a
+// quick visual cue for "easier" to "harder".
 const DIFFICULTY_COLOR = {
   easy: 'border-green-600 bg-green-600 text-white',
   medium: 'border-amber-500 bg-amber-500 text-white',
   hard: 'border-red-600 bg-red-600 text-white',
 };
 
+// A selectable card used for both the category grid and the mode
+// (normal/practice) choice - shows a title, optional subtitle/description,
+// and optional icon badge, highlighted when selected.
 function OptionCard({ selected, onClick, title, subtitle, icon }) {
   return (
     <button
@@ -47,6 +56,8 @@ function OptionCard({ selected, onClick, title, subtitle, icon }) {
   );
 }
 
+// A small selectable pill used for region and difficulty, which don't need
+// the extra description text a full OptionCard has.
 function Pill({ selected, onClick, children, colorClass }) {
   return (
     <button
@@ -62,6 +73,9 @@ function Pill({ selected, onClick, children, colorClass }) {
   );
 }
 
+// "New Game" screen: lets the player pick a category, region, difficulty,
+// and normal-vs-practice mode, then hands that config off to the Game page
+// via router state.
 export function GameSetup() {
   const { t } = useI18n();
   const navigate = useNavigate();
@@ -70,6 +84,9 @@ export function GameSetup() {
   const [difficulty, setDifficulty] = useState('medium');
   const [practice, setPractice] = useState(false);
 
+  // Hands the chosen setup off to /game as router state (rather than URL
+  // params or a shared context) since it's only ever needed once, right
+  // when the Game page mounts.
   const start = () => {
     navigate('/game', {
       state: {
@@ -85,6 +102,7 @@ export function GameSetup() {
     <div className="mx-auto min-h-screen max-w-lg px-4 pb-28">
       <TopBar title={t('setup.title')} onBack={true} />
 
+      {/* Category: 6 real categories + "mixed", single-select grid. */}
       <section className="mt-2">
         <h2 className="mb-3 text-sm font-semibold uppercase tracking-wide text-slate-500 dark:text-slate-400">
           {t('setup.category')}
@@ -103,6 +121,7 @@ export function GameSetup() {
         </div>
       </section>
 
+      {/* Region: "whole world" plus the 5 spec-defined regions. */}
       <section className="mt-8">
         <h2 className="mb-3 text-sm font-semibold uppercase tracking-wide text-slate-500 dark:text-slate-400">
           {t('setup.region')}
@@ -119,6 +138,8 @@ export function GameSetup() {
         </div>
       </section>
 
+      {/* Difficulty: affects both the country pool and distractor
+          closeness (see utils/countries.js and utils/questions.js). */}
       <section className="mt-8">
         <h2 className="mb-3 text-sm font-semibold uppercase tracking-wide text-slate-500 dark:text-slate-400">
           {t('setup.difficulty')}
@@ -132,6 +153,8 @@ export function GameSetup() {
         </div>
       </section>
 
+      {/* Mode: normal (timed, 20Q, lives) vs. practice (untimed, unlimited,
+          shows extended facts after each answer). */}
       <section className="mt-8">
         <h2 className="mb-3 text-sm font-semibold uppercase tracking-wide text-slate-500 dark:text-slate-400">
           {t('setup.mode')}
@@ -147,6 +170,9 @@ export function GameSetup() {
         </div>
       </section>
 
+      {/* Sticky "Let's play" bar pinned to the bottom of the viewport;
+          the extra safe-area padding keeps it clear of the iPhone home
+          indicator when installed as a standalone PWA. */}
       <div
         className="fixed inset-x-0 bottom-0 mx-auto max-w-lg border-t border-slate-200 bg-white/90 p-4 backdrop-blur dark:border-slate-700 dark:bg-slate-900/90"
         style={{ paddingBottom: 'calc(1rem + env(safe-area-inset-bottom))' }}

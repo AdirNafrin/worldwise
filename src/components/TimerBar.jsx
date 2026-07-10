@@ -1,3 +1,6 @@
+// Visual per-question countdown: a shrinking progress bar plus the
+// remaining whole seconds as a number. Turns red under 30% remaining as an
+// early warning that time is about to run out.
 export function TimerBar({ percent, remainingSeconds }) {
   const isLow = percent < 30;
   return (

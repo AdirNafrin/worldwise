@@ -1,5 +1,9 @@
 import { useI18n } from '../i18n/I18nContext';
 
+// Generic "are you sure?" modal, reused for both quitting a round mid-game
+// and resetting all saved stats. Renders nothing at all when closed rather
+// than hiding via CSS, so it never intercepts clicks/tab order in the
+// background.
 export function ConfirmDialog({ open, title, body, confirmLabel, onConfirm, onCancel }) {
   const { t } = useI18n();
   if (!open) return null;

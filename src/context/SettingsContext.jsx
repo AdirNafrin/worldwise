@@ -1,5 +1,7 @@
 import { createContext, useContext, useEffect, useMemo, useState } from 'react';
 
+// User preferences that persist across visits: theme, sound on/off, and an
+// optional manual override for the per-question timer.
 const STORAGE_KEY = 'worldwise:settings';
 
 const DEFAULTS = {
@@ -8,6 +10,8 @@ const DEFAULTS = {
   customTimerSeconds: null, // null = use difficulty default
 };
 
+// Reads saved settings from localStorage, falling back to defaults if
+// nothing is saved yet or the saved value is corrupt/unparseable.
 function loadSettings() {
   try {
     const raw = localStorage.getItem(STORAGE_KEY);
@@ -20,6 +24,9 @@ function loadSettings() {
 
 const SettingsContext = createContext(null);
 
+// Provides app-wide settings state and keeps it in sync with both
+// localStorage and the <html> element's `dark` class (which is what
+// Tailwind's dark: variant actually looks for).
 export function SettingsProvider({ children }) {
   const [settings, setSettings] = useState(loadSettings);
 
@@ -43,6 +50,9 @@ export function SettingsProvider({ children }) {
   return <SettingsContext.Provider value={api}>{children}</SettingsContext.Provider>;
 }
 
+// Hook for reading/updating settings from any component. Throws if used
+// outside the provider so a missing <SettingsProvider> fails loudly
+// instead of silently returning nothing.
 export function useSettings() {
   const ctx = useContext(SettingsContext);
   if (!ctx) throw new Error('useSettings must be used within SettingsProvider');

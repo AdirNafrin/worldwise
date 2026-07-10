@@ -2,6 +2,9 @@ import { useNavigate } from 'react-router-dom';
 import { useI18n } from '../i18n/I18nContext';
 import { useSettings } from '../context/SettingsContext';
 
+// Chevron that points the correct visual direction for "back" in both
+// writing directions: in RTL (Hebrew), "back" is to the right, so the
+// icon (drawn pointing left) needs to be flipped 180deg.
 function BackIcon({ dir }) {
   const rotate = dir === 'rtl' ? 'rotate-180' : '';
   return (
@@ -11,6 +14,10 @@ function BackIcon({ dir }) {
   );
 }
 
+// Shared page header: optional back button, a title, and optional extra
+// controls on the trailing side. `onBack` can be `true` (just go back one
+// history entry) or a custom handler (e.g. GameSetup's back button behaves
+// differently mid-flow).
 export function TopBar({ title, onBack, actions }) {
   const navigate = useNavigate();
   const { dir } = useI18n();
@@ -32,6 +39,10 @@ export function TopBar({ title, onBack, actions }) {
   );
 }
 
+// Small pill button that flips the UI language between Hebrew and English.
+// Shows the *other* language's label (so tapping "EN" while in Hebrew
+// switches to English), which is the common convention for language
+// switchers.
 export function LanguageToggle() {
   const { lang, setLang } = useI18n();
   return (
@@ -45,6 +56,8 @@ export function LanguageToggle() {
   );
 }
 
+// Sun/moon toggle for light/dark mode; the chosen theme is persisted by
+// SettingsContext so it's remembered on the next visit.
 export function ThemeToggle() {
   const { settings, toggleTheme } = useSettings();
   const isDark = settings.theme === 'dark';

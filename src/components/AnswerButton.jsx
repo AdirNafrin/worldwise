@@ -1,3 +1,12 @@
+// One text answer option in the 4-choice grid during a game. `status`
+// drives both the color and the icon, so correctness is never conveyed by
+// color alone (accessibility requirement from the spec):
+//   idle           - not answered yet, plain and clickable
+//   correct        - this is the option the player picked, and it was right
+//   incorrect      - this is the option the player picked, and it was wrong
+//   revealCorrect  - the player picked something else; this shows which
+//                    option was actually correct
+//   muted          - answered already, this option was neither picked nor correct
 const STYLES = {
   idle: 'border-slate-200 bg-white hover:border-blue-400 hover:bg-blue-50 dark:border-slate-700 dark:bg-slate-800 dark:hover:bg-slate-700',
   correct: 'border-green-500 bg-green-50 text-green-800 dark:bg-green-900/40 dark:text-green-300',

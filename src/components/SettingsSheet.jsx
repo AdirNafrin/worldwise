@@ -1,8 +1,14 @@
 import { useI18n } from '../i18n/I18nContext';
 import { useSettings } from '../context/SettingsContext';
 
+// Preset custom timer lengths (seconds) a player can pin instead of using
+// the difficulty's automatic default.
 const TIMER_OPTIONS = [5, 7, 10, 15, 20, 30];
 
+// Bottom-sheet (drawer) modal opened from the Home screen, letting the
+// player change language, theme, sound, and the question timer. All of the
+// actual values live in I18nContext/SettingsContext - this component is
+// just the UI for editing them.
 export function SettingsSheet({ open, onClose }) {
   const { t, lang, setLang } = useI18n();
   const { settings, toggleTheme, toggleSound, setCustomTimerSeconds } = useSettings();
@@ -10,6 +16,9 @@ export function SettingsSheet({ open, onClose }) {
   if (!open) return null;
 
   return (
+    // Clicking the dimmed backdrop closes the sheet; clicking inside the
+    // sheet itself must not (stopPropagation below), or every tap on a
+    // setting would also close the sheet.
     <div className="fixed inset-0 z-50 flex items-end justify-center bg-black/40 sm:items-center" onClick={onClose}>
       <div
         className="w-full max-w-lg rounded-t-3xl bg-white p-6 shadow-xl sm:rounded-3xl dark:bg-slate-800"
@@ -27,6 +36,7 @@ export function SettingsSheet({ open, onClose }) {
         </div>
 
         <div className="space-y-5">
+          {/* Language: switches both the UI text and document dir (RTL/LTR). */}
           <div className="flex items-center justify-between">
             <span className="font-medium">{t('settings.language')}</span>
             <div className="flex overflow-hidden rounded-full border border-slate-300 dark:border-slate-600">
@@ -45,6 +55,7 @@ export function SettingsSheet({ open, onClose }) {
             </div>
           </div>
 
+          {/* Theme: light/dark, persisted and applied as a `dark` class on <html>. */}
           <div className="flex items-center justify-between">
             <span className="font-medium">{t('settings.theme')}</span>
             <div className="flex overflow-hidden rounded-full border border-slate-300 dark:border-slate-600">
@@ -63,6 +74,7 @@ export function SettingsSheet({ open, onClose }) {
             </div>
           </div>
 
+          {/* Sound: mutes/unmutes the correct/incorrect answer tones. */}
           <div className="flex items-center justify-between">
             <span className="font-medium">{t('settings.sound')}</span>
             <button
@@ -77,6 +89,8 @@ export function SettingsSheet({ open, onClose }) {
             </button>
           </div>
 
+          {/* Timer override: "Automatic" clears the override so Game.jsx
+              falls back to the selected difficulty's default seconds-per-question. */}
           <div>
             <div className="mb-2 flex items-center justify-between">
               <span className="font-medium">{t('settings.timer')}</span>
