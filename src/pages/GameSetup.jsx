@@ -147,7 +147,10 @@ export function GameSetup() {
         </div>
       </section>
 
-      <div className="fixed inset-x-0 bottom-0 mx-auto max-w-lg border-t border-slate-200 bg-white/90 p-4 backdrop-blur dark:border-slate-700 dark:bg-slate-900/90">
+      <div
+        className="fixed inset-x-0 bottom-0 mx-auto max-w-lg border-t border-slate-200 bg-white/90 p-4 backdrop-blur dark:border-slate-700 dark:bg-slate-900/90"
+        style={{ paddingBottom: 'calc(1rem + env(safe-area-inset-bottom))' }}
+      >
         <button
           onClick={start}
           className="w-full rounded-full bg-blue-600 py-4 text-lg font-semibold text-white shadow-lg shadow-blue-600/20 hover:bg-blue-700 active:scale-[0.98]"
