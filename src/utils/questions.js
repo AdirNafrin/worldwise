@@ -1,10 +1,11 @@
-import { buildSubjectPool, getCountryName } from './countries';
+import { buildSubjectPool, getCountryName, getRegionName, REGIONS } from './countries';
 import { getLanguageName } from './languages';
 import { shuffle, sample } from './shuffle';
 
-// The 6 trivia categories from the spec. "mixed" is handled separately
-// (see generateRound) rather than living in this list, since it isn't a
-// question type of its own - it's "use all of these, evenly distributed".
+// The trivia categories from the spec, plus "country -> continent". "mixed"
+// is handled separately (see generateRound) rather than living in this
+// list, since it isn't a question type of its own - it's "use all of
+// these, evenly distributed".
 export const CATEGORIES = [
   'flagToName',
   'nameToFlag',
@@ -12,6 +13,7 @@ export const CATEGORIES = [
   'nameToCapital',
   'nameToPopulation',
   'nameToLanguage',
+  'nameToRegion',
 ];
 
 // Not every country can be the *subject* of every category - e.g. a
@@ -25,7 +27,16 @@ const FIELD_FILTERS = {
   nameToCapital: (c) => Boolean(c.capital),
   nameToPopulation: (c) => c.population != null,
   nameToLanguage: (c) => c.languages.length > 0,
+  // A handful of territories (Antarctica etc.) fall outside the 5
+  // real regions and can't be quizzed on "which continent".
+  nameToRegion: (c) => REGIONS.includes(c.region),
 };
+
+// "Which continent" only makes sense across the whole world - if the
+// player filtered to a single region, every subject would trivially share
+// the same correct answer. This category ignores the region filter
+// entirely and always draws from every country.
+const IGNORES_REGION_FILTER = new Set(['nameToRegion']);
 
 // Population-question distractor "closeness": window of ranks (in the
 // pool sorted by population) to draw distractors from, per difficulty.
@@ -162,6 +173,17 @@ function buildQuestion(category, subject, pool, difficulty, lang) {
       const options = shuffle([correctName, ...distractors]);
       return { category, countryCode: subject.cca3, countryName: name, options, correctAnswer: correctName };
     }
+    // Show a country name, ask which continent/region it's in. Distractors
+    // come from the fixed 5-region list rather than from other countries.
+    case 'nameToRegion': {
+      const correctName = getRegionName(subject.region, lang);
+      const distractors = sample(
+        REGIONS.filter((r) => r !== subject.region),
+        3,
+      ).map((r) => getRegionName(r, lang));
+      const options = shuffle([correctName, ...distractors]);
+      return { category, countryCode: subject.cca3, countryName: name, options, correctAnswer: correctName };
+    }
     default:
       throw new Error(`Unknown category: ${category}`);
   }
@@ -181,7 +203,15 @@ export function generateRound({ categories, region, difficulty, count, lang }) {
   // per-category eligible *subjects*, respecting each category's field filter.
   const basePool = buildSubjectPool(region, difficulty, count, () => true);
   const poolsByCategory = Object.fromEntries(
-    cats.map((cat) => [cat, buildSubjectPool(region, difficulty, count, FIELD_FILTERS[cat])]),
+    cats.map((cat) => [
+      cat,
+      buildSubjectPool(
+        IGNORES_REGION_FILTER.has(cat) ? 'all' : region,
+        difficulty,
+        count,
+        FIELD_FILTERS[cat],
+      ),
+    ]),
   );
 
   const usedCodes = new Set();

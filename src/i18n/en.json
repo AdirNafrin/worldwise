@@ -26,6 +26,7 @@
   "category.nameToCapital": "Country → Capital",
   "category.nameToPopulation": "Country → Population",
   "category.nameToLanguage": "Country → Language",
+  "category.nameToRegion": "Country → Continent",
   "category.mixed": "Mixed",
 
   "category.flagToName.desc": "Guess the country from its flag",
@@ -34,6 +35,7 @@
   "category.nameToCapital.desc": "Pick the capital city of the country",
   "category.nameToPopulation.desc": "Guess the country's population",
   "category.nameToLanguage.desc": "Pick an official language of the country",
+  "category.nameToRegion.desc": "Pick the continent the country is in",
   "category.mixed.desc": "A shuffled mix of all categories",
 
   "home.start": "Start Game",
@@ -82,6 +84,7 @@
   "game.whatIsCapital": "What is the capital of {country}?",
   "game.whatIsPopulation": "What is the population of {country}?",
   "game.whatIsLanguage": "What is an official language of {country}?",
+  "game.whatIsRegion": "Which continent is {country} in?",
   "game.flagAlt": "Flag of {country}",
   "game.flagAltHidden": "Flag to identify",
   "game.quit": "Quit round",

@@ -14,6 +14,23 @@ export function getCountryName(country, lang) {
   return lang === 'he' ? country.nameHe : country.nameEn;
 }
 
+// Hebrew names for the 5 REGIONS values, for the "country -> continent"
+// trivia category. Kept separate from the i18n dictionaries (same pattern
+// as getLanguageName) since this is data being quizzed on, not UI copy.
+const REGION_NAMES_HE = {
+  Africa: 'אפריקה',
+  Americas: 'אמריקה',
+  Asia: 'אסיה',
+  Europe: 'אירופה',
+  Oceania: 'אוקיאניה',
+};
+
+// Returns a region's name in the requested UI language.
+export function getRegionName(region, lang) {
+  if (lang === 'he') return REGION_NAMES_HE[region] || region;
+  return region;
+}
+
 // Countries ranked by population, most populous first. Countries with no
 // population figure (a handful of uninhabited territories) are appended at
 // the end, so they only ever surface in the largest ("hard") tier.

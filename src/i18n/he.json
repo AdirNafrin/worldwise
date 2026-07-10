@@ -26,6 +26,7 @@
   "category.nameToCapital": "מדינה ← בירה",
   "category.nameToPopulation": "מדינה ← אוכלוסייה",
   "category.nameToLanguage": "מדינה ← שפה",
+  "category.nameToRegion": "מדינה ← יבשת",
   "category.mixed": "מעורב",
 
   "category.flagToName.desc": "נחשו את המדינה לפי הדגל שלה",
@@ -34,6 +35,7 @@
   "category.nameToCapital.desc": "בחרו את עיר הבירה של המדינה",
   "category.nameToPopulation.desc": "נחשו את אוכלוסיית המדינה",
   "category.nameToLanguage.desc": "בחרו שפה רשמית של המדינה",
+  "category.nameToRegion.desc": "בחרו את היבשת שבה נמצאת המדינה",
   "category.mixed.desc": "תמהיל מעורבב של כל הקטגוריות",
 
   "home.start": "התחל משחק",
@@ -82,6 +84,7 @@
   "game.whatIsCapital": "מהי בירת {country}?",
   "game.whatIsPopulation": "מהי אוכלוסיית {country}?",
   "game.whatIsLanguage": "מהי שפה רשמית של {country}?",
+  "game.whatIsRegion": "באיזו יבשת נמצאת {country}?",
   "game.flagAlt": "דגל {country}",
   "game.flagAltHidden": "דגל לזיהוי",
   "game.quit": "יציאה מהסבב",

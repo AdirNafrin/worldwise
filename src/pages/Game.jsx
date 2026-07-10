@@ -370,6 +370,8 @@ function QuestionPrompt({ question, t }) {
       return <p className="text-center text-lg font-semibold">{t('game.whatIsPopulation', { country: question.countryName })}</p>;
     case 'nameToLanguage':
       return <p className="text-center text-lg font-semibold">{t('game.whatIsLanguage', { country: question.countryName })}</p>;
+    case 'nameToRegion':
+      return <p className="text-center text-lg font-semibold">{t('game.whatIsRegion', { country: question.countryName })}</p>;
     default:
       return null;
   }

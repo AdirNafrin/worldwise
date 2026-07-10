@@ -19,6 +19,7 @@ const CATEGORY_ICON = {
   nameToCapital: { emoji: '📍', badge: 'bg-orange-100 dark:bg-orange-900/50' },
   nameToPopulation: { emoji: '👥', badge: 'bg-emerald-100 dark:bg-emerald-900/50' },
   nameToLanguage: { emoji: '💬', badge: 'bg-violet-100 dark:bg-violet-900/50' },
+  nameToRegion: { emoji: '🌍', badge: 'bg-teal-100 dark:bg-teal-900/50' },
   mixed: { emoji: '🎲', badge: 'bg-pink-100 dark:bg-pink-900/50' },
 };
 
@@ -33,11 +34,11 @@ const DIFFICULTY_COLOR = {
 // A selectable card used for both the category grid and the mode
 // (normal/practice) choice - shows a title, optional subtitle/description,
 // and optional icon badge, highlighted when selected.
-function OptionCard({ selected, onClick, title, subtitle, icon, className = '' }) {
+function OptionCard({ selected, onClick, title, subtitle, icon }) {
   return (
     <button
       onClick={onClick}
-      className={`rounded-2xl border-2 p-4 text-start transition-colors ${className} ${
+      className={`rounded-2xl border-2 p-4 text-start transition-colors ${
         selected
           ? 'border-blue-500 bg-blue-50 dark:bg-blue-950/40'
           : 'border-slate-200 bg-white hover:border-blue-300 dark:border-slate-700 dark:bg-slate-800'
@@ -102,7 +103,7 @@ export function GameSetup() {
     <div className="mx-auto min-h-screen max-w-lg px-4 pb-28">
       <TopBar title={t('setup.title')} onBack={true} />
 
-      {/* Category: 6 real categories + "mixed", single-select grid. */}
+      {/* Category: all real categories + "mixed", single-select grid. */}
       <section className="mt-2">
         <h2 className="mb-3 text-sm font-semibold uppercase tracking-wide text-slate-500 dark:text-slate-400">
           {t('setup.category')}
@@ -116,9 +117,6 @@ export function GameSetup() {
               title={t(`category.${cat}`)}
               subtitle={t(`category.${cat}.desc`)}
               icon={CATEGORY_ICON[cat]}
-              // "mixed" is the 7th, odd-one-out option - span both columns
-              // so it fills its own row instead of leaving a lopsided gap.
-              className={cat === 'mixed' ? 'col-span-2' : ''}
             />
           ))}
         </div>
