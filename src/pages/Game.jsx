@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
-import { useLocation, useNavigate } from 'react-router-dom';
+import { useBlocker, useLocation, useNavigate } from 'react-router-dom';
 import { useI18n } from '../i18n/I18nContext';
 import { useSettings } from '../context/SettingsContext';
 import { useSound } from '../hooks/useSound';
@@ -86,6 +86,15 @@ export function Game() {
     if (!config) navigate('/setup', { replace: true });
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
+
+  // The in-app "✕" button asks for confirmation before quitting, but the
+  // browser/OS back gesture (swipe-back on iOS, hardware back on Android,
+  // or the browser's own back button) bypasses it entirely and would
+  // otherwise silently abandon the round. useBlocker intercepts exactly
+  // that case (a POP history action, i.e. back/forward) while leaving our
+  // own navigate() calls elsewhere (quitting via the ✕, finishing the
+  // round) unblocked.
+  const blocker = useBlocker(({ historyAction }) => Boolean(config) && historyAction === 'POP');
 
   // Cancel any pending auto-advance timer if the component unmounts mid-delay.
   useEffect(() => () => clearTimeout(advanceTimeoutRef.current), []);
@@ -215,10 +224,11 @@ export function Game() {
         </div>
       </div>
 
-      {/* Question counter: "∞" total in practice mode since it's unbounded. */}
+      {/* Question counter: practice mode has no fixed total, so it just
+          shows a running count instead of "X of ∞" (which read as broken). */}
       <p className="mt-2 text-center text-sm text-slate-500 dark:text-slate-400">
         {config.practice
-          ? t('game.question', { current: index + 1, total: '∞' })
+          ? t('game.questionPractice', { current: index + 1 })
           : t('game.question', { current: index + 1, total: ROUND_LENGTH })}
       </p>
 
@@ -294,13 +304,22 @@ export function Game() {
         )}
       </div>
 
-      {/* Confirmation before abandoning an in-progress round. */}
+      {/* Confirmation before abandoning an in-progress round - shown
+          whether triggered by the ✕ button or by a blocked back
+          navigation (see the useBlocker call above). */}
       <ConfirmDialog
-        open={confirmQuit}
+        open={confirmQuit || blocker.state === 'blocked'}
         title={t('game.quit')}
         body={t('game.quitConfirm')}
-        onCancel={() => setConfirmQuit(false)}
-        onConfirm={() => navigate('/setup', { replace: true })}
+        onCancel={() => {
+          setConfirmQuit(false);
+          if (blocker.state === 'blocked') blocker.reset();
+        }}
+        onConfirm={() => {
+          setConfirmQuit(false);
+          if (blocker.state === 'blocked') blocker.proceed();
+          else navigate('/setup', { replace: true });
+        }}
       />
     </div>
   );

@@ -64,6 +64,7 @@
   "setup.category": "Category",
   "setup.region": "Region",
   "setup.difficulty": "Difficulty",
+  "setup.difficulty.hint": "Changes how close the wrong answers are and how obscure the countries can get - easy stays with well-known countries and clearly-wrong options, hard pulls in tricky, close ones.",
   "setup.mode": "Mode",
   "setup.mode.normal": "Normal (20 questions)",
   "setup.mode.practice": "Practice (no timer, no lives)",
@@ -71,6 +72,7 @@
   "setup.begin": "Let's play",
 
   "game.question": "Question {current} of {total}",
+  "game.questionPractice": "Question {current} · Practice mode",
   "game.score": "Score",
   "game.lives": "Lives",
   "game.streak": "Streak",

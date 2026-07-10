@@ -64,6 +64,7 @@
   "setup.category": "קטגוריה",
   "setup.region": "אזור",
   "setup.difficulty": "רמת קושי",
+  "setup.difficulty.hint": "משנה כמה קרובות התשובות השגויות וכמה נדירות המדינות שיישאלו - קל נשאר עם מדינות מוכרות והסחות ברורות, קשה מביא מדינות פחות מוכרות והסחות מטעות.",
   "setup.mode": "מצב משחק",
   "setup.mode.normal": "רגיל (20 שאלות)",
   "setup.mode.practice": "תרגול (ללא טיימר וללא חיים)",
@@ -71,6 +72,7 @@
   "setup.begin": "בואו נשחק",
 
   "game.question": "שאלה {current} מתוך {total}",
+  "game.questionPractice": "שאלה {current} · מצב תרגול",
   "game.score": "ניקוד",
   "game.lives": "חיים",
   "game.streak": "רצף",

@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { createBrowserRouter, RouterProvider, Outlet } from 'react-router-dom';
 import { I18nProvider } from './i18n/I18nContext';
 import { SettingsProvider } from './context/SettingsContext';
 import { StatsProvider } from './context/StatsContext';
@@ -9,6 +9,34 @@ import { GameSetup } from './pages/GameSetup';
 import { Game } from './pages/Game';
 import { Results } from './pages/Results';
 import { Stats } from './pages/Stats';
+
+// Shared shell rendered above every page: the matched route's page via
+// <Outlet/>, plus the install banner that should float over any screen.
+function RootLayout() {
+  return (
+    <>
+      <Outlet />
+      <InstallBanner />
+    </>
+  );
+}
+
+// A data router (rather than plain <BrowserRouter>/<Routes>) is required
+// for useBlocker, which Game.jsx uses to intercept the browser/OS back
+// gesture mid-round and ask for confirmation instead of silently losing
+// progress.
+const router = createBrowserRouter([
+  {
+    element: <RootLayout />,
+    children: [
+      { path: '/', element: <Home /> },
+      { path: '/setup', element: <GameSetup /> },
+      { path: '/game', element: <Game /> },
+      { path: '/results', element: <Results /> },
+      { path: '/stats', element: <Stats /> },
+    ],
+  },
+]);
 
 // Root component: wires up the app-wide providers (language, theme/sound
 // settings, saved stats) and the page router. Provider order matters here
@@ -21,20 +49,7 @@ function App() {
       <SettingsProvider>
         <StatsProvider>
           <ErrorBoundary>
-            <BrowserRouter>
-              {/* Each route is one full-screen "page" from the spec (home,
-                  setup, the game itself, results, stats). */}
-              <Routes>
-                <Route path="/" element={<Home />} />
-                <Route path="/setup" element={<GameSetup />} />
-                <Route path="/game" element={<Game />} />
-                <Route path="/results" element={<Results />} />
-                <Route path="/stats" element={<Stats />} />
-              </Routes>
-              {/* Floating install prompt; renders itself only once a round
-                  has been completed and the browser has offered to install. */}
-              <InstallBanner />
-            </BrowserRouter>
+            <RouterProvider router={router} />
           </ErrorBoundary>
         </StatsProvider>
       </SettingsProvider>

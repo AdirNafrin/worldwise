@@ -33,11 +33,11 @@ const DIFFICULTY_COLOR = {
 // A selectable card used for both the category grid and the mode
 // (normal/practice) choice - shows a title, optional subtitle/description,
 // and optional icon badge, highlighted when selected.
-function OptionCard({ selected, onClick, title, subtitle, icon }) {
+function OptionCard({ selected, onClick, title, subtitle, icon, className = '' }) {
   return (
     <button
       onClick={onClick}
-      className={`rounded-2xl border-2 p-4 text-start transition-colors ${
+      className={`rounded-2xl border-2 p-4 text-start transition-colors ${className} ${
         selected
           ? 'border-blue-500 bg-blue-50 dark:bg-blue-950/40'
           : 'border-slate-200 bg-white hover:border-blue-300 dark:border-slate-700 dark:bg-slate-800'
@@ -116,6 +116,9 @@ export function GameSetup() {
               title={t(`category.${cat}`)}
               subtitle={t(`category.${cat}.desc`)}
               icon={CATEGORY_ICON[cat]}
+              // "mixed" is the 7th, odd-one-out option - span both columns
+              // so it fills its own row instead of leaving a lopsided gap.
+              className={cat === 'mixed' ? 'col-span-2' : ''}
             />
           ))}
         </div>
@@ -151,6 +154,7 @@ export function GameSetup() {
             </Pill>
           ))}
         </div>
+        <p className="mt-2 text-xs text-slate-500 dark:text-slate-400">{t('setup.difficulty.hint')}</p>
       </section>
 
       {/* Mode: normal (timed, 20Q, lives) vs. practice (untimed, unlimited,
