@@ -50,6 +50,14 @@ than guessing — it changes if they ever rename the Vercel project.
   the user has to create the empty repo manually on github.com first.
 - `soccer` (the original repo) has been intentionally abandoned — all
   local git remotes pointing at it were removed. Don't resurrect it.
+- The local working directory was originally `/home/user/soccer` (matching
+  the sandbox's original provisioning) and was renamed to
+  `/home/user/worldwise` at the user's request, purely for local
+  cleanliness (it isn't visible to anyone, but they wanted it to stop
+  saying "soccer" anywhere, including on disk). If a fresh session's
+  system prompt still shows `/home/user/soccer` as the "primary working
+  directory," that's just stale environment metadata — check `pwd` /
+  `ls /home/user` for the real current path rather than trusting that label.
 
 ## Environment quirks worth knowing
 
@@ -106,6 +114,14 @@ than guessing — it changes if they ever rename the Vercel project.
   category/region/difficulty/mode), bypassing the setup screen. "Back to
   home" is the only way back to the setup/menu flow. This was an explicit
   user preference, not the original default behavior.
+- **Country → Flag answers render as a 2x2 grid**, not one-per-row like
+  the other categories (`Game.jsx`, the options `<div>` gets `grid-cols-2`
+  only when `question.category === 'nameToFlag'`). Explicit user request
+  for better use of screen width. The flag boxes themselves size via
+  `aspect-[8/5]` + `max-w-40` rather than a fixed pixel width, so they
+  shrink correctly inside a 2-column grid on narrow phones instead of
+  overflowing their column - don't go back to fixed `w-32`/`h-20`, that's
+  what caused the original stretched-flag bug this replaced.
 - Full list of trivia categories lives in `CATEGORIES` in
   `src/utils/questions.js` — currently 7 (flag↔name, capital↔name,
   name→population, name→language, name→continent) plus "mixed". Adding an
@@ -130,6 +146,39 @@ than guessing — it changes if they ever rename the Vercel project.
   concepts in plain terms, don't assume familiarity.
 - Communicates in Hebrew; respond in Hebrew for chat, keep code/comments/
   commit messages in English.
+
+## Audio
+
+- Beyond the original single correct/wrong tone pair, there are now **4
+  selectable sound themes** (`SOUND_THEMES` in `src/hooks/useSound.js`:
+  classic/arcade/chime/marimba), each just a different sequence of
+  `beep()` calls (waveform/pitch/timing) — still zero audio assets.
+  Persisted as `settings.soundTheme`. The Settings screen's preview (▶)
+  button plays a theme *regardless of the mute setting*, on purpose, so
+  users can audition options while muted — don't "fix" that into
+  respecting mute.
+
+## Responsive design
+
+- The app targets phone/tablet/desktop, web + installed PWA, iOS + Android,
+  all in one responsive layout (no separate mobile/desktop codepaths).
+- Verification pattern used and worth reusing after any layout change:
+  spin up the preview server, then loop Playwright across viewport widths
+  **320 to 1920px** (at least 320/360/375/390/412/430/768/1024/1280/1366/1920
+  to cover old small phones through iPad landscape and desktop) and assert
+  `document.documentElement.scrollWidth <= document.documentElement.clientWidth + 1`
+  on every page/state (including Hebrew RTL, and short/landscape phone
+  heights like 667x375) — cheap to run, catches horizontal-overflow
+  regressions immediately. Also worth a real visual screenshot at the
+  narrowest width (320px) since "no overflow" doesn't guarantee
+  "readable."
+- This is exactly how a real bug was found: on short viewports (phone
+  landscape, or an old small phone), the Settings sheet had no
+  `max-height`, so its content — including its own close button — could
+  grow taller than the screen with no way to scroll back up to it. Fixed
+  with `max-h-[85vh] overflow-y-auto` on the sheet card. Any new fixed/
+  modal overlay should get the same treatment up front rather than
+  waiting to rediscover this.
 
 ## Open / unresolved items
 

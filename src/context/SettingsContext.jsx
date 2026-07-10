@@ -38,6 +38,9 @@ export function SettingsProvider({ children }) {
   useEffect(() => {
     localStorage.setItem(STORAGE_KEY, JSON.stringify(settings));
     document.documentElement.classList.toggle('dark', settings.theme === 'dark');
+    // Mirrors the `dark` class above: sets data-palette="atlas" (etc.) on
+    // <html> so the [data-palette='X'] CSS custom properties in index.css
+    // take effect app-wide.
     document.documentElement.dataset.palette = settings.palette;
   }, [settings]);
 

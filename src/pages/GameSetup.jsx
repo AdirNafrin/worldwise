@@ -174,7 +174,10 @@ export function GameSetup() {
 
       {/* Sticky "Let's play" bar pinned to the bottom of the viewport;
           the extra safe-area padding keeps it clear of the iPhone home
-          indicator when installed as a standalone PWA. */}
+          indicator when installed as a standalone PWA. Background is the
+          page's own --bg-bottom (not a plain white/slate card) so the bar
+          blends into the gradient instead of reading as a mismatched white
+          slab on the warmer palettes - only the button itself should stand out. */}
       <div
         className="fixed inset-x-0 bottom-0 mx-auto max-w-lg border-t border-slate-200/60 bg-[var(--bg-bottom)] p-4 dark:border-slate-700/60 dark:bg-[var(--bg-bottom-dark)]"
         style={{ paddingBottom: 'calc(1rem + env(safe-area-inset-bottom))' }}

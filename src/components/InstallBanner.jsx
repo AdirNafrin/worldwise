@@ -75,6 +75,9 @@ export function InstallBanner() {
   };
 
   return (
+    // Background matches the page's own gradient (--bg-bottom) rather than
+    // a plain white/slate card, so this banner blends into whichever color
+    // palette is active instead of looking like a disconnected white bar.
     <div
       className="fixed inset-x-0 bottom-0 z-40 border-t border-slate-200/60 bg-[var(--bg-bottom)] p-4 shadow-lg dark:border-slate-700/60 dark:bg-[var(--bg-bottom-dark)]"
       style={{ paddingBottom: 'calc(1rem + env(safe-area-inset-bottom))' }}

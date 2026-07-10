@@ -24,6 +24,11 @@ export function SettingsSheet({ open, onClose }) {
     // setting would also close the sheet.
     <div className="fixed inset-0 z-50 flex items-end justify-center bg-black/40 sm:items-center" onClick={onClose}>
       <div
+        // max-h + overflow-y-auto: on short viewports (phone landscape,
+        // small/old phones) this sheet's content can be taller than the
+        // screen. Without a cap it would overflow past the top of the
+        // viewport, taking the close button and the last settings with it,
+        // with no way to scroll back to them.
         className="max-h-[85vh] w-full max-w-lg overflow-y-auto rounded-t-3xl bg-white p-6 shadow-xl sm:rounded-3xl dark:bg-slate-800"
         onClick={(e) => e.stopPropagation()}
       >
