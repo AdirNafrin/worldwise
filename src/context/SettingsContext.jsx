@@ -4,8 +4,12 @@ import { createContext, useContext, useEffect, useMemo, useState } from 'react';
 // optional manual override for the per-question timer.
 const STORAGE_KEY = 'worldwise:settings';
 
+// One of the [data-palette] blocks defined in src/index.css.
+export const PALETTES = ['atlas', 'terracotta', 'emerald', 'violet'];
+
 const DEFAULTS = {
   theme: 'light',
+  palette: 'atlas',
   soundMuted: false,
   soundTheme: 'classic', // one of the keys in SOUND_THEMES (src/hooks/useSound.js)
   customTimerSeconds: null, // null = use difficulty default
@@ -34,6 +38,7 @@ export function SettingsProvider({ children }) {
   useEffect(() => {
     localStorage.setItem(STORAGE_KEY, JSON.stringify(settings));
     document.documentElement.classList.toggle('dark', settings.theme === 'dark');
+    document.documentElement.dataset.palette = settings.palette;
   }, [settings]);
 
   const api = useMemo(
@@ -41,6 +46,7 @@ export function SettingsProvider({ children }) {
       settings,
       toggleTheme: () =>
         setSettings((s) => ({ ...s, theme: s.theme === 'dark' ? 'light' : 'dark' })),
+      setPalette: (palette) => setSettings((s) => ({ ...s, palette })),
       toggleSound: () => setSettings((s) => ({ ...s, soundMuted: !s.soundMuted })),
       setSoundTheme: (soundTheme) => setSettings((s) => ({ ...s, soundTheme })),
       setCustomTimerSeconds: (seconds) =>

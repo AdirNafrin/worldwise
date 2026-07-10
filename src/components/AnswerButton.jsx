@@ -8,7 +8,7 @@
 //                    option was actually correct
 //   muted          - answered already, this option was neither picked nor correct
 const STYLES = {
-  idle: 'border-slate-200 bg-white hover:border-blue-400 hover:bg-blue-50 dark:border-slate-700 dark:bg-slate-800 dark:hover:bg-slate-700',
+  idle: 'border-slate-200 bg-white hover:-translate-y-0.5 hover:border-[var(--accent)] hover:bg-[var(--accent-soft)] hover:shadow-md dark:border-slate-700 dark:bg-slate-800 dark:hover:bg-slate-700',
   correct: 'border-green-500 bg-green-50 text-green-800 dark:bg-green-900/40 dark:text-green-300',
   incorrect: 'border-red-500 bg-red-50 text-red-800 dark:bg-red-900/40 dark:text-red-300',
   revealCorrect: 'border-green-500 border-dashed bg-white dark:bg-slate-800',
@@ -36,7 +36,7 @@ export function AnswerButton({ status = 'idle', onClick, disabled, children }) {
     <button
       onClick={onClick}
       disabled={disabled}
-      className={`flex min-h-16 w-full items-center justify-between gap-3 rounded-2xl border-2 px-4 py-3 text-start font-medium transition-colors ${STYLES[status]}`}
+      className={`flex min-h-16 w-full items-center justify-between gap-3 rounded-2xl border-2 px-4 py-3 text-start font-medium transition-all ${STYLES[status]}`}
     >
       <span className="flex-1">{children}</span>
       {status === 'correct' && <CheckIcon />}

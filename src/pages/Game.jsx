@@ -295,7 +295,7 @@ export function Game() {
             {config.practice && (
               <button
                 onClick={goNext}
-                className="mt-4 w-full rounded-full bg-blue-600 py-3 font-semibold text-white hover:bg-blue-700"
+                className="mt-4 w-full rounded-full bg-[var(--accent)] py-3 font-semibold text-white transition-all hover:-translate-y-0.5 hover:bg-[var(--accent-hover)] hover:shadow-lg"
               >
                 {t('feedback.next')}
               </button>
@@ -392,7 +392,7 @@ function AnswerOption({ category, value, status, disabled, onClick, lang, index 
         onClick={onClick}
         disabled={disabled}
         aria-label={flagLabel}
-        className={`flex items-center justify-center rounded-2xl border-2 bg-slate-50 p-4 transition-colors dark:bg-slate-900/40 ${
+        className={`flex items-center justify-center rounded-2xl border-2 bg-slate-50 p-4 transition-all dark:bg-slate-900/40 ${
           status === 'correct'
             ? 'border-green-500'
             : status === 'incorrect'
@@ -401,7 +401,7 @@ function AnswerOption({ category, value, status, disabled, onClick, lang, index 
                 ? 'border-green-500 border-dashed'
                 : status === 'muted'
                   ? 'border-slate-200 opacity-50 dark:border-slate-700'
-                  : 'border-slate-200 hover:border-blue-400 dark:border-slate-700'
+                  : 'border-slate-200 hover:-translate-y-0.5 hover:border-[var(--accent)] hover:shadow-md dark:border-slate-700'
         }`}
       >
         <div className="h-20 w-32 overflow-hidden rounded-md shadow-sm ring-1 ring-black/5">

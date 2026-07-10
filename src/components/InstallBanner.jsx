@@ -92,7 +92,7 @@ export function InstallBanner() {
         </button>
         <button
           onClick={install}
-          className="rounded-full bg-blue-600 px-4 py-2 text-sm font-medium text-white hover:bg-blue-700"
+          className="rounded-full bg-[var(--accent)] px-4 py-2 text-sm font-medium text-white transition-all hover:-translate-y-0.5 hover:bg-[var(--accent-hover)] hover:shadow-md"
         >
           {t('home.installAction')}
         </button>

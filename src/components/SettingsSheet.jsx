@@ -1,5 +1,5 @@
 import { useI18n } from '../i18n/I18nContext';
-import { useSettings } from '../context/SettingsContext';
+import { PALETTES, useSettings } from '../context/SettingsContext';
 import { SOUND_THEMES, useSound } from '../hooks/useSound';
 
 // Preset custom timer lengths (seconds) a player can pin instead of using
@@ -12,7 +12,8 @@ const TIMER_OPTIONS = [5, 7, 10, 15, 20, 30];
 // just the UI for editing them.
 export function SettingsSheet({ open, onClose }) {
   const { t, lang, setLang } = useI18n();
-  const { settings, toggleTheme, toggleSound, setSoundTheme, setCustomTimerSeconds } = useSettings();
+  const { settings, toggleTheme, setPalette, toggleSound, setSoundTheme, setCustomTimerSeconds } =
+    useSettings();
   const { previewTheme } = useSound();
 
   if (!open) return null;
@@ -44,13 +45,13 @@ export function SettingsSheet({ open, onClose }) {
             <div className="flex overflow-hidden rounded-full border border-slate-300 dark:border-slate-600">
               <button
                 onClick={() => setLang('he')}
-                className={`px-4 py-1.5 text-sm ${lang === 'he' ? 'bg-blue-600 text-white' : ''}`}
+                className={`px-4 py-1.5 text-sm ${lang === 'he' ? 'bg-[var(--accent)] text-white' : ''}`}
               >
                 עברית
               </button>
               <button
                 onClick={() => setLang('en')}
-                className={`px-4 py-1.5 text-sm ${lang === 'en' ? 'bg-blue-600 text-white' : ''}`}
+                className={`px-4 py-1.5 text-sm ${lang === 'en' ? 'bg-[var(--accent)] text-white' : ''}`}
               >
                 English
               </button>
@@ -63,16 +64,42 @@ export function SettingsSheet({ open, onClose }) {
             <div className="flex overflow-hidden rounded-full border border-slate-300 dark:border-slate-600">
               <button
                 onClick={() => settings.theme !== 'light' && toggleTheme()}
-                className={`px-4 py-1.5 text-sm ${settings.theme === 'light' ? 'bg-blue-600 text-white' : ''}`}
+                className={`px-4 py-1.5 text-sm ${settings.theme === 'light' ? 'bg-[var(--accent)] text-white' : ''}`}
               >
                 {t('settings.theme.light')}
               </button>
               <button
                 onClick={() => settings.theme !== 'dark' && toggleTheme()}
-                className={`px-4 py-1.5 text-sm ${settings.theme === 'dark' ? 'bg-blue-600 text-white' : ''}`}
+                className={`px-4 py-1.5 text-sm ${settings.theme === 'dark' ? 'bg-[var(--accent)] text-white' : ''}`}
               >
                 {t('settings.theme.dark')}
               </button>
+            </div>
+          </div>
+
+          {/* Color palette: which accent color scheme is active (independent
+              of light/dark). Each swatch button carries its own
+              `data-palette` attribute so its preview dot always shows that
+              palette's real --accent color, regardless of which one is
+              currently active app-wide. */}
+          <div>
+            <span className="font-medium">{t('settings.palette')}</span>
+            <div className="mt-2 flex flex-wrap gap-2">
+              {PALETTES.map((p) => (
+                <button
+                  key={p}
+                  data-palette={p}
+                  onClick={() => setPalette(p)}
+                  className={`flex items-center gap-2 rounded-full border px-3 py-1.5 text-sm transition-all hover:-translate-y-0.5 hover:shadow-sm ${
+                    settings.palette === p
+                      ? 'border-[var(--accent)]'
+                      : 'border-slate-300 dark:border-slate-600'
+                  }`}
+                >
+                  <span className="h-4 w-4 rounded-full bg-[var(--accent)]" />
+                  {t(`settings.palette.${p}`)}
+                </button>
+              ))}
             </div>
           </div>
 
@@ -83,7 +110,7 @@ export function SettingsSheet({ open, onClose }) {
               onClick={toggleSound}
               role="switch"
               aria-checked={!settings.soundMuted}
-              className={`h-7 w-12 rounded-full p-1 transition-colors ${!settings.soundMuted ? 'bg-blue-600' : 'bg-slate-300 dark:bg-slate-600'}`}
+              className={`h-7 w-12 rounded-full p-1 transition-colors ${!settings.soundMuted ? 'bg-[var(--accent)]' : 'bg-slate-300 dark:bg-slate-600'}`}
             >
               <span
                 className={`block h-5 w-5 rounded-full bg-white transition-transform ${!settings.soundMuted ? 'translate-x-5 rtl:-translate-x-5' : 'translate-x-0'}`}
@@ -102,7 +129,7 @@ export function SettingsSheet({ open, onClose }) {
                   key={key}
                   className={`flex items-center gap-1 rounded-full border pe-1 ps-3 py-1.5 text-sm ${
                     settings.soundTheme === key
-                      ? 'border-blue-600 bg-blue-600 text-white'
+                      ? 'border-[var(--accent)] bg-[var(--accent)] text-white'
                       : 'border-slate-300 dark:border-slate-600'
                   }`}
                 >
@@ -111,7 +138,7 @@ export function SettingsSheet({ open, onClose }) {
                     onClick={() => previewTheme(key)}
                     aria-label={t('settings.soundTheme.preview')}
                     className={`flex h-6 w-6 items-center justify-center rounded-full ${
-                      settings.soundTheme === key ? 'bg-blue-700' : 'bg-slate-100 dark:bg-slate-700'
+                      settings.soundTheme === key ? 'bg-[var(--accent-hover)]' : 'bg-slate-100 dark:bg-slate-700'
                     }`}
                   >
                     ▶
@@ -130,7 +157,7 @@ export function SettingsSheet({ open, onClose }) {
             <div className="flex flex-wrap gap-2">
               <button
                 onClick={() => setCustomTimerSeconds(null)}
-                className={`rounded-full border px-3 py-1.5 text-sm ${settings.customTimerSeconds == null ? 'border-blue-600 bg-blue-600 text-white' : 'border-slate-300 dark:border-slate-600'}`}
+                className={`rounded-full border px-3 py-1.5 text-sm ${settings.customTimerSeconds == null ? 'border-[var(--accent)] bg-[var(--accent)] text-white' : 'border-slate-300 dark:border-slate-600'}`}
               >
                 {t('settings.timer.auto')}
               </button>
@@ -138,7 +165,7 @@ export function SettingsSheet({ open, onClose }) {
                 <button
                   key={s}
                   onClick={() => setCustomTimerSeconds(s)}
-                  className={`rounded-full border px-3 py-1.5 text-sm ${settings.customTimerSeconds === s ? 'border-blue-600 bg-blue-600 text-white' : 'border-slate-300 dark:border-slate-600'}`}
+                  className={`rounded-full border px-3 py-1.5 text-sm ${settings.customTimerSeconds === s ? 'border-[var(--accent)] bg-[var(--accent)] text-white' : 'border-slate-300 dark:border-slate-600'}`}
                 >
                   {t('settings.timer.custom', { seconds: s })}
                 </button>

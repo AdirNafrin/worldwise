@@ -36,7 +36,10 @@ export function Home() {
           <span className="flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-br from-amber-300 to-amber-500 shadow-sm">
             <img src="/favicon.svg" alt="" className="h-7 w-7" />
           </span>
-          <h1 className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-violet-600 bg-clip-text text-transparent dark:from-blue-400 dark:to-violet-400">
+          <h1
+            className="bg-clip-text text-2xl font-bold text-transparent"
+            style={{ backgroundImage: 'var(--title-gradient)' }}
+          >
             {t('app.name')}
           </h1>
         </div>
@@ -51,19 +54,19 @@ export function Home() {
       <div className="mt-12 flex flex-1 flex-col items-center justify-center gap-4 text-center">
         <button
           onClick={() => navigate('/setup')}
-          className="w-full max-w-xs rounded-full bg-blue-600 py-4 text-lg font-semibold text-white shadow-lg shadow-blue-600/20 transition hover:bg-blue-700 active:scale-[0.98]"
+          className="w-full max-w-xs rounded-full bg-[var(--accent)] py-4 text-lg font-semibold text-white shadow-lg transition-all hover:-translate-y-0.5 hover:bg-[var(--accent-hover)] hover:shadow-xl active:translate-y-0 active:scale-[0.98]"
         >
           {t('home.start')}
         </button>
         <button
           onClick={() => navigate('/stats')}
-          className="w-full max-w-xs rounded-full border border-slate-300 py-3 font-medium hover:bg-slate-100 dark:border-slate-600 dark:hover:bg-slate-800"
+          className="w-full max-w-xs rounded-full border border-slate-300 py-3 font-medium transition-all hover:-translate-y-0.5 hover:bg-slate-100 hover:shadow-md dark:border-slate-600 dark:hover:bg-slate-800"
         >
           {t('home.stats')}
         </button>
         <button
           onClick={() => setSettingsOpen(true)}
-          className="w-full max-w-xs rounded-full border border-slate-300 py-3 font-medium hover:bg-slate-100 dark:border-slate-600 dark:hover:bg-slate-800"
+          className="w-full max-w-xs rounded-full border border-slate-300 py-3 font-medium transition-all hover:-translate-y-0.5 hover:bg-slate-100 hover:shadow-md dark:border-slate-600 dark:hover:bg-slate-800"
         >
           {t('home.settings')}
         </button>
@@ -76,7 +79,7 @@ export function Home() {
         {summary ? (
           <div className="grid grid-cols-3 gap-3 text-center">
             <div>
-              <p className="text-xl font-bold text-blue-600 dark:text-blue-400">{summary.count}</p>
+              <p className="text-xl font-bold text-[var(--accent)] dark:text-[var(--accent-text-dark)]">{summary.count}</p>
               <p className="text-xs text-slate-500 dark:text-slate-400">{t('home.gamesPlayed')}</p>
             </div>
             <div>

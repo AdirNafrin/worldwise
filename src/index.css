@@ -11,9 +11,84 @@ body,
   height: 100%;
 }
 
+/* --- Color palettes ---
+   Each palette is a set of CSS custom properties consumed throughout the
+   app via Tailwind arbitrary values (e.g. bg-[var(--accent)]), so
+   switching the `data-palette` attribute on <html> (see SettingsContext)
+   re-themes every accent color/button/gradient at once. "atlas" is the
+   default and also acts as the fallback if data-palette is ever missing. */
+:root,
+[data-palette='atlas'] {
+  --accent: #2563eb;
+  --accent-hover: #1d4ed8;
+  --accent-text-dark: #60a5fa;
+  --accent-2: #7c3aed;
+  --accent-2-dark: #a78bfa;
+  --accent-soft: #eff6ff;
+  --accent-soft-dark: rgba(37, 99, 235, 0.25);
+  --bg-top: #eef2ff;
+  --bg-bottom: #f8fafc;
+  --bg-top-dark: #1e1b4b;
+  --bg-mid-dark: #0f172a;
+  --bg-bottom-dark: #020617;
+}
+
+[data-palette='terracotta'] {
+  --accent: #ea580c;
+  --accent-hover: #c2410c;
+  --accent-text-dark: #fb923c;
+  --accent-2: #e11d48;
+  --accent-2-dark: #fb7185;
+  --accent-soft: #ffedd5;
+  --accent-soft-dark: rgba(234, 88, 12, 0.25);
+  --bg-top: #fff7ed;
+  --bg-bottom: #fef2f2;
+  --bg-top-dark: #431407;
+  --bg-mid-dark: #27140a;
+  --bg-bottom-dark: #0c0a09;
+}
+
+[data-palette='emerald'] {
+  --accent: #059669;
+  --accent-hover: #047857;
+  --accent-text-dark: #34d399;
+  --accent-2: #0284c7;
+  --accent-2-dark: #38bdf8;
+  --accent-soft: #d1fae5;
+  --accent-soft-dark: rgba(5, 150, 105, 0.25);
+  --bg-top: #ecfdf5;
+  --bg-bottom: #eff6ff;
+  --bg-top-dark: #022c22;
+  --bg-mid-dark: #052e2b;
+  --bg-bottom-dark: #020617;
+}
+
+[data-palette='violet'] {
+  --accent: #7c3aed;
+  --accent-hover: #6d28d9;
+  --accent-text-dark: #c4b5fd;
+  --accent-2: #db2777;
+  --accent-2-dark: #f472b6;
+  --accent-soft: #ede9fe;
+  --accent-soft-dark: rgba(124, 58, 237, 0.25);
+  --bg-top: #f5f3ff;
+  --bg-bottom: #fdf4ff;
+  --bg-top-dark: #2e1065;
+  --bg-mid-dark: #3b0764;
+  --bg-bottom-dark: #020617;
+}
+
+:root {
+  --title-gradient: linear-gradient(to right, var(--accent), var(--accent-2));
+}
+
+:root.dark {
+  --title-gradient: linear-gradient(to right, var(--accent-text-dark), var(--accent-2-dark));
+}
+
 body {
   @apply text-slate-900 antialiased dark:text-slate-100;
-  background: linear-gradient(180deg, #eef2ff 0%, #f8fafc 45%, #f8fafc 100%);
+  background: linear-gradient(180deg, var(--bg-top) 0%, var(--bg-bottom) 45%, var(--bg-bottom) 100%);
   background-attachment: fixed;
   /* Keeps content clear of the iPhone notch/status bar and home-indicator
      area when the app is installed and running as a standalone PWA. */
@@ -21,9 +96,10 @@ body {
     env(safe-area-inset-left);
 }
 
-/* Dark-mode background gradient, swapped in via the same `.dark` class. */
+/* Dark-mode background gradient, swapped in via the same `.dark` class -
+   uses the active palette's own dark stops rather than one fixed look. */
 :root.dark body {
-  background: linear-gradient(180deg, #1e1b4b 0%, #0f172a 45%, #020617 100%);
+  background: linear-gradient(180deg, var(--bg-top-dark) 0%, var(--bg-mid-dark) 45%, var(--bg-bottom-dark) 100%);
   background-attachment: fixed;
 }
 
@@ -31,4 +107,14 @@ body {
    buttons already have their own hover/active styling. */
 * {
   -webkit-tap-highlight-color: transparent;
+}
+
+/* Respect the OS-level "reduce motion" preference - the hover lift/shadow
+   micro-interactions below are a nice-to-have, not something that should
+   fight a user's accessibility setting. */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
 }

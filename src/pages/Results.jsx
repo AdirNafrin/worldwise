@@ -71,7 +71,7 @@ export function Results() {
 
       <div className="mt-6 rounded-3xl border border-slate-200 p-6 text-center dark:border-slate-700">
         <p className="text-sm text-slate-500 dark:text-slate-400">{t('results.score')}</p>
-        <p className="text-5xl font-extrabold text-blue-600">{data.score}</p>
+        <p className="text-5xl font-extrabold text-[var(--accent)] dark:text-[var(--accent-text-dark)]">{data.score}</p>
         {isNewBest && (
           <p className="mt-2 inline-block rounded-full bg-amber-100 px-3 py-1 text-sm font-semibold text-amber-800 dark:bg-amber-900/40 dark:text-amber-300">
             🏆 {t('results.newBest')}
@@ -96,19 +96,19 @@ export function Results() {
             change settings first uses "Back to home" instead. */}
         <button
           onClick={() => navigate('/game', { replace: true, state: data.config })}
-          className="w-full rounded-full bg-blue-600 py-3 font-semibold text-white hover:bg-blue-700"
+          className="w-full rounded-full bg-[var(--accent)] py-3 font-semibold text-white transition-all hover:-translate-y-0.5 hover:bg-[var(--accent-hover)] hover:shadow-lg"
         >
           {t('results.playAgain')}
         </button>
         <button
           onClick={() => navigate('/')}
-          className="w-full rounded-full border border-slate-300 py-3 font-medium hover:bg-slate-100 dark:border-slate-600 dark:hover:bg-slate-800"
+          className="w-full rounded-full border border-slate-300 py-3 font-medium transition-all hover:-translate-y-0.5 hover:bg-slate-100 hover:shadow-md dark:border-slate-600 dark:hover:bg-slate-800"
         >
           {t('results.backHome')}
         </button>
         <button
           onClick={() => setReviewOpen((o) => !o)}
-          className="w-full rounded-full border border-slate-300 py-3 font-medium hover:bg-slate-100 dark:border-slate-600 dark:hover:bg-slate-800"
+          className="w-full rounded-full border border-slate-300 py-3 font-medium transition-all hover:-translate-y-0.5 hover:bg-slate-100 hover:shadow-md dark:border-slate-600 dark:hover:bg-slate-800"
         >
           {t('results.review')}
         </button>

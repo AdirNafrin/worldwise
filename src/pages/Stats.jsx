@@ -84,7 +84,10 @@ export function Stats() {
                   <span className="text-slate-500 dark:text-slate-400">{pct == null ? '—' : `${pct}%`}</span>
                 </div>
                 <div className="h-2 overflow-hidden rounded-full bg-slate-200 dark:bg-slate-700">
-                  <div className="h-full rounded-full bg-blue-500" style={{ width: `${pct ?? 0}%` }} />
+                  <div
+                    className="h-full rounded-full bg-[var(--accent)] transition-[width]"
+                    style={{ width: `${pct ?? 0}%` }}
+                  />
                 </div>
               </div>
             );

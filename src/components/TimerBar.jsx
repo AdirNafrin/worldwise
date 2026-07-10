@@ -7,7 +7,7 @@ export function TimerBar({ percent, remainingSeconds }) {
     <div className="flex items-center gap-2">
       <div className="h-2 flex-1 overflow-hidden rounded-full bg-slate-200 dark:bg-slate-700">
         <div
-          className={`h-full rounded-full transition-[width] duration-200 ease-linear ${isLow ? 'bg-red-500' : 'bg-blue-500'}`}
+          className={`h-full rounded-full transition-[width] duration-200 ease-linear ${isLow ? 'bg-red-500' : 'bg-[var(--accent)]'}`}
           style={{ width: `${Math.max(0, Math.min(100, percent))}%` }}
         />
       </div>

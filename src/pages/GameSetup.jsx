@@ -38,10 +38,10 @@ function OptionCard({ selected, onClick, title, subtitle, icon }) {
   return (
     <button
       onClick={onClick}
-      className={`rounded-2xl border-2 p-4 text-start transition-colors ${
+      className={`rounded-2xl border-2 p-4 text-start transition-all hover:-translate-y-0.5 hover:shadow-md ${
         selected
-          ? 'border-blue-500 bg-blue-50 dark:bg-blue-950/40'
-          : 'border-slate-200 bg-white hover:border-blue-300 dark:border-slate-700 dark:bg-slate-800'
+          ? 'border-[var(--accent)] bg-[var(--accent-soft)] dark:bg-[var(--accent-soft-dark)]'
+          : 'border-slate-200 bg-white hover:border-[var(--accent)] dark:border-slate-700 dark:bg-slate-800'
       }`}
     >
       <div className="flex items-center gap-2">
@@ -63,9 +63,9 @@ function Pill({ selected, onClick, children, colorClass }) {
   return (
     <button
       onClick={onClick}
-      className={`rounded-full border px-4 py-2 text-sm font-medium transition-colors ${
+      className={`rounded-full border px-4 py-2 text-sm font-medium transition-all hover:-translate-y-0.5 hover:shadow-sm ${
         selected
-          ? colorClass || 'border-blue-600 bg-blue-600 text-white'
+          ? colorClass || 'border-[var(--accent)] bg-[var(--accent)] text-white'
           : 'border-slate-300 hover:bg-slate-100 dark:border-slate-600 dark:hover:bg-slate-800'
       }`}
     >
@@ -181,7 +181,7 @@ export function GameSetup() {
       >
         <button
           onClick={start}
-          className="w-full rounded-full bg-blue-600 py-4 text-lg font-semibold text-white shadow-lg shadow-blue-600/20 hover:bg-blue-700 active:scale-[0.98]"
+          className="w-full rounded-full bg-[var(--accent)] py-4 text-lg font-semibold text-white shadow-lg transition-all hover:-translate-y-0.5 hover:bg-[var(--accent-hover)] hover:shadow-xl active:translate-y-0 active:scale-[0.98]"
         >
           {t('setup.begin')}
         </button>

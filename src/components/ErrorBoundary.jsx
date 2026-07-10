@@ -28,7 +28,7 @@ class ErrorBoundaryBase extends Component {
           <p className="text-slate-500 dark:text-slate-400">{t('error.boundary.body')}</p>
           <button
             onClick={() => window.location.reload()}
-            className="rounded-full bg-blue-600 px-6 py-2 font-medium text-white hover:bg-blue-700"
+            className="rounded-full bg-[var(--accent)] px-6 py-2 font-medium text-white hover:bg-[var(--accent-hover)]"
           >
             {t('error.boundary.reload')}
           </button>
