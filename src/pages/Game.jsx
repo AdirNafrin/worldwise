@@ -298,7 +298,7 @@ function AnswerOption({ category, value, status, disabled, onClick, lang, index 
         onClick={onClick}
         disabled={disabled}
         aria-label={flagLabel}
-        className={`overflow-hidden rounded-2xl border-2 transition-colors ${
+        className={`flex items-center justify-center rounded-2xl border-2 bg-slate-50 p-4 transition-colors dark:bg-slate-900/40 ${
           status === 'correct'
             ? 'border-green-500'
             : status === 'incorrect'
@@ -310,7 +310,7 @@ function AnswerOption({ category, value, status, disabled, onClick, lang, index 
                   : 'border-slate-200 hover:border-blue-400 dark:border-slate-700'
         }`}
       >
-        <div className="h-20 w-full">
+        <div className="h-20 w-32 overflow-hidden rounded-md shadow-sm ring-1 ring-black/5">
           <FlagImage src={value} alt="" />
         </div>
       </button>
