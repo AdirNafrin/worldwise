@@ -5,7 +5,7 @@ import { useSettings } from '../context/SettingsContext';
 import { useSound } from '../hooks/useSound';
 import { useTimer } from '../hooks/useTimer';
 import { generateRound } from '../utils/questions';
-import { ALL_COUNTRIES, formatArea, formatPopulation, getCountryName } from '../utils/countries';
+import { ALL_COUNTRIES, formatArea, formatPopulation, formatPopulationForDifficulty, getCountryName } from '../utils/countries';
 import { getLanguageName } from '../utils/languages';
 import { AnswerButton } from '../components/AnswerButton';
 import { TimerBar } from '../components/TimerBar';
@@ -266,6 +266,7 @@ export function Game() {
                 status={status}
                 disabled={answered}
                 lang={lang}
+                difficulty={config.difficulty}
                 onClick={() => !answered && commitAnswer(opt, false)}
               />
             );
@@ -290,7 +291,7 @@ export function Game() {
             </p>
             {selected !== question.correctAnswer && (
               <p className="mt-1 text-sm text-slate-600 dark:text-slate-300">
-                {t('feedback.correctAnswerWas', { answer: formatAnswer(question.category, question.correctAnswer, lang) })}
+                {t('feedback.correctAnswerWas', { answer: formatAnswer(question.category, question.correctAnswer, lang, config.difficulty) })}
               </p>
             )}
             {config.practice && subject && <PracticeFacts subject={subject} t={t} lang={lang} />}
@@ -331,8 +332,8 @@ export function Game() {
 // Population values need unit formatting, and nameToFlag's "value" is
 // actually a flag image path, so it's translated back to a country name -
 // otherwise the feedback text would show something like "/flags/can.svg".
-function formatAnswer(category, value, lang) {
-  if (category === 'nameToPopulation') return formatPopulation(value, lang);
+function formatAnswer(category, value, lang, difficulty) {
+  if (category === 'nameToPopulation') return formatPopulationForDifficulty(value, lang, difficulty);
   if (category === 'nameToFlag') {
     const country = countryByFlag.get(value);
     return country ? getCountryName(country, lang) : value;
@@ -382,7 +383,7 @@ function QuestionPrompt({ question, t }) {
 // One answer option. For nameToFlag questions this renders a flag image
 // (in a fixed, correctly-proportioned box so it never looks stretched)
 // instead of the AnswerButton's usual text label.
-function AnswerOption({ category, value, status, disabled, onClick, lang, index }) {
+function AnswerOption({ category, value, status, disabled, onClick, lang, index, difficulty }) {
   if (category === 'nameToFlag') {
     // Once answered, reveal which country this flag belongs to via the
     // accessible label (it stays generic - just the option's position -
@@ -416,7 +417,7 @@ function AnswerOption({ category, value, status, disabled, onClick, lang, index 
     );
   }
 
-  const label = category === 'nameToPopulation' ? formatPopulation(value, lang) : value;
+  const label = category === 'nameToPopulation' ? formatPopulationForDifficulty(value, lang, difficulty) : value;
   return (
     <AnswerButton status={status} disabled={disabled} onClick={onClick}>
       {label}

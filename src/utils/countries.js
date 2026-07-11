@@ -83,8 +83,9 @@ export function buildSubjectPool(region, difficulty, minCount, fieldFilter) {
 
 // Formats a population number as a short, glanceable string ("8.9M" / "8.9
 // מיליון") instead of the full digit count, per the spec's readability
-// requirement for a fast-paced quiz UI.
-export function formatPopulation(value, lang) {
+// requirement for a fast-paced quiz UI. Pass `{ whole: true }` to always
+// round to a whole unit ("9M") instead of allowing one decimal place.
+export function formatPopulation(value, lang, { whole = false } = {}) {
   if (value == null) return '—';
   const units =
     lang === 'he'
@@ -102,12 +103,23 @@ export function formatPopulation(value, lang) {
     if (value >= threshold) {
       const num = value / threshold;
       // One decimal place below 100 (e.g. "8.9M"), whole numbers above it
-      // (e.g. "340M") so the string doesn't get needlessly long.
-      const formatted = num >= 100 ? Math.round(num) : Math.round(num * 10) / 10;
+      // (e.g. "340M") so the string doesn't get needlessly long - unless
+      // `whole` forces rounding regardless of magnitude.
+      const formatted = whole || num >= 100 ? Math.round(num) : Math.round(num * 10) / 10;
       return `${formatted}${suffix}`;
     }
   }
   return String(value);
+}
+
+// "Country -> Population" question numbers: rounded to a whole unit at
+// easy/medium (matches the wide/medium distractor spread there - keeping a
+// decimal digit on obviously-different numbers doesn't add anything), but
+// kept to one decimal place at hard, where distractors sit in a tight
+// population-rank window and that extra digit is what makes them genuinely
+// hard to tell apart.
+export function formatPopulationForDifficulty(value, lang, difficulty) {
+  return formatPopulation(value, lang, { whole: difficulty !== 'hard' });
 }
 
 // Formats an area in km², with thousands separators for large numbers.

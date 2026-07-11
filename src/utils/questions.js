@@ -1,4 +1,4 @@
-import { buildSubjectPool, getCountryName, getRegionName, REGIONS } from './countries';
+import { buildSubjectPool, formatPopulationForDifficulty, getCountryName, getRegionName, REGIONS } from './countries';
 import { getLanguageName } from './languages';
 import { shuffle, sample } from './shuffle';
 
@@ -73,28 +73,55 @@ function pickSubject(pool, usedCodes) {
 // population-sorted list) is within POPULATION_WINDOW of the subject's own
 // rank, so "hard" pulls very close (easily-confused) numbers and "easy"
 // pulls from anywhere (obviously-wrong numbers).
-function buildPopulationDistractors(subject, pool, difficulty) {
+//
+// Picks are deduped on the *displayed* string (via formatPopulationForDifficulty),
+// not just the raw population value - rounding for display (see
+// formatPopulationForDifficulty) means two countries with different real
+// populations can otherwise both show up as e.g. "9M", which would look like
+// a broken question (two identical-looking options, only one marked right).
+function buildPopulationDistractors(subject, pool, difficulty, lang) {
   const sorted = [...pool]
     .filter((c) => c.population != null)
     .sort((a, b) => a.population - b.population);
   const idx = sorted.findIndex((c) => c.cca3 === subject.cca3);
   const window = POPULATION_WINDOW[difficulty] ?? POPULATION_WINDOW.hard;
-  const candidates =
+  const inWindow =
     window === Infinity
       ? sorted.filter((c) => c.cca3 !== subject.cca3)
       : sorted.filter((c, i) => c.cca3 !== subject.cca3 && Math.abs(i - idx) <= window);
+  const inWindowCodes = new Set(inWindow.map((c) => c.cca3));
+  const rest = sorted.filter((c) => c.cca3 !== subject.cca3 && !inWindowCodes.has(c.cca3));
 
-  const chosen = sample(candidates, 3).map((c) => c.population);
-  const values = new Set([subject.population, ...chosen]);
-  // Backfill from the whole sorted list if the close window didn't yield
-  // three distinct values (only possible in very small pools).
-  let fallbackPool = sorted.filter((c) => c.cca3 !== subject.cca3);
-  while (values.size < 4 && fallbackPool.length > 0) {
-    const pick = fallbackPool[Math.floor(Math.random() * fallbackPool.length)];
-    fallbackPool = fallbackPool.filter((c) => c !== pick);
-    values.add(pick.population);
+  const usedDisplays = new Set([formatPopulationForDifficulty(subject.population, lang, difficulty)]);
+  const usedValues = new Set([subject.population]);
+  const chosen = [];
+  const tryPick = (candidates) => {
+    for (const c of shuffle(candidates)) {
+      if (chosen.length >= 3) return;
+      if (usedValues.has(c.population)) continue;
+      const display = formatPopulationForDifficulty(c.population, lang, difficulty);
+      if (usedDisplays.has(display)) continue;
+      usedDisplays.add(display);
+      usedValues.add(c.population);
+      chosen.push(c.population);
+    }
+  };
+  // Prefer the difficulty's own rank window first, then widen to the rest of
+  // the pool if it didn't yield 3 visually-distinct values.
+  tryPick(inWindow);
+  if (chosen.length < 3) tryPick(rest);
+  // Last-resort backfill (only reachable with a tiny pool): allow a repeated
+  // display string rather than showing fewer than 4 options, same as the
+  // original raw-value-only guarantee this replaces.
+  if (chosen.length < 3) {
+    for (const c of shuffle(sorted.filter((c) => c.cca3 !== subject.cca3))) {
+      if (chosen.length >= 3) break;
+      if (usedValues.has(c.population)) continue;
+      usedValues.add(c.population);
+      chosen.push(c.population);
+    }
   }
-  return [...values].filter((v) => v !== subject.population).slice(0, 3);
+  return chosen;
 }
 
 // Builds the 3 wrong-answer languages for a "country -> language" question.
@@ -154,7 +181,7 @@ function buildQuestion(category, subject, pool, difficulty, lang) {
     }
     // Show a country name, ask for its (formatted) population.
     case 'nameToPopulation': {
-      const distractors = buildPopulationDistractors(subject, pool, difficulty);
+      const distractors = buildPopulationDistractors(subject, pool, difficulty, lang);
       const options = shuffle([subject.population, ...distractors]);
       return {
         category,

@@ -2,7 +2,7 @@ import { useEffect, useMemo, useRef, useState } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { useI18n } from '../i18n/I18nContext';
 import { useStats } from '../context/StatsContext';
-import { ALL_COUNTRIES, formatPopulation, getCountryName } from '../utils/countries';
+import { ALL_COUNTRIES, formatPopulationForDifficulty, getCountryName } from '../utils/countries';
 import { FlagImage } from '../components/FlagImage';
 import { markFirstRoundDone } from '../components/InstallBanner';
 
@@ -119,7 +119,7 @@ export function Results() {
       {reviewOpen && (
         <div className="mt-6 space-y-3">
           {data.log.map((entry, i) => (
-            <ReviewRow key={i} index={i} entry={entry} t={t} lang={lang} />
+            <ReviewRow key={i} index={i} entry={entry} t={t} lang={lang} difficulty={data.config.difficulty} />
           ))}
         </div>
       )}
@@ -137,9 +137,11 @@ function flagAlt(flagSrc, t, lang) {
 }
 
 // Formats a logged answer value for display in the review list; only
-// population values need special formatting (raw numbers otherwise).
-function optionLabel(category, value, lang) {
-  if (category === 'nameToPopulation') return formatPopulation(value, lang);
+// population values need special formatting (raw numbers otherwise). Uses
+// the round's difficulty so the review shows the same rounding the player
+// actually saw during the question (see formatPopulationForDifficulty).
+function optionLabel(category, value, lang, difficulty) {
+  if (category === 'nameToPopulation') return formatPopulationForDifficulty(value, lang, difficulty);
   return value;
 }
 
@@ -147,7 +149,7 @@ function optionLabel(category, value, lang) {
 // got it right, their answer, and (if wrong) the correct answer. Renders
 // flag thumbnails instead of text for nameToFlag questions, since the
 // logged "answer" there is an image path, not a readable string.
-function ReviewRow({ index, entry, t, lang }) {
+function ReviewRow({ index, entry, t, lang, difficulty }) {
   const subject = countryByCode.get(entry.countryCode);
   const isFlagCategory = entry.category === 'nameToFlag';
 
@@ -173,7 +175,7 @@ function ReviewRow({ index, entry, t, lang }) {
             </div>
           ) : (
             <p className="font-medium">
-              {entry.userAnswer ? optionLabel(entry.category, entry.userAnswer, lang) : '—'}
+              {entry.userAnswer ? optionLabel(entry.category, entry.userAnswer, lang, difficulty) : '—'}
             </p>
           )}
         </div>
@@ -187,7 +189,7 @@ function ReviewRow({ index, entry, t, lang }) {
                 <FlagImage src={entry.correctAnswer} alt={flagAlt(entry.correctAnswer, t, lang)} />
               </div>
             ) : (
-              <p className="font-medium">{optionLabel(entry.category, entry.correctAnswer, lang)}</p>
+              <p className="font-medium">{optionLabel(entry.category, entry.correctAnswer, lang, difficulty)}</p>
             )}
           </div>
         )}
